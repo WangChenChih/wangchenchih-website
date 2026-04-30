@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-The [PDF version of the my full CV](https://wangchenchih.github.io/wangchenchih_website/_pages/CV/CV.pdf) can be browsed via the link. 
+The [PDF version of the my full CV](https://wangchenchih.github.io/wangchenchih-website/_pages/CV/CV.pdf) can be browsed via the link. 
 
 Education
 ======
