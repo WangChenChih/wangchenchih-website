@@ -41,3 +41,13 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+
+@media (min-width: 1024px) {
+  .sidebar {
+    width: 320px;
+  }
+
+  .page {
+    margin-left: 340px;
+  }
+}
