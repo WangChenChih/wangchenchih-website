@@ -1,7 +1,7 @@
 ---
 title: 'test'
 date: 2012-08-14
-permalink: /test/test-1
+permalink: /test/
 tags:
   - cool posts
   - category1
