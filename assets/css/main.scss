@@ -42,12 +42,14 @@
     "vendor/font-awesome/brands"
 ;
 
-@media (min-width: 1024px) {
-  .sidebar {
-    width: 320px;
-  }
+/* Expand left sidebar width */
+.sidebar {
+  width: 300px;   /* default is ~200–250px */
+}
 
-  .page {
-    margin-left: 340px;
-  }
+/* Adjust main content to not overlap */
+.archive,
+.page,
+.page__content {
+  margin-left: 320px;
 }
