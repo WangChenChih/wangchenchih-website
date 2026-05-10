@@ -31,6 +31,9 @@ main:
 
   - title: "test"
     url: /test/
+
+  - title: "Personal Logo"
+    url: /personal-logo/
     
   - title: "Guide"
     url: /markdown/
