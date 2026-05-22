@@ -3,7 +3,7 @@ title: "Exact Organization of Density Matrices and Entanglement Structure in the
 collection: publications
 category: arXiv
 permalink: /publication/Wang-Huang-Yip_2026
-excerpt: 'This paper is about the number 3. The number 4 is left for future work.'
+excerpt: #'This paper is about the number 3. The number 4 is left for future work.'
 date: 2026-5-23
 venue: 'arXiv'
 slidesurl: 'https://academicpages.github.io/files/slides3.pdf'
