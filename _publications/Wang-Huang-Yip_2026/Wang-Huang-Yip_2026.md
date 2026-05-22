@@ -1,11 +1,11 @@
 ---
 title: "Exact Organization of Density Matrices and Entanglement Structure in the Kitaev Spin Liquid"
 collection: publications
-category: arXiv
+category: arXiv # could be either manuscripts, conferences, or arXiv depending on the type of the publication
 permalink: /publication/Wang-Huang-Yip_2026
 excerpt: #'This paper is about the number 3. The number 4 is left for future work.'
 date: 2026-5-23
-venue: 'arXiv'
+venue: 'arXiv'  # showing up as 'Published in <venue>' below the title
 slidesurl: 'https://academicpages.github.io/files/slides3.pdf'
 paperurl: 'https://arxiv.org/pdf/2605.18002'
 citation: 'Chen-Chih Wang, Yi-Ping Huang, and Sungkit Yip. (2026). &quot; Exact Organization of Density Matrices and Entanglement Structure in the Kitaev Spin Liquid &quot;  arXiv:2605.18002'
