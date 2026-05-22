@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "dirt" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Chen-Chih Wang"
+title                    : "Homepage of Chen-Chih Wang \n k"
 title_separator          : "-"
 name                     : &name "Chen-Chih Wang"
 description              : &description "theoretical condensed matter physics | many-body entanglement and quantum matter | Chinese music | Erhu"   # Update this with a general description of your site, this is the default if not overridden by a page
