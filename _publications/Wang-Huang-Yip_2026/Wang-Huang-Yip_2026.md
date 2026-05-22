@@ -1,7 +1,7 @@
 ---
 title: "Exact Organization of Density Matrices and Entanglement Structure in the Kitaev Spin Liquid"
 collection: publications
-category: arXiv # could be either manuscripts, conferences, or arXiv depending on the type of the publication
+category: arXiv # could be either manuscripts, conferences, or arXiv depending on the type of the publication. Go to _config.yml and search '# Publication Category' to add new categories
 permalink: /publication/Wang-Huang-Yip_2026
 excerpt: #'This paper is about the number 3. The number 4 is left for future work.'
 date: 2026-5-23
