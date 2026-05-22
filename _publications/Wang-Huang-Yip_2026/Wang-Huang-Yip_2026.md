@@ -10,6 +10,7 @@ slidesurl: 'https://academicpages.github.io/files/slides3.pdf'
 paperurl: 'https://arxiv.org/pdf/2605.18002'
 citation: 'Chen-Chih Wang, Yi-Ping Huang, and Sungkit Yip. (2026). &quot; Exact Organization of Density Matrices and Entanglement Structure in the Kitaev Spin Liquid &quot;  arXiv:2605.18002'
 ---
+prove this is new
 
 In this research, we introduce a formulation that represents the ground-state density matrix of the spin-1/2 Kitaev honeycomb model in terms of spin operators. Due to the 1-form Wilson symmetry of the phase, both the density matrix and the reduced density matrix in the spin representation can be expressed in an organized form, enabling an exact analysis of the entanglement structure from the perspective of spin degrees of freedom.
 
