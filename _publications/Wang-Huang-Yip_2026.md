@@ -7,7 +7,7 @@ excerpt: 'This paper is about the number 3. The number 4 is left for future work
 date: 2026-5-23
 venue: 'arXiv'
 slidesurl: 'https://academicpages.github.io/files/slides3.pdf'
-paperurl: 'https://academicpages.github.io/files/paper3.pdf'
+paperurl: 'https://arxiv.org/pdf/2605.18002'
 citation: 'Chen-Chih Wang, Yi-Ping Huang, and Sungkit Yip. (2026). &quot; Exact Organization of Density Matrices and Entanglement Structure in the Kitaev Spin Liquid &quot;  arXiv:2605.18002'
 ---
 
