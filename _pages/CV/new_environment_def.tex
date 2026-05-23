@@ -1,0 +1,123 @@
+\newcommand{\timelayout}{0.23\textwidth}
+\newcommand{\itemlayout}{0.73\textwidth}
+
+%------------ordinary font size------------
+\newcommand{\ordinaryfontsize}{\fontsize{10pt}{12pt}\selectfont} % set the ordinary font size
+
+%--------------section--------------
+\newcommand{\newsection}[1]{
+
+\vspace{3mm}
+
+\noindent{\color{gray}\rule{\linewidth}{0.4pt}}
+
+    \vspace{-0.2cm}
+
+\fontsize{16pt}{24pt}\selectfont
+\noindent\textsc{\textbf{#1}}
+
+\ordinaryfontsize % back to the ordinary font size
+
+\vspace{2mm}
+}
+
+%--------------major item (with time)--------------
+% \resemeitem{<experience>}{<date>}
+\newcommand{\resemeitem}[2]{
+
+\noindent\begin{tabular}{p{\timelayout} p{\itemlayout}}
+    {\ordinaryfontsize
+    \color{gray} \textit{#2}}
+    &
+    {\fontsize{12}{12}\color{violet}\textbf{#1}}
+\end{tabular}
+
+\vspace{-1mm}
+    
+}
+%--------------environment for sublists--------------
+% usege:
+%\resemeitem{<experience1>}{<date1>}
+%    \begin{sublist}
+%        \item item1
+%        \item item2
+%    \end{sublist}
+\newenvironment{sublist}
+{
+
+\vspace{-4mm}
+
+\noindent\begin{tabular}{p{\timelayout} p{\itemlayout}}
+
+\quad &
+
+    \ordinaryfontsize
+  \begin{list}{$-$}{ % label
+    \setlength{\itemsep}{0mm}
+  }
+}
+{
+  \end{list}
+
+\end{tabular}
+
+  \vspace{1mm}
+  
+}
+
+%--------------- time item --------------
+% \timeitem{<experience>}{<date>}
+\newcommand{\timeitem}[2]{
+
+\noindent\begin{tabular}{p{\timelayout} p{\itemlayout}}
+    {\color{gray}\ordinaryfontsize
+    \textit{#2}}
+    &
+    {\color{black}\ordinaryfontsize #1}
+\end{tabular}
+
+\vspace{-1mm}
+
+}
+
+%----------- normal lists ----------------
+\newenvironment{normallist}
+{
+\vspace{-4mm}
+
+    \ordinaryfontsize
+  \begin{list}{$\bullet$}{ % label
+    \setlength{\leftmargin}{5mm}
+    \setlength{\itemsep}{-0.5mm}
+  }
+}
+{
+  \end{list}
+  
+  \vspace{-6mm}
+}
+
+%----------- no bullet lists ----------------
+\newenvironment{nobullist}
+{
+\vspace{-2mm}
+
+    \fontsize{10pt}{12pt}\selectfont
+  \begin{list}{}{ % label
+    \setlength{\leftmargin}{5mm}
+    \setlength{\itemsep}{-0.5mm}
+  }
+}
+{
+  \end{list}
+  
+  \vspace{-5mm}
+}
+
+%%%%%%%%%%%%%%% date of update %%%%%%%%%%%
+\newcommand{\monthyear}{%
+    \ifcase\month
+    \or January\or February\or March\or April\or May\or June%
+    \or July\or August\or September\or October\or November\or December%
+    \fi\space \the\year
+}
