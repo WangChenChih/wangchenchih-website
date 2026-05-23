@@ -79,10 +79,10 @@ $$
 On the other hand, the local symmetry operator becomes analogous to 
 
 $$
-A_iX_i \to \left(\prod_{j\in\mathcal{N}(i)}e^{i\pi E_{ij}}\right)e^{-i \pi\rho} \to e^{i\pi (\bold{\nabla}\cdot E - \rho)}
+A_iX_i \to \left(\prod_{j\in\mathcal{N}(i)}e^{i\pi E_{ij}}\right)e^{-i \pi\rho} \to e^{i\pi (\mathbf{\nabla}\cdot E - \rho)}
 $$
 
-The exponent $(\bold{\nabla}\cdot E -\rho)$ in the above analogy implies that the physical meaning of a gauge symmetry is the **Gauss law** of the gauge theory. This is the reason why we refer to the Gauss law as the *generator of the gauge transformation*.
+The exponent $(\mathbf{\nabla}\cdot E -\rho)$ in the above analogy implies that the physical meaning of a gauge symmetry is the **Gauss law** of the gauge theory. This is the reason why we refer to the Gauss law as the *generator of the gauge transformation*.
 
 The Gauss law of the gauge theory is the constraint for the local symmetry
 
