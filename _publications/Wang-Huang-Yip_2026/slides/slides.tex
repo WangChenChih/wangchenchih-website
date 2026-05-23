@@ -82,10 +82,10 @@
     \begin{itemize}
         \item Model Hamiltonian
         \sequ{
-        H = -\sum_{\anglelr{ij}}J_{\alpha_{ij}}\dimer{i}{j} \quad ;\quad\wordfig{1.6}{figures/direction-def.pdf}
+        H = -\sum_{\anglelr{ij}}J_{\alpha_{ij}}\dimer{i}{j} \quad ;\quad\wordfig{1.2}{figures/direction-def.pdf}
         }
         \item Majorana fermion (parton) representation: $b^x$, $b^y$, $b^z$, $c$ $\Rightarrow$  $\sigma^\mu = ib^\mu c$
-        \item Parton Hamiltonian
+        \item Parton Hamiltonian: define $ib^{\alpha_{ij}}_ib^{\alpha_{ij}}_j = \hat{u}_{ij}$
         \sequ{
         H \to \sum_{\anglelr{ij}}iJ_{\alpha_{ij}}\hat{u}_{ij}c_ic_j
         }
@@ -95,15 +95,45 @@
         \mathcal{P}_G=\prod_{i}\lr{\frac{\mathds{1}+D_i}{2}} \quad,\quad D_i =  b^x_ib^y_ib^z_ic_i \Leftarrow -i\sigma^x_i\sigma^y_i\sigma^z_i
         }
         }
-        \item Separability of the entanglement entropy \scite{https://doi.org/10.1103/PhysRevLett.105.080501}{(Yao and Qi, PRL105 080501)}
+        \item Separability of the entanglement entropy \scite{https://doi.org/10.1103/PhysRevLett.105.080501}{(Yao and Qi, PRL\textbf{105} 080501)}
         \sequ{
         S_A = S_A^F + S_A^G
         }
     \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Kitaev Model: an Introduction}
+\begin{frame}{Kitaev Model: Gauge Theory}
+In the Majorana fermion representation, the model is equivalent to a system of free Majorana fermions (matter field) coupled to a static $\mathbb{Z}_2$ gauge field
+\begin{itemize}
 
+    \item Define the gauge field $\hat{u}_{ij} = e^{iA_{ij}}$, then the elementary $\mathbb{Z}_2$ gauge flux reads 
+    \sequ{
+    e^{i\Phi} = \exp\lr{i\oint_{\de p} A} = \prod_{\anglelr{ij}\in\de p}\hat{u}_{ij} = \prod_{\anglelr{ij}\in\de p}\dimer{i}{j} =: W_p
+    }
+    
+    \item The electric field in the gauge field that flips the gauge field is $b^{\alpha_{ij}}_i \to e^{i\pi E_{ij}}$ because
+    $b^{\alpha_{ij}}_i\hat{u}_{ij}b^{\alpha_{ij}}_i = -\hat{u}_{ij} $
+
+    \item Gutzwiller projection as a Gauss law constraint: $D_i = b_i^xb_i^yb_i^zc_i = 1$. The ground state is
+    \sequ{
+        \prod_{i}\lr{\frac{\mathds{1}+D_i}{2}}\ket{u}\ket{M}
+    }
+
+    %%%%%%%%%%%%%%%% problems %%%%%%%%%%%%%%%%
+    \alert{
+    \item Both definitions $b^{\alpha_{ij}}_i = e^{i\pi E_{ij}}$ and $b^{\alpha_{ij}}_j = e^{i\pi E_{ij}}$ are valid.
+    \item The Gauss law is a physical constraint and cannot be broken.
+    }
+    
+\end{itemize}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Kitaev Model: Properties of Spin Correlation Functions}
+    \begin{itemize}
+        \item Two-spin correlation functions are short-ranged \scite{https://doi.org/10.1103/PhysRevLett.98.247201}{(Baskaran, Mandal, and Shankar, PRL\textbf{98}, 247201)}
+        
+    \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
