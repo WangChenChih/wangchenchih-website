@@ -8,12 +8,12 @@ tags:
 
 # Coordinate transformation in Linear Algebra
 
-A typical coordinate transformation is a rotation, which is described by a rotation matrix. Take dimension-2 for example, if we want to rotate a vector $\bold{v}=(v_1,v_2)$ by an angle $\theta$, then the new vector obtained after such a rotation is
+A typical coordinate transformation is a rotation, which is described by a rotation matrix. Take dimension-2 for example, if we want to rotate a vector $\mathbf{v}=(v_1,v_2)$ by an angle $\theta$, then the new vector obtained after such a rotation is
 
  
 
 $$
-\bold{v}'=R(\theta )\bold{v}\equiv\begin{pmatrix}\cos{\theta} & \sin{\theta}\\ -\sin{\theta} & \cos{\theta}\end{pmatrix}\bold{v}
+\mathbf{v}'=R(\theta )\mathbf{v}\equiv\begin{pmatrix}\cos{\theta} & \sin{\theta}\\ -\sin{\theta} & \cos{\theta}\end{pmatrix}\mathbf{v}
 $$
 
 where $R(\theta)$ is the rotation matrix. This can be represented in terms of its components
@@ -28,22 +28,22 @@ $$
 v'_{i} = \sum_{j}M_{ij}v_j
 $$
 
-in that way, we say that the matrix $M$ transforms a coordinate where the vector $\bold{v}$ is observed, to another coordinate where the vector $\bold{v}'$ is observed.
+in that way, we say that the matrix $M$ transforms a coordinate where the vector $\mathbf{v}$ is observed, to another coordinate where the vector $\mathbf{v}'$ is observed.
 
 # Inner Product
 
 So, what exactly is the matrix $M$? The answer is given by two concepts: basis and inner product.
 
-Suppose a vector $\bold{v}$ can be **uniquely** represented in terms of a set of basis vectors  $\{e_1,e_2,e_3,\cdots\}$ in the following way
+Suppose a vector $\mathbf{v}$ can be **uniquely** represented in terms of a set of basis vectors  $\{e_1,e_2,e_3,\cdots\}$ in the following way
 
 $$
-\bold{v}=\sum_{i}v_ie_i
+\mathbf{v}=\sum_{i}v_ie_i
 $$
 
 then we say the set of vectors $\{e_1,e_2,e_3,\cdots\}$ is a choice of a basis. However, there is not only one choice. Suppose there is another basis $\{e'_1,e'_2,e'_3,\cdots\}$, and the vector can be uniquely represented as
 
 $$
-\bold{v}=\sum_{i}v'_ie'_i
+\mathbf{v}=\sum_{i}v'_ie'_i
 $$
 
 then what are those new components $v'_i$? 
@@ -51,13 +51,13 @@ then what are those new components $v'_i$?
 Now we introduce an assumption that $e_i\cdot e_j=\delta_{ij}$ and $e'_i\cdot e'_j=\delta_{ij}$, where $\delta_{ij}$  is the [Kronecker delta function](https://www.notion.so/Teaching-Fourier-transform-2cdb1af8720580af9722d3373c5f2d87?pvs=21). Then, we can easily get the components $v_i$ by
 
 $$
-\bold{v}\cdot e'_i = \sum_{j}v'_je'_j\cdot e'_i = \sum_{j}v'_j\delta_{ij} = v'_i
+\mathbf{v}\cdot e'_i = \sum_{j}v'_je'_j\cdot e'_i = \sum_{j}v'_j\delta_{ij} = v'_i
 $$
 
 Use this equation, we have
 
 $$
-v'_i = \bold{v}\cdot e'_i = \sum_{j}v_je_j\cdot e_i'
+v'_i = \mathbf{v}\cdot e'_i = \sum_{j}v_je_j\cdot e_i'
 $$
 
 Now you see that we can define the matrix $M_{ij}=e'_i\cdot e_j$ such that
@@ -71,7 +71,7 @@ The rotation matrix is simply the inner product of the basis vectors in the two 
 Most importantly, from the above manifestation, we also know that any vector can be written in a standard form
 
 $$
-\begin{equation}\bold{v}=\sum_{i}e_i(e_i\cdot \bold{v})\end{equation}
+\begin{equation}\mathbf{v}=\sum_{i}e_i(e_i\cdot \mathbf{v})\end{equation}
 $$
 
 This is very general once the orthonormal basis is given.
@@ -141,25 +141,25 @@ $$
 
 then we will get the Fourier transform!
 
-So the two functions $\tilde{f}_k$ and $f_x$ are just components of a vector $\bold{f}$ in different coordinate systems:
+So the two functions $\tilde{f}_k$ and $f_x$ are just components of a vector $\mathbf{f}$ in different coordinate systems:
 
 $$
-\bold{f}=\sum_{k}\tilde{e}_k\langle \tilde{e}_k,\bold{f}\rangle=\sum_{x} e_x\langle e_x,\bold{f}\rangle
+\mathbf{f}=\sum_{k}\tilde{e}_k\langle \tilde{e}_k,\mathbf{f}\rangle=\sum_{x} e_x\langle e_x,\mathbf{f}\rangle
 $$
 
 where we can write
 
 $$
-\langle \tilde{e}_k,\bold{f}\rangle=\tilde{f}_k\quad,\quad \langle e_x,\bold{f}\rangle=f_x
+\langle \tilde{e}_k,\mathbf{f}\rangle=\tilde{f}_k\quad,\quad \langle e_x,\mathbf{f}\rangle=f_x
 $$
 
 so
 
 $$
-\bold{f}=\sum_{k}\tilde{f}_k\tilde{e}_k=\sum_{x}f_xe_x
+\mathbf{f}=\sum_{k}\tilde{f}_k\tilde{e}_k=\sum_{x}f_xe_x
 $$
 
-After this, we can use the concept of coordinate transformation we have discussed to understand that the Fourier transformation is nothing but a transformation between components of a vector $\bold{f}$ in two different coordinate systems defined by basis sets $\{\tilde{e}_k\}$ and $\{e_x\}$, respectively. 
+After this, we can use the concept of coordinate transformation we have discussed to understand that the Fourier transformation is nothing but a transformation between components of a vector $\mathbf{f}$ in two different coordinate systems defined by basis sets $\{\tilde{e}_k\}$ and $\{e_x\}$, respectively. 
 
 From this point of view, it becomes clear why the Fourier transform and the inverse Fourier transform share the same form. Suppose both basis sets $\{e_x\}$ and $\{\tilde e_k\}$ are orthonormal (orthogonal and normal at the same time). Plug the inverse Fourier transform (4) into the Fourier transform (3),
 
