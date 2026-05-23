@@ -5,6 +5,7 @@ permalink: /posts/2025/12/fourier-transform/
 tags:
   - teaching
 ---
+This is a note on the fundamental knowledge of Fourier analysis. I hope those who are interested in the mathematical fundations will find it helpful.
 
 # Coordinate transformation in Linear Algebra
 
