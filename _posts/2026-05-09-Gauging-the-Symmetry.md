@@ -1,7 +1,7 @@
 ---
 title: 'Gauging the Symmetry'
 date: 2026-05-09
-permalink: /posts/2026/05/boundaries/
+permalink: /posts/2026/05/gauging/
 tags:
   - physics
 ---
