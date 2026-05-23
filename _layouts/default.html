@@ -30,13 +30,7 @@ layout: compress
         tex2jax: {
           inlineMath: [ ['$','$'], ["\\(","\\)"] ],
           processEscapes: true,
-          skipTags: ["script","noscript","style","textarea","code","pre"],
-          ignoreClass: "no-mathjax",
-          processClass: "mathjax"
-        },
-        coreRules: {
-          // Instructs MathJax to catch text if Kramdown sneaks an <em> tag into the math string
-          elements: document.getElementsByTagName("em") 
+          skipTags: ["script","noscript","style","textarea","code","pre"]
         }
       });
     </script>
