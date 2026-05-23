@@ -25,7 +25,7 @@ $$
 Similarly, the product of all plaquette operators along a rough boundary ends up with an Wilson loop
 
 $$
-\prod_{p\in \mathrm{r.b.}} P_p = \prod_{i\in{\mathcal{C}}_{\mathrm{r.b.}}}\sigma^z_i = \tilde{W}_{{\mathcal{C}}_{\mathrm{r.b.}}}
+\prod_{p\in \mathrm{r.b.}} P_p = \prod_{i\in \mathcal{C}_{\mathrm{r.b.}}}\sigma^z_i = \tilde{W}_{\mathcal{C}_{\mathrm{r.b.}}}
 $$
 
 These observations demonstrate that, unlike the to the torus geometry, the 1-form symmetry generators of the toric code model on a cylinder can be constructed or removed by local operators, making them not topologically protected anymore.
