@@ -1,0 +1,107 @@
+# Raman Scattering
+
+Created: November 19, 2025 1:21 AM
+
+Raman scattering has become a powerful experimental tool to detect novel phases of matter, especially because its energy scale is near that of creating elementary excitations in condensed matter physics. For quantum spin liquids, a common mechanism of the interaction between the matter and the detection EM wave is the Loudon-Fleury mechanism, in which photons perturb the Mott insulator and produce a vertex with a weight in a form similar to that of the spin model in the corresponding low-energy effective theory. In this note, I try to organize important references on Raman scattering and its applications in strongly correlated magnets.
+
+# Basic Raman
+
+The scattering intensity is given by
+
+$$
+I(\omega) = \int\mathrm{d}te^{i\omega t}\langle R(t)R(0)\rangle
+$$
+
+Note that the operator $R$ depends on the polarizations of the internal and scattered light. Which can be rewritten into another form using the spectral representation
+
+$$
+\langle R(t)R(0)\rangle = \bra{0}R(t)R(0)\ket{0} = \sum_{n}e^{i(E_0-E_n)t}\langle 0|R|n\rangle\langle n|R|0\rangle
+$$
+
+Based on this, the intensity $I(\omega)$ in the spectral representation reads
+
+$$
+I(\omega) = 2\pi\sum_{n}|\langle 0|R|n\rangle|^2\delta(E_n-E_0-\omega)
+$$
+
+which is nothing but the Fermi golden rule.
+
+If the temperature is finite, then the ensemble average reads
+
+$$
+\begin{align*}\langle R(t)R(0)\rangle &= \frac{1}{\mathcal{Z}}\mathrm{Tr}\left[e^{-\beta H}R(t)R(0)\right] \\ &=\frac{1}{\mathcal{Z}}\sum_{mn}e^{-\beta E_m}e^{i(E_m-E_n)t}\bra{m}R\ket{n}\bra{n}R\ket{m}\end{align*}
+$$
+
+So, the Raman intensity $I(\omega)$ becomes
+
+$$
+I(\omega) = \frac{2\pi}{\mathcal{Z}}\sum_{mn}e^{-\beta E_m}|\langle m|R|n\rangle|^2\delta(E_n-E_m-\omega)
+$$
+
+# Fermi Liquids
+
+# Superconductors
+
+# Strongly-Correlated Superconductors
+
+Here, we review how to derive the [Loudon-Fleury vertex](https://journals.aps.org/pr/abstract/10.1103/PhysRev.166.514). The derivation basically follows the [Shastry-Shraiman paper](https://drive.google.com/file/d/1E_ydg8hhTXstSVAuOCx73EAdrIZH0E7r/view?usp=drive_link).
+
+First of all, consider a Hubbard model
+
+$$
+H = -t\sum_{\langle i,j\rangle}(c^\dagger_{i,\sigma}c_{j,\sigma}+\mathrm{H.c.}) + U\sum_{i}n_{i\uparrow}n_{i\downarrow}\equiv H_t + H_U
+$$
+
+To include the interaction between the external EM field and the electrons, we can apply a Peierls substitution
+
+$$
+H_t\to -t\sum_{\langle i,j\rangle}\left(e^{i\frac{e}{c}\int_{i}^{j}\bold{A}\cdot d\bold{r}} c^\dagger_{i,\sigma}c_{j,\sigma}+\mathrm{H.c.}\right)
+$$
+
+ Notice that the [Peierls substitution is valid only if the basis states of the lattice Hamiltonian are well localized](https://www.nature.com/articles/ncomms9944) (see also review articles: [Wannier](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.34.645) and [Nenciu](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.63.91)), so we need to be careful. Fortunately, the electrons are highly localized in our consideration here. 
+
+Suppose the wavelength of the incident EM wave is way larger than the lattice constant, then the phase becomes
+
+$$
+\int_{i}^{j}\bold{A}\cdot d\bold{r}\approx \bold{A}\left(\frac{i+j}{2}\right)\cdot\bold{d}_{ij}
+$$
+
+After this approximation, the Hamiltonian can be expanded in the powers of $eA/c$, and one gets
+
+[to be continue](https://drive.google.com/file/d/1eVkRgNN-OlUWamqIT45fNIcFxu2UiyFi/view?usp=drive_link)
+
+# Strongly-Correlated Magnets
+
+- [Theory of Raman response in three-dimensional Kitaev spin liquids](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.92.094439)
+- [Raman signature of the $U(1)$ Dirac spin-liquid state](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.81.024414)
+    
+    This paper also revisits a claim made in the [Shastry-Shraiman paper](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.65.1068) (see also their [review article](https://www.worldscientific.com/doi/abs/10.1142/S0217979291000237)) that a chiral term $\bold{S}_i\cdot({\bold{S}_j\times\bold{S}_k})$ appears in the fourth-order perturbation of the Raman vertex, and it turns out that such a term didn’t actually appear. (see Appendix A of this paper)
+    
+- [Raman Scattering Signatures of Kitaev Spin Liquids](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.113.187201)
+- [Resonant Raman scattering theory for Kitaev models and their Majorana fermion boundary modes](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.94.104427)
+
+The backbone of the theory is the [Loudon-Fleury vertex](https://journals.aps.org/pr/abstract/10.1103/PhysRev.166.514) (Shastry and Shraiman also wrote a [review article](https://www.worldscientific.com/doi/abs/10.1142/S0217979291000237))
+
+$$
+\begin{equation}R=\sum_{i,j;\alpha,\beta}(\boldsymbol{\epsilon}_{in}\cdot\bold{d}_{ij})(\boldsymbol{\epsilon}_{out}\cdot\bold{d}_{ij})\Gamma_{ij}^{\alpha\beta}\sigma_i^\alpha\sigma_j^\beta\end{equation}
+$$
+
+if the Hamiltonian is of the form
+
+$$
+H = \sum_{i,j;\alpha,\beta}\Gamma_{ij}^{\alpha\beta}\sigma_i^\alpha\sigma_j^\beta
+$$
+
+From the Loudon-Fleury vertex, we can define the polarization-dependent vertex as
+
+$$
+R_{\mu\nu}=\sum_{i,j;\alpha,\beta}d^\mu_{ij}d^\nu_{ij}\Gamma_{ij}^{\alpha\beta}\sigma_i^\alpha\sigma_j^\beta
+$$
+
+such that the total vertex can be written in a tensor contraction form
+
+$$
+R=\sum_{\mu,\nu}\epsilon_{in}^\mu R_{\mu\nu}\epsilon_{out}^{\nu}
+$$
+
+## Kitaev Model
