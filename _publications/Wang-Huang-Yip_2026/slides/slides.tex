@@ -1,0 +1,111 @@
+\documentclass[professionalfont]{beamer}
+%\usecolortheme{default}
+\usetheme{Madrid}
+\usepackage{subcaption}
+\usepackage{caption}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{dsfont}
+
+\usepackage{pst-all}
+\usepackage{leftidx}
+
+\title{\href{https://arxiv.org/abs/2605.18002}{\textbf{Exact Organization of Density Matrices and Entanglement Structure in the Kitaev Spin Liquid}}}
+\subtitle{Chen-Chih Wang, Yi-Ping Huang, Sungkit Yip, \href{https://arxiv.org/abs/2605.18002}{arXiv:2605.18002}}
+
+\author{Chen-Chih Wang}
+\institute{NTHU}
+\date{\today}
+\titlegraphic{\vspace{-2cm}\includegraphics[width=2.5cm]{_publications/Wang-Huang-Yip_2026/slides/figures/NTHU.pdf}\hspace{5cm}\includegraphics[width=2.5cm]{_publications/Wang-Huang-Yip_2026/slides/figures/phys_logo.png}}
+
+\newcommand{\anglelr}[1]{\left\langle #1 \right\rangle}
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\de}{\partial}
+\newcommand{\pdif}[1]{\frac{\partial }{\partial #1}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\lr}[1]{\left(#1\right)}
+\newcommand{\lrm}[1]{\left[#1\right]}
+\newcommand{\lrg}[1]{\left\{#1\right\}}
+\newcommand{\lran}[1]{\left\langle #1 \right\rangle}
+\newcommand{\lra}[1]{\left|#1\right|}
+\newcommand{\ket}[1]{\left| #1 \right\rangle}
+\newcommand{\bra}[1]{\left\langle #1 \right|}
+\newcommand{\braket}[2]{\left\langle #1 \right|\left. #2\right\rangle}
+\newcommand{\mrm}[1]{\mathrm{#1}}
+\newcommand{\bo}[1]{\mathbf{#1}}
+\newcommand{\gk}{\gamma_{\mathbf{k}}}
+\newcommand{\uk}{u_{\mathbf{k}}}
+\newcommand{\vk}{v_{\mathbf{k}}}
+\newcommand{\vkp}{v_{\mathbf{k}'}}
+
+\newcommand{\tr}{\mrm{Tr}}
+
+\newcommand{\dimer}[2]{\sigma^{\alpha_{#1 #2}}_{#1}\sigma^{\alpha_{#1 #2}}_{#2}}
+
+\newcommand{\sequ}[1]{{\footnotesize \[#1\]}}
+\newcommand{\scite}[2]{\href{ #1 }{{\tiny #2}}} % #1 is the URL of the paper, and #2 is the paper info
+
+\newtheorem{axiom}{Axiom}
+
+\newcommand{\wordfig}[2]{\begin{minipage}[h]{#1 cm}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{#2}
+   \end{minipage}}
+   
+\newcommand{\wordfigdir}[2]{
+\begin{minipage}[h]{#1 cm}
+\centering
+	\vspace{0pt}
+	#2
+\end{minipage}}
+
+%\setbeamercolor{frametitle}{fg=black,bg=blue}
+%\setbeamertemplate{frametitle}[default][left]
+%\setbeamerfont{frametitle}{size=\huge}
+%\setbeamerfont{block title}{size=\Large}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+    \titlepage
+\end{frame}
+%%%%%%%%%%%%%%%%%%  content  %%%%%%%%%%%%%%%%%%%
+\begin{frame}{Outline}
+   \tableofcontents
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%% main %%%%%%%%%%%%%%%%%%%%%
+\section{Kitaev Model}
+\begin{frame}{Kitaev Model: an Introduction}
+    \begin{itemize}
+        \item Model Hamiltonian
+        \sequ{
+        H = -\sum_{\anglelr{ij}}J_{\alpha_{ij}}\dimer{i}{j} \quad ;\quad\wordfig{1.6}{figures/direction-def.pdf}
+        }
+        \item Majorana fermion (parton) representation: $b^x$, $b^y$, $b^z$, $c$ $\Rightarrow$  $\sigma^\mu = ib^\mu c$
+        \item Parton Hamiltonian
+        \sequ{
+        H \to \sum_{\anglelr{ij}}iJ_{\alpha_{ij}}\hat{u}_{ij}c_ic_j
+        }
+        \item Gutzwiller projection
+        {\footnotesize
+        \sequ{
+        \mathcal{P}_G=\prod_{i}\lr{\frac{\mathds{1}+D_i}{2}} \quad,\quad D_i =  b^x_ib^y_ib^z_ic_i \Leftarrow -i\sigma^x_i\sigma^y_i\sigma^z_i
+        }
+        }
+        \item Separability of the entanglement entropy \scite{https://doi.org/10.1103/PhysRevLett.105.080501}{(Yao and Qi, PRL105 080501)}
+        \sequ{
+        S_A = S_A^F + S_A^G
+        }
+    \end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Kitaev Model: an Introduction}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
