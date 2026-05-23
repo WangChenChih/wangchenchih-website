@@ -1,7 +1,10 @@
-# Raman Scattering
-
-Created: November 19, 2025 1:21 AM
-
+---
+title: 'Raman Scattering in Strongly Correlated Magnets'
+date: 2025-11-19
+permalink: /posts/2025/11/raman-scattering/
+tags:
+  - physics
+---
 Raman scattering has become a powerful experimental tool to detect novel phases of matter, especially because its energy scale is near that of creating elementary excitations in condensed matter physics. For quantum spin liquids, a common mechanism of the interaction between the matter and the detection EM wave is the Loudon-Fleury mechanism, in which photons perturb the Mott insulator and produce a vertex with a weight in a form similar to that of the spin model in the corresponding low-energy effective theory. In this note, I try to organize important references on Raman scattering and its applications in strongly correlated magnets.
 
 # Basic Raman
