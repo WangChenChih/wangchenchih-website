@@ -1,20 +1,20 @@
-# Gauging the Symmetry
+---
+title: 'Gauging the Symmetry'
+date: 2026-05-09
+permalink: /posts/2026/05/boundaries/
+tags:
+  - physics
+---
 
-Created: May 9, 2026 5:51 PM
-
-https://www.youtube.com/watch?v=Bn8vA5-o5Mg
-
-https://www.youtube.com/watch?v=PhuydbwXTNU
-
-https://www.youtube.com/watch?v=gdvaQ-iFDVE
-
-# Intro and Motivation
-
-Symmetry is one of the most important concepts in physics.
-
-One motivation for *gauging* symmetry is to see whether two seemingly different models share common physical features. For example, the 2D transverse field Ising model exhibits topological order, which is the same as the toric code model, in some specific limits. 
+Symmetry is one of the most important concepts in physics.One motivation for *gauging* symmetry is to see whether two seemingly different models share common physical features. For example, the 2D transverse field Ising model exhibits topological order, which is the same as the toric code model, in some specific limits. 
 
 Another motivation is to manifest the *emergent symmetry* if the original symmetry is broken slightly. For example, the toric code model is still in the topologically ordered phase even when an external field is added. 
+
+This note basically follows the three remarkable lectures given by Xie Chen
+
+* https://www.youtube.com/watch?v=Bn8vA5-o5Mg
+* https://www.youtube.com/watch?v=PhuydbwXTNU
+* https://www.youtube.com/watch?v=gdvaQ-iFDVE
 
 # Transverse Field Ising Model: Gauging the $\mathbb{Z}_2$ Symmetry
 
