@@ -6,7 +6,7 @@ permalink: /publication/Wang-Huang-Yip_2026
 excerpt: #'This paper is about the number 3. The number 4 is left for future work.'
 date: 2026-5-23
 venue: 'arXiv'  # showing up as 'Published in <venue>' below the title
-slidesurl: 'https://academicpages.github.io/_publications/Wang-Huang-Yip_2026/slides/slides.pdf'
+slidesurl: 'https://academicpages.github.io/wangchenchih-website/_publications/Wang-Huang-Yip_2026/slides/slides.pdf'
 paperurl: 'https://arxiv.org/pdf/2605.18002'
 citation: 'Chen-Chih Wang, Yi-Ping Huang, and Sungkit Yip. (2026). &quot; Exact Organization of Density Matrices and Entanglement Structure in the Kitaev Spin Liquid &quot;  arXiv:2605.18002'
 ---
