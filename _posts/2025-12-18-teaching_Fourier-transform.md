@@ -1,6 +1,10 @@
-# Teaching—Fourier transform
-
-Created: December 18, 2025 10:55 PM
+---
+title: 'Teaching -- Fourier Transform'
+date: 2025-12-18
+permalink: /posts/2025/12/fourier-transform/
+tags:
+  - teaching
+---
 
 # Coordinate transformation in Linear Algebra
 
@@ -80,7 +84,7 @@ $$
 \langle f,g \rangle
 $$
 
-The bracket has to satisfy several properties called [**inner product axioms.](https://en.wikipedia.org/wiki/Inner_product_space)** 
+The bracket has to satisfy several properties called [**inner product axioms**.](https://en.wikipedia.org/wiki/Inner_product_space) 
 
 - $\langle f,g \rangle\in\mathbb{C}$     ($\mathbb{C}$ stands for the set of complex numbers)
 - $\langle f,g \rangle = \langle g,f \rangle^*$
