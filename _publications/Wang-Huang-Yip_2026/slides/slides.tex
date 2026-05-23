@@ -65,6 +65,7 @@
 %\setbeamerfont{block title}{size=\Large}
 
 \begin{document}
+\footnotesize % choose font size
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
     \titlepage
@@ -132,6 +133,27 @@ In the Majorana fermion representation, the model is equivalent to a system of f
 \begin{frame}{Kitaev Model: Properties of Spin Correlation Functions}
     \begin{itemize}
         \item Two-spin correlation functions are short-ranged \scite{https://doi.org/10.1103/PhysRevLett.98.247201}{(Baskaran, Mandal, and Shankar, PRL\textbf{98}, 247201)}
+            \sequ{
+                \anglelr{\sigma^\mu_i\sigma^\nu_j} = \bra{M}ic_ic_j\ket{M} \underbrace{\bra{u} ib^\mu_ib^\nu_j \ket{u}}_{\text{vanishes if $ib^\mu_ib^\nu_j\neq \hat{u}_{ij}$}}
+            }
+
+        \item Multi-spin correlation functions can ONLY be string-like 
+            \[
+                \anglelr{\prod_{\anglelr{ij}\in\mathfrak{D}}\dimer{i}{j}} \equiv \anglelr{\Sigma_\mathfrak{D}}
+            \]
+
+        \item $\mathbb{Z}_2$ algebra of strings
+            \[
+            \mathfrak{D}\ominus \mathfrak{D}' := \mathfrak{D}\cup\mathfrak{D}' - \mathfrak{D}\cap \mathfrak{D}' \quad:\quad \alert{illustration}
+            \]
+        \item String operators form a projective representation
+            \[
+                \Sigma_\mathfrak{D}\Sigma_{\mathfrak{D}'} = \varphi(\mathfrak{D},\mathfrak{D}')\Sigma_{\mathfrak{D}\ominus\mathfrak{D}'} \quad;\quad \varphi(\mathfrak{D},\mathfrak{D}')=\pm 1, \quad\varphi(\mathfrak{D},\mathfrak{D}) = (-1)^{\abs{\mathfrak{D}}}
+            \]
+        \item Equivalence relation among strings
+            \[
+                \anglelr{\Sigma_{\mathfrak{D}\ominus \de\mathcal{A}}} = \varphi(\mathfrak{D},\de\mathcal{A})\anglelr{\Sigma_{\mathfrak{D}}\Sigma_{\de\mathcal{A}}}
+            \]
         
     \end{itemize}
 \end{frame}
