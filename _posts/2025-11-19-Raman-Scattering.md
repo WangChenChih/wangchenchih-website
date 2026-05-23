@@ -58,7 +58,7 @@ $$
 To include the interaction between the external EM field and the electrons, we can apply a Peierls substitution
 
 $$
-H_t\to -t\sum_{\langle i,j\rangle}\left(e^{i\frac{e}{c}\int_{i}^{j}\bold{A}\cdot d\bold{r}} c^\dagger_{i,\sigma}c_{j,\sigma}+\mathrm{H.c.}\right)
+H_t\to -t\sum_{\langle i,j\rangle}\left(e^{i\frac{e}{c}\int_{i}^{j}\mathbf{A}\cdot d\mathbf{r}} c^\dagger_{i,\sigma}c_{j,\sigma}+\mathrm{H.c.}\right)
 $$
 
  Notice that the [Peierls substitution is valid only if the basis states of the lattice Hamiltonian are well localized](https://www.nature.com/articles/ncomms9944) (see also review articles: [Wannier](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.34.645) and [Nenciu](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.63.91)), so we need to be careful. Fortunately, the electrons are highly localized in our consideration here. 
@@ -66,7 +66,7 @@ $$
 Suppose the wavelength of the incident EM wave is way larger than the lattice constant, then the phase becomes
 
 $$
-\int_{i}^{j}\bold{A}\cdot d\bold{r}\approx \bold{A}\left(\frac{i+j}{2}\right)\cdot\bold{d}_{ij}
+\int_{i}^{j}\mathbf{A}\cdot d\mathbf{r}\approx \mathbf{A}\left(\frac{i+j}{2}\right)\cdot\mathbf{d}_{ij}
 $$
 
 After this approximation, the Hamiltonian can be expanded in the powers of $eA/c$, and one gets
@@ -78,7 +78,7 @@ After this approximation, the Hamiltonian can be expanded in the powers of $eA/c
 - [Theory of Raman response in three-dimensional Kitaev spin liquids](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.92.094439)
 - [Raman signature of the $U(1)$ Dirac spin-liquid state](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.81.024414)
     
-    This paper also revisits a claim made in the [Shastry-Shraiman paper](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.65.1068) (see also their [review article](https://www.worldscientific.com/doi/abs/10.1142/S0217979291000237)) that a chiral term $\bold{S}_i\cdot({\bold{S}_j\times\bold{S}_k})$ appears in the fourth-order perturbation of the Raman vertex, and it turns out that such a term didn’t actually appear. (see Appendix A of this paper)
+    This paper also revisits a claim made in the [Shastry-Shraiman paper](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.65.1068) (see also their [review article](https://www.worldscientific.com/doi/abs/10.1142/S0217979291000237)) that a chiral term $\mathbf{S}_i\cdot({\mathbf{S}_j\times\mathbf{S}_k})$ appears in the fourth-order perturbation of the Raman vertex, and it turns out that such a term didn’t actually appear. (see Appendix A of this paper)
     
 - [Raman Scattering Signatures of Kitaev Spin Liquids](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.113.187201)
 - [Resonant Raman scattering theory for Kitaev models and their Majorana fermion boundary modes](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.94.104427)
@@ -86,7 +86,7 @@ After this approximation, the Hamiltonian can be expanded in the powers of $eA/c
 The backbone of the theory is the [Loudon-Fleury vertex](https://journals.aps.org/pr/abstract/10.1103/PhysRev.166.514) (Shastry and Shraiman also wrote a [review article](https://www.worldscientific.com/doi/abs/10.1142/S0217979291000237))
 
 $$
-\begin{equation}R=\sum_{i,j;\alpha,\beta}(\boldsymbol{\epsilon}_{in}\cdot\bold{d}_{ij})(\boldsymbol{\epsilon}_{out}\cdot\bold{d}_{ij})\Gamma_{ij}^{\alpha\beta}\sigma_i^\alpha\sigma_j^\beta\end{equation}
+\begin{equation}R=\sum_{i,j;\alpha,\beta}(\mathbfsymbol{\epsilon}_{in}\cdot\mathbf{d}_{ij})(\mathbfsymbol{\epsilon}_{out}\cdot\mathbf{d}_{ij})\Gamma_{ij}^{\alpha\beta}\sigma_i^\alpha\sigma_j^\beta\end{equation}
 $$
 
 if the Hamiltonian is of the form
