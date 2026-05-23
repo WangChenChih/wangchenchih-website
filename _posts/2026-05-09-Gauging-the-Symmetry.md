@@ -46,7 +46,7 @@ $$
 
 The gauge flux term $B_p$ is the lowest-order local symmetry-preserving term that lifts the degeneracy of eigenstates in the Hilbert space enlarged by redundant gauge degrees of freedom at edges of the lattice. The gauge flux term is the dynamics of the gauge field, analogous to the term $F^{\mu\nu}F_{\mu\nu}$ in QED. 
 
-With the gauge field, the local symmetry operator in the gauge theory can be defined as $A_iX_i$$
+With the gauge field, the local symmetry operator in the gauge theory can be defined as $A_iX_i$
 
 $$
 [H_g,A_iX_i] = 0
