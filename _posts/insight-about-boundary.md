@@ -1,7 +1,7 @@
 ---
 title: 'Boundaries'
 date: 2026-05-24
-permalink: /posts/boundaries/
+permalink: /posts/2026/05/boundaries/
 tags:
   - physics
 ---
