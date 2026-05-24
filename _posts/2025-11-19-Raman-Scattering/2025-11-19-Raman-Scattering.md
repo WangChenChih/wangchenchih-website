@@ -130,4 +130,15 @@ $$
 
 As proposed by [Perkins-Chern-Brenig_PRB.87.174423](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevB.87.174423.pdf), the polarization dependence of the two-magnon Raman scattering governed by the Loudon-Fleury vertex contains detailed information on the two-magnon density of states and the magnon-magnon interactions, which might shed lights in the problem whether the ground state of \\(\mathrm{Cs_2CuCl_4}\\) is a magnetic orderede state or a quantum spin liquid. This problem has been on a debate since the results of neutron scattering showed a broad continuum in the resulting spectrum. 
 
+The following are several references on experimental study of two-magnon Raman scattering, which is usually been used to detect possible spin liquid signals if there exsits a broad continuum in the spectrum.   
+* [Phonon and magnon scattering of antiferromagnetic \\(\mathrm{Bi_2Fe_4O_9}\\)](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevB.81.024302.pdf)
+* [Anomalous frequency and intensity scaling of collective and local modes in a coupled-spin
+tetrahedral system \\(\mathrm{Cu_2Te_2O_5C_l2}\\)](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevB.79.024416.pdf)
+* [Modes of Magnetic Resonance in the Spin-Liquid Phase of \\(\mathrm{Cs_2CuCl_4}\\)](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevLett.107.037204.pdf)
+
+The papers below are theorecial studies.
+* [Raman scattering for triangular lattices spin-1/2
+Heisenberg antiferromagnets](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/Vernay_2007_J._Phys.__Condens._Matter_19_145243.pdf)
+* [Theory of Two-Magnon Raman Scattering in Iron Pnictides and Chalcogenides](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevLett.106.067002.pdf)
+
 ## Kitaev Model
