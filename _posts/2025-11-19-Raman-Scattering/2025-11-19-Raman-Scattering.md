@@ -126,4 +126,8 @@ $$
 R=\sum_{\mu,\nu}\epsilon_{in}^\mu R_{\mu\nu}\epsilon_{out}^{\nu}
 $$
 
+## Polaization Dependence
+
+As proposed by [Perkins-Chern-Brenig_PRB.87.174423](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevB.87.174423.pdf), the polarization dependence of the two-magnon Raman scattering governed by the Loudon-Fleury vertex contains detailed information on the two-magnon density of states and the magnon-magnon interactions, which might shed lights in the problem whether the ground state of \\(\mathrm{Cs_2CuCl_4}\\) is a magnetic orderede state or a quantum spin liquid. This problem has been on a debate since the results of neutron scattering showed a broad continuum in the resulting spectrum. 
+
 ## Kitaev Model
