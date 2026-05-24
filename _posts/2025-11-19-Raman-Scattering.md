@@ -4,11 +4,11 @@ date: 2025-11-19
 permalink: /posts/2025/11/raman-scattering/
 tags:
   - physics
+#$$
+#\newcommand{\ket}[1]{\left| #1 \right\rangle}
+#\newcommand{\bra}[1]{\left\langle #1 \right|}
+#$$
 ---
-$$
-\newcommand{\ket}[1]{\left| #1 \right\rangle}
-\newcommand{\bra}[1]{\left\langle #1 \right|}
-$$
 Raman scattering has become a powerful experimental tool to detect novel phases of matter, especially because its energy scale is near that of creating elementary excitations in condensed matter physics. For quantum spin liquids, a common mechanism of the interaction between the matter and the detection EM wave is the Loudon-Fleury mechanism, in which photons perturb the Mott insulator and produce a vertex with a weight in a form similar to that of the spin model in the corresponding low-energy effective theory. In this note, I try to organize important references on Raman scattering and its applications in strongly correlated magnets.
 
 # Basic Raman
@@ -90,7 +90,7 @@ After this approximation, the Hamiltonian can be expanded in the powers of $eA/c
 The backbone of the theory is the [Loudon-Fleury vertex](https://journals.aps.org/pr/abstract/10.1103/PhysRev.166.514) (Shastry and Shraiman also wrote a [review article](https://www.worldscientific.com/doi/abs/10.1142/S0217979291000237))
 
 $$
-\begin{equation}R=\sum_{i,j;\alpha,\beta}(\mathbfsymbol{\epsilon}_{in}\cdot\mathbf{d}_{ij})(\mathbfsymbol{\epsilon}_{out}\cdot\mathbf{d}_{ij})\Gamma_{ij}^{\alpha\beta}\sigma_i^\alpha\sigma_j^\beta\end{equation}
+\begin{equation}R=\sum_{i,j;\alpha,\beta}(\boldsymbol{\epsilon}_{in}\cdot\mathbf{d}_{ij})(\boldsymbol{\epsilon}_{out}\cdot\mathbf{d}_{ij})\Gamma_{ij}^{\alpha\beta}\sigma_i^\alpha\sigma_j^\beta\end{equation}
 $$
 
 if the Hamiltonian is of the form

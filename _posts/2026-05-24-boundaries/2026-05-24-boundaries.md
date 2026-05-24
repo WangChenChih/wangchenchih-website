@@ -5,7 +5,6 @@ permalink: /posts/2026/05/boundaries/
 tags:
   - physics
 ---
-
 I gained insight after figuring something out when tackling problems about the toric code model: Almost every non-trivial effect arises from the boundary.
 
 Here is a list of examples: 
