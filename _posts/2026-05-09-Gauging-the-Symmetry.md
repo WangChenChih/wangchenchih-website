@@ -5,6 +5,9 @@ permalink: /posts/2026/05/gauging/
 tags:
   - physics
 ---
+$$
+\newcommand{\braket}[1]{\langle #1 \rangle}
+$$
 
 Symmetry is one of the most important concepts in physics.One motivation for *gauging* symmetry is to see whether two seemingly different models share common physical features. For example, the 2D transverse field Ising model exhibits topological order, which is the same as the toric code model, in some specific limits. 
 
