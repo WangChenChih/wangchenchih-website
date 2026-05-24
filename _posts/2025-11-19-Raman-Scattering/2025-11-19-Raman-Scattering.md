@@ -51,7 +51,7 @@ $$
 
 # Strongly-Correlated Superconductors
 
-Here, we review how to derive the [Loudon-Fleury vertex](https://journals.aps.org/pr/abstract/10.1103/PhysRev.166.514). The derivation basically follows the [Shastry-Shraiman paper](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevLett.65.1068.pdf).
+Here, we review how to derive the [Loudon-Fleury vertex](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRev.166.514.pdf). The derivation basically follows the [Shastry-Shraiman paper](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevLett.65.1068.pdf).
 
 First of all, consider a Hubbard model
 
@@ -65,7 +65,7 @@ $$
 H_t\to -t\sum_{\langle i,j\rangle}\left(e^{i\frac{e}{c}\int_{i}^{j}\mathbf{A}\cdot d\mathbf{r}} c^\dagger_{i,\sigma}c_{j,\sigma}+\mathrm{H.c.}\right)
 $$
 
- Notice that the [Peierls substitution is valid only if the basis states of the lattice Hamiltonian are well localized](https://www.nature.com/articles/ncomms9944) (see also review articles: [Wannier](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.34.645) and [Nenciu](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.63.91)), so we need to be careful. Fortunately, the electrons are highly localized in our consideration here. 
+ Notice that the [Peierls substitution is valid only if the basis states of the lattice Hamiltonian are well localized](https://www.nature.com/articles/ncomms9944) (see also review articles: [Wannier](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/RevModPhys.34.645.pdf) and [Nenciu](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/RevModPhys.63.91.pdf)), so we need to be careful. Fortunately, the electrons are highly localized in our consideration here. 
 
 Suppose the wavelength of the incident EM wave is way larger than the lattice constant, then the phase becomes
 
