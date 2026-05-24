@@ -170,6 +170,7 @@ include:
   - .htaccess
   - _pages
   - _publications
+  - _posts
   - files
 exclude:
   - "*.sublime-project"

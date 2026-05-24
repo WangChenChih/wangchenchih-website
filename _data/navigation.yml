@@ -29,9 +29,6 @@ main:
   # - title: "CV"
   #   url: /cv-json/
 
-  - title: "test"
-    url: /test/
-
   - title: "Personal Logo"
     url: /personal-logo/
     
