@@ -75,19 +75,19 @@ $$
 
 After this approximation, the Hamiltonian can be expanded in the powers of $eA/c$, and one gets
 
-[to be continue](https://drive.google.com/file/d/1eVkRgNN-OlUWamqIT45fNIcFxu2UiyFi/view?usp=drive_link)
+[to be continue](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevB.52.9760.pdf)
 
 # Strongly-Correlated Magnets
 
-- [Theory of Raman response in three-dimensional Kitaev spin liquids](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.92.094439)
-- [Raman signature of the $U(1)$ Dirac spin-liquid state](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.81.024414)
+- [Theory of Raman response in three-dimensional Kitaev spin liquids](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevB.92.094439.pdf)
+- [Raman signature of the $U(1)$ Dirac spin-liquid state](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevB.81.024414.pdf)
     
-This paper also revisits a claim made in the [Shastry-Shraiman paper](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.65.1068) (see also their [review article](https://www.worldscientific.com/doi/abs/10.1142/S0217979291000237)) that a chiral term $\mathbf{S}_i\cdot({\mathbf{S}_j\times\mathbf{S}_k})$ appears in the fourth-order perturbation of the Raman vertex, and it turns out that such a term didn’t actually appear. (see Appendix A of this paper)
+This paper also revisits a claim made in the [Shastry-Shraiman paper](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevLett.65.1068.pdf) (see also their [review article](https://www.worldscientific.com/doi/abs/10.1142/S0217979291000237)) that a chiral term $\mathbf{S}_i\cdot({\mathbf{S}_j\times\mathbf{S}_k})$ appears in the fourth-order perturbation of the Raman vertex, and it turns out that such a term didn’t actually appear. (see Appendix A of this paper)
     
-- [Raman Scattering Signatures of Kitaev Spin Liquids](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.113.187201)
-- [Resonant Raman scattering theory for Kitaev models and their Majorana fermion boundary modes](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.94.104427)
+- [Raman Scattering Signatures of Kitaev Spin Liquids](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevLett.113.187201.pdf)
+- [Resonant Raman scattering theory for Kitaev models and their Majorana fermion boundary modes](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevB.94.104427.pdf)
 
-The backbone of the theory is the [Loudon-Fleury vertex](https://journals.aps.org/pr/abstract/10.1103/PhysRev.166.514) (Shastry and Shraiman also wrote a [review article](https://www.worldscientific.com/doi/abs/10.1142/S0217979291000237))
+The backbone of the theory is the [Loudon-Fleury vertex](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRev.166.514.pdf) (Shastry and Shraiman also wrote a [review article](https://www.worldscientific.com/doi/abs/10.1142/S0217979291000237))
 
 $$
 \begin{equation}R=\sum_{i,j;\alpha,\beta}(\boldsymbol{\epsilon}_{in}\cdot\mathbf{d}_{ij})(\boldsymbol{\epsilon}_{out}\cdot\mathbf{d}_{ij})\Gamma_{ij}^{\alpha\beta}\sigma_i^\alpha\sigma_j^\beta\end{equation}
