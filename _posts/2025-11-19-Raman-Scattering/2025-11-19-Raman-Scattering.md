@@ -95,10 +95,7 @@ and \\(\epsilon_k\\) is the electron dispersion.
 # Strongly-Correlated Magnets
 
 - [Theory of Raman response in three-dimensional Kitaev spin liquids](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevB.92.094439.pdf)
-- [Raman signature of the $U(1)$ Dirac spin-liquid state](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevB.81.024414.pdf)
-    
-This paper also revisits a claim made in the [Shastry-Shraiman paper](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevLett.65.1068.pdf) (see also their [review article](https://www.worldscientific.com/doi/abs/10.1142/S0217979291000237)) that a chiral term $\mathbf{S}_i\cdot({\mathbf{S}_j\times\mathbf{S}_k})$ appears in the fourth-order perturbation of the Raman vertex, and it turns out that such a term didn’t actually appear. (see Appendix A of this paper)
-    
+- [Raman signature of the $U(1)$ Dirac spin-liquid state](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevB.81.024414.pdf). This paper also revisits a claim made in the [Shastry-Shraiman paper](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevLett.65.1068.pdf) (see also their [review article](https://www.worldscientific.com/doi/abs/10.1142/S0217979291000237)) that a chiral term $\mathbf{S}_i\cdot({\mathbf{S}_j\times\mathbf{S}_k})$ appears in the fourth-order perturbation of the Raman vertex, and it turns out that such a term didn’t actually appear. (see Appendix A of this paper)    
 - [Raman Scattering Signatures of Kitaev Spin Liquids](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevLett.113.187201.pdf)
 - [Resonant Raman scattering theory for Kitaev models and their Majorana fermion boundary modes](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevB.94.104427.pdf)
 
