@@ -75,6 +75,21 @@ $$
 
 After this approximation, the Hamiltonian can be expanded in the powers of $eA/c$, and one gets
 
+$$
+H_t = H_t^{\mathbf{A}=0} - \frac{e}{\hbar c} \sum_{q}\mathbf{j}_q\cdot\mathbf{A}_{-q} + \frac{1}{2}\left(\frac{e}{\hbar c}\right)^2\sum_{q_1q_2}A_{-q_1}^\alpha\tau_{q_1+q_2}^{\alpha\beta}A^\beta_{-q_2}
+$$
+
+where
+
+$$
+\begin{align*}
+j^\alpha_q &= \sum_{k,\sigma} \frac{\partial \epsilon_k}{\partial k_\alpha}c^\dagger_{k+q/2,\sigma}c_{k-q/2,\sigma} \\
+\tau^{\alpha\beta}_{q} &= \sum_{k,\sigma}\frac{\partial^2 \epsilon_k}{\partial k_\alpha\partial k_\beta}c^\dagger_{k+q/2,\sigma}c_{k-q/2,\sigma}
+\end{align*}
+$$
+
+and \\(\epsilon_k\\) is the electron dispersion. 
+
 [to be continue](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevB.52.9760.pdf)
 
 # Strongly-Correlated Magnets
