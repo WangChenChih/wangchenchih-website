@@ -51,7 +51,7 @@ $$
 
 # Strongly-Correlated Superconductors
 
-Here, we review how to derive the [Loudon-Fleury vertex](https://journals.aps.org/pr/abstract/10.1103/PhysRev.166.514). The derivation basically follows the [Shastry-Shraiman paper](https://drive.google.com/file/d/1E_ydg8hhTXstSVAuOCx73EAdrIZH0E7r/view?usp=drive_link).
+Here, we review how to derive the [Loudon-Fleury vertex](https://journals.aps.org/pr/abstract/10.1103/PhysRev.166.514). The derivation basically follows the [Shastry-Shraiman paper](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevLett.65.1068.pdf).
 
 First of all, consider a Hubbard model
 
