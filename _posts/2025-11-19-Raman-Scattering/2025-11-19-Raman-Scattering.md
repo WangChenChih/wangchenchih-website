@@ -130,7 +130,7 @@ As proposed by [Perkins-Chern-Brenig_PRB.87.174423](https://wangchenchih.github.
 The following are several references on experimental study of two-magnon Raman scattering, which is usually been used to detect possible spin liquid signals if there exsits a broad continuum in the spectrum.   
 * [Phonon and magnon scattering of antiferromagnetic \\(\mathrm{Bi_2Fe_4O_9}\\)](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevB.81.024302.pdf)
 * [Anomalous frequency and intensity scaling of collective and local modes in a coupled-spin
-tetrahedral system \\(\mathrm{Cu_2Te_2O_5C_l2}\\)](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevB.79.024416.pdf)
+tetrahedral system \\(\mathrm{Cu_2Te_2O_5Cl_2}\\)](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevB.79.024416.pdf)
 * [Modes of Magnetic Resonance in the Spin-Liquid Phase of \\(\mathrm{Cs_2CuCl_4}\\)](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/PhysRevLett.107.037204.pdf)
 
 The papers below are theorecial studies.
