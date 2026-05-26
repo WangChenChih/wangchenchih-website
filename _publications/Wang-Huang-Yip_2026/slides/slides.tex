@@ -78,6 +78,15 @@
 
 
 %%%%%%%%%%%%%%%%%%%%% main %%%%%%%%%%%%%%%%%%%%%
+\section{Motivation}
+\begin{frame}{Motivation}
+    \begin{itemize}
+        \item density matrix
+        \item entanglement
+        \item 
+    \end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Kitaev Model}
 \begin{frame}{Kitaev Model: an Introduction}
     \begin{itemize}
@@ -150,14 +159,70 @@ In the Majorana fermion representation, the model is equivalent to a system of f
             \[
                 \Sigma_\mathfrak{D}\Sigma_{\mathfrak{D}'} = \varphi(\mathfrak{D},\mathfrak{D}')\Sigma_{\mathfrak{D}\ominus\mathfrak{D}'} \quad;\quad \varphi(\mathfrak{D},\mathfrak{D}')=\pm 1, \quad\varphi(\mathfrak{D},\mathfrak{D}) = (-1)^{\abs{\mathfrak{D}}}
             \]
-        \item Equivalence relation among strings
-            \[
-                \anglelr{\Sigma_{\mathfrak{D}\ominus \de\mathcal{A}}} = \varphi(\mathfrak{D},\de\mathcal{A})\anglelr{\Sigma_{\mathfrak{D}}\Sigma_{\de\mathcal{A}}}
-            \]
         
     \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Organization: Equivalence Relation}
+\begin{frame}{Organization: Equivalence Relation}
+    \begin{itemize}
+        \item  
+            Exact 1-form symmetry: Wilson loop $\Sigma_{\mathcal{C}}\ket{\psi_0} = W_{\mathcal{C}}\ket{\psi_0} = \ket{\psi_0}$
+        \item The weights are identical up to a sign if the strings are identical up to a loop $\mathcal{C}$
+            \[
+                \anglelr{\Sigma_{\mathfrak{D}\ominus \mathcal{C}}} = \varphi(\mathfrak{D},\mathcal{C})\anglelr{\Sigma_{\mathfrak{D}}\Sigma_{\mathcal{C}}} = \varphi(\mathfrak{D},\mathcal{C})\anglelr{\Sigma_{\mathfrak{D}}W_{\mathcal{C}}} = \varphi(\mathfrak{D},\de A)\anglelr{\Sigma_{\mathfrak{D}}}
+            \]
+        \item Equivalence relation:
+            \[
+            [\mathfrak{D}] = \lrg{\mathfrak{D'} \; : \; \exists\text{  $\mathcal{C}$ composed by closed loops such that }\mathfrak{D}'\ominus\mathcal{C}=\mathfrak{D}}
+            \]
+        \item Endpoints perspective: $\mrm{EP(\mathfrak{D})} = \mrm{EP}(\mathfrak{D}')$ iff $[\mathfrak{D}] = [\mathfrak{D}']$ $\Rightarrow$ Emerging fermions at endpoints of strings 
+            
+    \end{itemize}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.4\linewidth]{figures/equivalent.pdf}
+        \includegraphics[width=0.4\linewidth]{figures/equivalent_loop.pdf}
+    \end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Organization of Density Matrix}
+    \begin{itemize}
+        \item Suppose the observables are a set of $\mathbb{Z}_2$ traceless Hermitian operators: $\lrg{\mathcal{O}_n^2 = \mathds{1}}$, then the density matrix can be expanded in terms of these observables
+        \[
+        \rho \propto \sum_{n}\tr(\mathcal{O}_n^\dagger\rho)\mathcal{O}_n = \sum_{n}\anglelr{\mathcal{O}_n}\mathcal{O}_n
+        \]
+        \item For the spin-$1/2$ Kitaev model, the observables are Pauli strings.
+        \[
+        \rho \propto \sum_{\mathfrak{D}}\anglelr{\Sigma_\mathfrak{D}}\Sigma_{\mathfrak{D}}
+        \]
+        \item Organization due to the exact 1-form Wilson symmetry:
+        \[
+        \rho \propto \mathcal{P}^{(p)} \sum_{\alert{[\mathfrak{D}]}}\anglelr{\Sigma_\mathfrak{D}}\Sigma_{\mathfrak{D}} \quad ; \quad 
+        \mathcal{P}^{(p)} := \lr{\frac{\mathds{1} + \Tilde{W}_h}{2}} \lr{\frac{\mathds{1} + \Tilde{W}_v}{2}} \prod_{p}\lr{\frac{\mathds{1} + W_p}{2}}
+        \]
+        \item Normalize $\tr \rho = 1$ to get the final result:
+        \[
+        \boxed{
+            \rho = \frac{1}{2^{N - N_p}}\mathcal{P}^{(p)} \sum_{[\mathfrak{D}]}\anglelr{\Sigma_\mathfrak{D}}\Sigma_{\mathfrak{D}}
+        }
+        \]
+    \end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Frame Title}
+    
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Unsolved Problems and Outlooks}
+\begin{frame}{Unsolved Problems and Outlooks}
+    \begin{itemize}
+        \item To get the REAL topological entanglement entropy, we need an exact 't Hooft symmetry and make it spontaneously broken.
+    \end{itemize}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
