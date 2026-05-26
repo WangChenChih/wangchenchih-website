@@ -157,7 +157,10 @@ In the Majorana fermion representation, the model is equivalent to a system of f
             \]
         \item String operators form a projective representation
             \[
-                \Sigma_\mathfrak{D}\Sigma_{\mathfrak{D}'} = \varphi(\mathfrak{D},\mathfrak{D}')\Sigma_{\mathfrak{D}\ominus\mathfrak{D}'} \quad;\quad \varphi(\mathfrak{D},\mathfrak{D}')=\pm 1, \quad\varphi(\mathfrak{D},\mathfrak{D}) = (-1)^{\abs{\mathfrak{D}}}
+                 \boxed{
+                    \Sigma_\mathfrak{D}\Sigma_{\mathfrak{D}'} = \varphi(\mathfrak{D},\mathfrak{D}')\Sigma_{\mathfrak{D}\ominus\mathfrak{D}'}
+                 }
+                 \quad;\quad \varphi(\mathfrak{D},\mathfrak{D}')=\pm 1, \quad\varphi(\mathfrak{D},\mathfrak{D}) = (-1)^{\abs{\mathfrak{D}}}
             \]
         
     \end{itemize}
@@ -174,7 +177,9 @@ In the Majorana fermion representation, the model is equivalent to a system of f
             \]
         \item Equivalence relation:
             \[
-            [\mathfrak{D}] = \lrg{\mathfrak{D'} \; : \; \exists\text{  $\mathcal{C}$ composed by closed loops such that }\mathfrak{D}'\ominus\mathcal{C}=\mathfrak{D}}
+            \boxed{
+                [\mathfrak{D}] = \lrg{\mathfrak{D'} \; : \; \exists\text{  $\mathcal{C}$ composed by closed loops such that }\mathfrak{D}'\ominus\mathcal{C}=\mathfrak{D}}
+            }
             \]
         \item Endpoints perspective: $\mrm{EP(\mathfrak{D})} = \mrm{EP}(\mathfrak{D}')$ iff $[\mathfrak{D}] = [\mathfrak{D}']$ $\Rightarrow$ Emerging fermions at endpoints of strings 
             
@@ -199,7 +204,13 @@ In the Majorana fermion representation, the model is equivalent to a system of f
         \item Organization due to the exact 1-form Wilson symmetry:
         \[
         \rho \propto \mathcal{P}^{(p)} \sum_{\alert{[\mathfrak{D}]}}\anglelr{\Sigma_\mathfrak{D}}\Sigma_{\mathfrak{D}} \quad ; \quad 
-        \mathcal{P}^{(p)} := \lr{\frac{\mathds{1} + \Tilde{W}_h}{2}} \lr{\frac{\mathds{1} + \Tilde{W}_v}{2}} \prod_{p}\lr{\frac{\mathds{1} + W_p}{2}}
+        \mathcal{P}^{(p)} := 
+        \underbrace{
+            \lr{\frac{\mathds{1} + \Tilde{W}_h}{2}} \lr{\frac{\mathds{1} + \Tilde{W}_v}{2}} 
+        }_{\text{topological projector (global Wilson)}}
+        \underbrace{
+            \prod_{p}\lr{\frac{\mathds{1} + W_p}{2}}
+        }_{\text{flux-free projector}}
         \]
         \item Normalize $\tr \rho = 1$ to get the final result:
         \[
@@ -210,13 +221,72 @@ In the Majorana fermion representation, the model is equivalent to a system of f
     \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Frame Title}
-    j
+\begin{frame}{Organization of Reduced Density Matrix}
+    \begin{itemize}
+        \item Following the same spirit to construct the reduced density matrix: 
+        \begin{enumerate}
+            \item [(i)] Hermiticity
+            \item [(ii)] Ability of reproducing expectation values of observables
+            \item [(iii)] Normalization condition $\tr \rho =1$
+        \end{enumerate}
+        \[
+        \rho_A \propto \sum_{\mathfrak{D}\subset A}\anglelr{\Sigma_{\mathfrak{D}}}\Sigma_{\mathfrak{D}} \propto \mathcal{P}^{(p)}_A\sum_{[\mathfrak{D}]\subset A}\anglelr{\Sigma_\mathfrak{D}}\Sigma_{\mathfrak{D}} 
+        \mathop{\longrightarrow}^{\text{normalize}}
+        \boxed{
+            \frac{1}{2^{N^A-N^A_p}} \mathcal{P}^{(p)}_A \sum_{[\mathfrak{D}]\subset A} \anglelr{\Sigma_\mathfrak{D}} \Sigma_{\mathfrak{D}} 
+        }
+        \]
+        \item Define \textit{projected string operators}: $\mathcal{S}_\mathfrak{D}^{(A)} := \mathcal{P}^{(p)}_A\Sigma_\mathfrak{D}$. In this way, $\mathcal{S}_\mathfrak{D}^{(A)} = \mathcal{S}_\mathfrak{D'}^{(A)}$ if $\mathfrak{D}\sim\mathfrak{D}'$.
+        \item Representing density matrices in terms of projected string operators:
+        \[
+        \boxed{
+            \rho _A 
+            =
+            \frac{1}{2^{N^A - N^A_p}}\sum_{[\mathfrak{D}]\subset A}\anglelr{\Sigma_\mathfrak{D}}\mathcal{S}_{\mathfrak{D}}^{(A)}
+        }
+        \]
+    \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\section{Organization: Block-Diagonal Structure}
+\begin{frame}{Organization: Block-Diagonal Structure}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.4\linewidth]{figures/block-diag-illust.pdf}
+\end{figure}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\begin{frame}{Frame Title}
+    \begin{itemize}
+        \item Exact Gauss law at the boundary: Block-diagonal structure
+        \item Exact 1-form Wilson symmetry: Making blocks identical
+    \end{itemize}
+    
+    \begin{figure}
+        \centering
+        \begin{minipage}{0.6\linewidth}
+        \includegraphics[width=\linewidth]{figures/linking-string-electric-field.pdf}
+        \end{minipage}
+        \begin{minipage}{0.3\linewidth}
+            \includegraphics[width=\linewidth]{figures/xi-wilson-flip.pdf}
+        \end{minipage}
+    \end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Frame Title}
+    
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Unsolved Problems and Outlooks}
+\begin{frame}{Unsolved Problems and Outlooks}
+    \begin{itemize}
+        \item To get the REAL topological entanglement entropy, we need an exact 't Hooft symmetry and make it spontaneously broken.
+        \item Higher spin Kitaev model: 
+    \end{itemize}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Frame Title}
 
@@ -240,11 +310,16 @@ In the Majorana fermion representation, the model is equivalent to a system of f
     
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Unsolved Problems and Outlooks}
-\begin{frame}{Unsolved Problems and Outlooks}
-    \begin{itemize}
-        \item To get the REAL topological entanglement entropy, we need an exact 't Hooft symmetry and make it spontaneously broken.
-    \end{itemize}
+\begin{frame}{Frame Title}
+\begin{itemize}
+    \item For a multi-connected region with genus number $g$, there is a set of \textit{web patch} configurations $\lrg{ \mathfrak{D}_{\mrm{WP}}^{(1)}, \mathfrak{D}_{\mrm{WP}}^{(2)},\cdots,\mathfrak{D}_{\mrm{WP}}^{(g)} }$ such that $\tr_A \lr{\Sigma_{\mathfrak{D}\ominus \mathfrak{D}_{\mrm{WP}}^{(n)}} } \neq 0$ if $\mathfrak{D}\subset A$
+    \item In general, however, $\Sigma_{\mathfrak{D}\ominus \mathfrak{D}_{\mrm{WP}}^{(n)}} \neq \Sigma_{\mathfrak{D}}\Sigma_{\mathfrak{D}_{\mrm{WP}}^{(n)}}$, thus the reduced density matrix cannot be organized as before.
+    \item The web patch is invalid in the fermion representation: $\tr_{A,F}\lr{\mathcal{M}_{\mathfrak{D}\ominus \mathfrak{D}_{\mrm{WP}}^{(n)}} } = 0$
+\end{itemize}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.5\linewidth]{figures/web-patch.pdf}
+    \end{figure}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
