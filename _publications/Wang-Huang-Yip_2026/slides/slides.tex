@@ -83,7 +83,8 @@
     \begin{itemize}
         \item density matrix
         \item entanglement
-        \item 
+        \item spin representation to understand everything (gauge, matter, entanglement...)
+        \item \href{https://doi.org/10.1103/PhysRevX.15.011001}{W.-T. Xu \textit{et al}. PRX \textbf{15}, 011001 (2025)}
     \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -106,9 +107,10 @@
         }
         }
         \item Separability of the entanglement entropy \scite{https://doi.org/10.1103/PhysRevLett.105.080501}{(Yao and Qi, PRL\textbf{105} 080501)}
-        \sequ{
-        S_A = S_A^F + S_A^G
-        }
+        \[
+        \boxed{S_A = S_A^F + S_A^G}
+        \]
+        
     \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -250,27 +252,99 @@ In the Majorana fermion representation, the model is equivalent to a system of f
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Organization: Block-Diagonal Structure}
 \begin{frame}{Organization: Block-Diagonal Structure}
-    \begin{itemize}
-        \item 
-    \end{itemize}
+
 \begin{figure}
     \centering
-    \includegraphics[width=0.4\linewidth]{figures/block-diag-illust.pdf}
+    \begin{minipage}{0.4\linewidth}
+        \includegraphics[width=\linewidth]{figures/block-diag-illust.pdf}
+    \end{minipage}
+    \begin{minipage}{0.55\linewidth}
+        \begin{itemize}
+            \item \textit{Majorana representation} of string operators: {\tiny$\mathcal{M}_{\mathfrak{D}} := \prod_{\anglelr{ij}\in\mathfrak{D}}ic_jc_i$}, which satisfies the same algebra
+            \sequ{
+                \mathcal{M}_{\mathfrak{D}} \mathcal{M}_{\mathfrak{D}'} = \varphi(\mathfrak{D},\mathfrak{D}') \mathcal{M}_{\mathfrak{D}\ominus\mathfrak{D}'}
+            }
+            \item Difference in the Hilbert space dimension:
+            \sequ{
+                \tr_{A,F} \mathcal{M}^{(A)}_{\varnothing} = 2^{N^A/2}
+                \neq 
+                \tr_A \mathcal{S}^{(A)}_{\varnothing} = 2^{N^A-N^A_p}
+            }
+            \item Conjecture: projected string operators are \textit{block diagonalized}
+        \end{itemize}
+    \end{minipage}
 \end{figure}
+
+        
+
+\textbf{Observation:} A block-diagonal density matrix leads to the separability of entanglement entropy 
+\sequ{
+    \rho = \frac{1}{d}\varrho^{\otimes d} \Rightarrow S^{(n)}(\rho) 
+    = 
+    \frac{1}{1-n}\ln\lrm{\frac{1}{d^n}\mrm{Tr}\lr{\varrho^n}^{\otimes d}} 
+    = 
+    \underbrace{S^{(n)}(\varrho)}_{\text{matter}} + \underbrace{\ln d}_{\text{gauge}}
+}
+
+\textbf{Questions:}
+\begin{itemize}
+    \item Can we directly prove that the string operators are block-diagonalized?
+    \item How could they be related to \textit{gauge fields}?
+\end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Frame Title}
+\section{Review: W.-T. Xu \textit{et al}. PRX \textbf{15}, 011001 (2025)}
+\begin{frame}{Exact Gauss Law $\times$ Exact 1-Form Wilson Symmetry: \\ --Exact Block-Diagonal Structure}
+
+Review the method discovered by a recent work [\href{https://doi.org/10.1103/PhysRevX.15.011001}{W.-T. Xu \textit{et al}. PRX \textbf{15}, 011001 (2025)}]
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{figures/contribution-1.png}
+\end{figure}
+\begin{itemize}
+    \item Exact Gauss law $[\rho, X_e]=0\;\forall e\in \de R$ yields block-diagonalized structure
+    \[
+    \rho = \bigoplus_{\lrg{x}}\varrho_{\lrg{x}}
+    \]
+    
+    \item Exact 1-form Wilson loop symmetry $[W_{\mathcal{C}/2},\rho] = 0$ relates different blocks since $W_{\mathcal{C}/2} X_e W_{\mathcal{C}/2}^\dagger = -X_e \;\forall e\in \de R$
+
+    \item Yielding $2^{\abs{\de R}-1}$-fold degeneracy in the entanglement spectrum
+    \[
+    \rho = \varrho^{\otimes 2^{\abs{\de R}-1}}
+    \]
+\end{itemize}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Block-Diagonal Density Matrix in the Kitaev Model}
+\begin{frame}{Block-Diagonal Density Matrix in the Kitaev Model}
+
+In the Kitaev model:
     \begin{itemize}
-        \item Exact Gauss law at the boundary: Block-diagonal structure
-        \item Exact 1-form Wilson symmetry: Making blocks identical
+        \item Exact Gauss law: From the electric field $b^{\alpha_{ij}}_i = e^{i\pi E_{ij}}$ at the boundary.
+
+        \item Exact 1-form Wilson symmetry: $\anglelr{W_\mathcal{C}} = \anglelr{\Sigma_{\mathcal{C}}} = 1$ for any closed loop $\mathcal{C}$.
+    \end{itemize}
+But the gauge field here is \textit{fictitious}. To use spin representation (physical):
+    \begin{itemize}
+        \item Connecting two \textit{deconfined} degrees of freedom to form physical objects
+        
+        \item Use electric fields to define a set of operators $\hat{\xi}_n := \sigma^{\mu_n}_n\Sigma_{\mathcal{C}_n}\sigma^{\mu_{n+1}}_{n+1}$ along the boundary of the entanglement cut.
+
+        \item Eventually, we obtain $L=\frac{1}{2}\abs{\de A}$ independent $\hat{\xi}$-operators, and they satisfy 
+        \[
+        \boxed{[\mathcal{S}_{\mathfrak{D}}^{(A)} , \hat{\xi}_{n}] = 0 \quad;\quad \mathfrak{D}\subset A }
+        \]
     \end{itemize}
     
     \begin{figure}
         \centering
-        \begin{minipage}{0.6\linewidth}
+        \begin{minipage}{0.26\linewidth}
         \includegraphics[width=\linewidth]{figures/linking-string-electric-field.pdf}
         \end{minipage}
-        \begin{minipage}{0.3\linewidth}
+        \hspace{4mm}
+        \begin{minipage}{0.26\linewidth}
             \includegraphics[width=\linewidth]{figures/xi-wilson-flip.pdf}
         \end{minipage}
     \end{figure}
@@ -322,4 +396,74 @@ In the Majorana fermion representation, the model is equivalent to a system of f
     \end{figure}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Contribution 2: Exact 1-Form Wilson}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\linewidth]{figures/PEPS.png}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Symmetry of the tensor network} derives the \textbf{0-form Ising symmetry} and the \textbf{1-form Wilson loop symmetry}.
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Contribution 2: Exact 1-Form Wilson}
+
+\begin{figure}
+    \centering
+    \includegraphics[height=0.25\textheight]{figures/boundary-matrix.png}
+    \includegraphics[height=0.25\textheight]{figures/transfer-matrix-symmetry.png}
+\end{figure}
+\begin{itemize}
+{\footnotesize
+    \item \href{https://doi.org/10.1103/PhysRevB.83.245134}{Transfer matrix of a tensor network gives reduced density matrix (in the virtual space)}
+    {\tiny
+    \[
+    \mathbb{T}\ket{\sigma_{R}} \propto \ket{\sigma_{R}} \quad\Rightarrow\quad \ket{\sigma_R}\to \sigma_L \quad\Rightarrow\quad \rho \sim  \sigma_L^T \sigma_R
+    \]
+    }
+
+    \item Symmetry of the tensor network becomes the symmetry of the reduced density matrix
+    {\tiny
+    \[
+    \begin{aligned}
+    \lr{\prod_iX_i\otimes\prod_iX_i}\mathbb{T}\lr{\prod_iX_i\otimes\prod_iX_i} &= \mathbb{T} \\
+    (Z_j\otimes Z_j)\mathbb{T}(Z_j\otimes Z_j)&= \mathbb{T}\;\forall j
+    \end{aligned}
+    \quad\Rightarrow\quad
+    \begin{aligned}
+        \lr{\prod_iX_i}\sigma_{L(R)}\lr{\prod_iX_i} &= \sigma_{L(R)} \\
+        Z_j \sigma_{L(R)}Z_j &= \sigma_{L(R)} \;\forall j
+    \end{aligned}
+    \]
+    }
+
+    \item Therefore, two operators $\prod_iX_i$ and $Z_j$ commute with the reduced density matrix, yielding $2$-fold degeneracy in the entanglement spectrum.
+}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Contribution 3: Spontaneous 1-form Symmetry Breaking}
+
+\begin{itemize}
+    \item Implementing the 1-form 't Hooft loop symmetry
+    \[
+    \rho \sim \frac{1 + T_{C_y}}{2}\exp\lr{-H_E}
+    \]
+    
+    \item The 1-form 't Hooft loop symmetry is spontaneously broken: $T_{C_y}\ket{\psi} \neq \ket{\psi}$, so the expectation value satisfies the perimeter law: $\anglelr{T_{C}}\sim e^{-\abs{C}}$.
+
+    \item Entanglement entropy:
+    \[
+    S_n = \frac{1}{1-n}\ln\mrm{Tr}\rho^n \mathop{\approx }^{\abs{\de R}\to \infty} -\frac{f(1/n) - f(1)}{1/n - 1}\abs{\de R} \underbrace{- \ln 2}_{\text{topo EE}} 
+    \]
+\end{itemize}
+
+\end{frame}
+
+
 \end{document}
