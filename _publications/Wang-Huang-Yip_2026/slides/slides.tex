@@ -83,10 +83,15 @@
 \section{Motivation}
 \begin{frame}{Motivation}
     \begin{itemize}
-        \item density matrix
-        \item entanglement
-        \item spin representation to understand everything (gauge, matter, entanglement...)
-        \item \href{https://doi.org/10.1103/PhysRevX.15.011001}{W.-T. Xu \textit{et al}. PRX \textbf{15}, 011001 (2025)}
+        \item Entanglement analysis: Could we construct a reduced density matrix without relying on the fermionic representation?
+        \begin{itemize}
+            \item Fermionic representation needs Gutzwiller projection.
+            \item Use physical \textbf{spin} operators to describe a spin system.
+        \end{itemize}
+        
+        \item Would spin representation be a better tool to understand the entanglement? 
+        
+        \item A recent work on the entanglement of $\mathbb{Z}_2$ gauge theory with 1-form symmetries  \href{https://doi.org/10.1103/PhysRevX.15.011001}{\footnotesize W.-T. Xu \textit{et al}. PRX \textbf{15}, 011001 (2025)}: Could we apply this theory to make the entanglement structure of the Kitaev model clearer?
     \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -157,7 +162,12 @@ In the Majorana fermion representation, the model is equivalent to a system of f
 
         \item $\mathbb{Z}_2$ algebra of strings
             \[
-            \mathfrak{D}\ominus \mathfrak{D}' := \mathfrak{D}\cup\mathfrak{D}' - \mathfrak{D}\cap \mathfrak{D}' \quad:\quad \alert{illustration}
+            \mathfrak{D}\ominus \mathfrak{D}' := \mathfrak{D}\cup\mathfrak{D}' - \mathfrak{D}\cap \mathfrak{D}' \quad:\quad 
+            \lr{\wordfig{1}{figures/oplus_1}}
+            \ominus
+            \lr{\wordfig{1}{figures/oplus_2}} 
+            = 
+            \lr{\wordfig{1}{figures/oplus_result}}
             \]
         \item String operators form a projective representation
             \[
@@ -250,6 +260,10 @@ In the Majorana fermion representation, the model is equivalent to a system of f
         }
         \]
     \end{itemize}
+{\small \textbf{\underline{Remark}:}} Since $\mrm{EP(\mathfrak{D})} = \mrm{EP}(\mathfrak{D}')$ iff $[\mathfrak{D}] = [\mathfrak{D}']$, the equivalent fermion density matrix $\rho_A^F$ looks the same as $\rho_A$. 
+\[
+\rho_A^F = \frac{1}{2^{N^A/2}}\sum_{\mrm{EP}(\mathfrak{D})\subset A}\lr{\text{fermion Op.}} = \frac{1}{2^{N^A/2}}\sum_{[\mathfrak{D}]\subset A}\lr{\text{fermion Op.}}
+\]
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Organization: Block-Diagonal Structure}
@@ -262,7 +276,7 @@ In the Majorana fermion representation, the model is equivalent to a system of f
     \end{minipage}
     \begin{minipage}{0.55\linewidth}
         \begin{itemize}
-            \item \textit{Majorana representation} of string operators: {\tiny$\mathcal{M}_{\mathfrak{D}} := \prod_{\anglelr{ij}\in\mathfrak{D}}ic_jc_i$}, which satisfies the same algebra
+            \item \textit{Majorana representation} of string operators: {\tiny$\mathcal{M}_{\mathfrak{D}} := \prod_{\anglelr{ij}\in\mathfrak{D}}ic_jc_i$}, which satisfies the same algebra (statistics)
             \sequ{
                 \mathcal{M}_{\mathfrak{D}} \mathcal{M}_{\mathfrak{D}'} = \varphi(\mathfrak{D},\mathfrak{D}') \mathcal{M}_{\mathfrak{D}\ominus\mathfrak{D}'}
             }
@@ -279,7 +293,7 @@ In the Majorana fermion representation, the model is equivalent to a system of f
 
         
 
-\textbf{Observation:} A degenerate entanglement spectrum leads to the separability of the entanglement entropy
+\textbf{\underline{Observation}:} A degenerate entanglement spectrum leads to the separability of the entanglement entropy
 \sequ{
     \rho = \frac{1}{d} \bigoplus_{n=1}^{d}\varrho \Rightarrow S^{(n)}(\rho) 
     = 
@@ -288,9 +302,9 @@ In the Majorana fermion representation, the model is equivalent to a system of f
     \underbrace{S^{(n)}(\varrho)}_{\text{matter}} + \underbrace{\ln d}_{\text{gauge}}
 }
 
-\textbf{Questions:}
+\textbf{\underline{Questions}:}
 \begin{itemize}
-    \item Can we directly prove that the string operators are block-diagonalized?
+    \item Can we directly prove that the entanglement spectrum is degenerate?
     \item How could they be related to \textit{gauge fields}?
 \end{itemize}
 \end{frame}
@@ -298,7 +312,7 @@ In the Majorana fermion representation, the model is equivalent to a system of f
 \section{Review: W.-T. Xu \textit{et al}. PRX \textbf{15}, 011001 (2025)}
 \begin{frame}{Exact Gauss Law $\times$ Exact 1-Form Wilson Symmetry: \\ --Exact Block-Diagonal Structure}
 
-Review the method discovered by a recent work [\href{https://doi.org/10.1103/PhysRevX.15.011001}{W.-T. Xu \textit{et al}. PRX \textbf{15}, 011001 (2025)}]
+Review the method discovered by a recent work [\href{https://doi.org/10.1103/PhysRevX.15.011001}{\footnotesize W.-T. Xu \textit{et al}. PRX \textbf{15}, 011001 (2025)}]
 \begin{figure}
     \centering
     \includegraphics[width=0.5\linewidth]{figures/contribution-1.png}
@@ -389,14 +403,13 @@ But the gauge field here is \textit{fictitious}. To use spin representation (phy
     \includegraphics[width=0.25\linewidth]{figures/Xi-def.pdf}
     \end{figure}
 \begin{itemize}
-    {\footnotesize
+    \item When $N^A$ is odd, an equivalent fermion system is ill-defined: We need to borrow a fermion from the gauge sector.
     \item For odd $N^A$, there is always an unpaired site at the boundary.
 
     \item We can define an additional operator $\Xi_A$ that also commutes with $\rho_A$, yielding an additional 2-fold degeneracy in the entanglement spectrum
     \[
     \hat{\Xi}_A \equiv \sigma^\mu_l \Sigma_{\mathfrak{D}_{\mrm{DC}}^{A(l)}} \to \lr{\prod_{\anglelr{ij}\in  \mathfrak{D}^{A(l)}_{\mrm{DC}}} \hat{u}_{ij}} \underbrace{\lr{b^\mu_l\prod_{i\in A}c_i}}_{\text{fermion parity}}
     \]
-    }
     
 \end{itemize}
 \end{frame}
@@ -404,19 +417,34 @@ But the gauge field here is \textit{fictitious}. To use spin representation (phy
 \section{Summary}
 \begin{frame}{Summary}
     \begin{itemize}
-        \item 
+        \item The entanglement structure of the Kitaev ground state is studied completely in terms of \textbf{physical spin representation}.
+        \item The exact \textbf{1-form Wilson symmetry} makes the density matrix \textbf{organized}. Such an organized form is equivalent to the fermion density matrix.
+        \begin{itemize}
+            \item The \textbf{string operators} directly reflect the \textbf{fermionic statistics}.
+            \item The \textbf{gauge} DoF is encoded in the flux-free projecto\textbf{}r $\mathcal{P}^{(p)}$, and the \textbf{matter} DoF emerges at endpoints of projected string operators $\mathcal{S}_{\mathfrak{D}}$. 
+        \end{itemize}
+
+        \item As proposed by [\href{https://doi.org/10.1103/PhysRevX.15.011001}{\footnotesize W.-T. Xu \textit{et al}. PRX \textbf{15}, 011001 (2025)}], the \textbf{exact 1-form Wilson symmetry} with the \textbf{exact Gauss law} gives an extensively degenerate entanglement spectrum.
+        \begin{itemize}
+            \item \textit{Glue} the fictitious electric fields back to form physical operators $\hat{\xi}$ in the spin representation.
+            \item The reduced density matrix is composed of identical copies of the fermionic density matrix.
+            \item Separability of the entanglement entropy
+        \end{itemize}
+
+        \item \textbf{Odd} number of lattice sites: \textbf{Fermion parity} provides an additional degeneracy.
     \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Unsolved Problems and Outlooks}
 \begin{frame}{Unsolved Problems and Outlooks}
     \begin{itemize}
-        \item To get the REAL topological entanglement entropy, we need an exact 't Hooft symmetry and make it spontaneously broken.
-        \item Higher spin Kitaev model: 
+        \item To get the \textbf{true topological entanglement entropy}, we need an exact 't Hooft symmetry and make it spontaneously broken. 
+        \item Higher spin Kitaev model: Expectation values don't provide sufficient conditions.
+        \item Multi-connected subregion
     \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Toric Code Model}
+\begin{frame}{Toric Code Model: True Topological Entanglement entropy}
 
     \begin{itemize}
         \item Reduced density matrix of a Kitaev ground state 
@@ -430,7 +458,7 @@ But the gauge field here is \textit{fictitious}. To use spin representation (phy
         
         \item Entanglement entropy: If the density matrix is proportional to a projector $\rho_A = C\mathcal{P}$
             \sequ{
-                S^{(n)}_A = \frac{1}{1-n}\ln \tr \rho_A^n = \frac{1}{1-n}\ln \lr{C^{n-1} \tr\rho_A} = -\ln C
+                S^{(n)}_A = \frac{1}{1-n}\ln \tr \rho_A^n = \frac{1}{1-n}\ln \lr{C^{n-1} \tr\rho_A} = -\ln C = \lr{\abs{\de A} - (j+g)}\ln 2
             }
     \end{itemize}
     
@@ -440,9 +468,9 @@ But the gauge field here is \textit{fictitious}. To use spin representation (phy
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Frame Title}
 \begin{itemize}
-    \item For a multi-connected region with genus number $g$, there is a set of \textit{web patch} configurations $\lrg{ \mathfrak{D}_{\mrm{WP}}^{(1)}, \mathfrak{D}_{\mrm{WP}}^{(2)},\cdots,\mathfrak{D}_{\mrm{WP}}^{(g)} }$ such that $\tr_A \lr{\Sigma_{\mathfrak{D}\ominus \mathfrak{D}_{\mrm{WP}}^{(n)}} } \neq 0$ if $\mathfrak{D}\subset A$
+    \item For a multi-connected region with genus number $g$, there is a set of \textit{web patch} configurations $\lrg{ \mathfrak{D}_{\mrm{WP}}^{(1)}, \mathfrak{D}_{\mrm{WP}}^{(2)},\cdots,\mathfrak{D}_{\mrm{WP}}^{(g)} }$ such that $\tr_{\bar{A}} \lr{\Sigma_{\mathfrak{D}\ominus \mathfrak{D}_{\mrm{WP}}^{(n)}} } \neq 0$ if $\mathfrak{D}\subset A$
     \item In general, however, $\Sigma_{\mathfrak{D}\ominus \mathfrak{D}_{\mrm{WP}}^{(n)}} \neq \Sigma_{\mathfrak{D}}\Sigma_{\mathfrak{D}_{\mrm{WP}}^{(n)}}$, thus the reduced density matrix cannot be organized as before.
-    \item The web patch is invalid in the fermion representation: $\tr_{A,F}\lr{\mathcal{M}_{\mathfrak{D}\ominus \mathfrak{D}_{\mrm{WP}}^{(n)}} } = 0$
+    \item The web patch is invalid in the fermion representation: $\tr_{\bar{A},F}\lr{\mathcal{M}_{\mathfrak{D}\ominus \mathfrak{D}_{\mrm{WP}}^{(n)}} } = 0$
 \end{itemize}
     \begin{figure}
         \centering
