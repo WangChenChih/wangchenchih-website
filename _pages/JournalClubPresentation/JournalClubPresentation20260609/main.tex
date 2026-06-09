@@ -121,7 +121,7 @@
         \tinyeq{
             \lambda^\mu_k = 
             \begin{cases}
-                -1, & k\in\mathcal{L} ,\;\hat{n}_k\in\mathcal{L} \\
+                -1, & k\in\mathcal{L} ,\;\mu\in\mathcal{L} \\
                 1 , & \text{otherwise.}
             \end{cases}
         }
@@ -141,11 +141,127 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Anomalous 1-Form Symmetry}
     \begin{itemize}
-        \item \item Define the Gauss law (generators of gauge symmetries)
+        \item Define the Gauss law (generators of gauge symmetries): Two independent generators
+        \begin{figure}
+            \centering
+            \begin{minipage}{0.7\textwidth}
+                \footnotesize
+                \[
+                \left\{
+                \begin{aligned}
+                & G_k^{(x)} \equiv e^{i\pi S_k^{x}}E_k^yE_k^z \\
+                & G_k^{(y)} \equiv e^{i\pi S_k^{y}}E_k^zE_k^x \\
+                & G_k^{(z)} \equiv e^{i\pi S_k^{z}}E_k^xE_k^y = G_k^{(x)}G_k^{(y)} \\
+                \end{aligned}
+                \right.
+                \]
+                Given a loop $\mathcal{L}$, suppose $k,\anglelr{ij}\in\mathcal{L}$
+                \[
+                G^{(\hat{n}_k)}_k S^\mu_k \left.G^{(\hat{n}_k)}_k\right.^\dagger = \lambda^\mu_k S^\mu_k \quad,\quad 
+                \begin{aligned}
+                    & G^{(\hat{n}_k)}_i A_{ij} \left.G^{(\hat{n}_k)}_i\right.^\dagger = \lambda_i^{\alpha_{ij}}A_{ij} \\
+                    & G^{(\hat{n}_k)}_j A_{ij} \left.G^{(\hat{n}_k)}_j\right.^\dagger = A_{ij} \lambda_j^{\alpha_{ij}}
+                \end{aligned}
+                \]
+            \end{minipage}
+            \begin{minipage}{0.2\textwidth}
+                \includegraphics[width=\textwidth]{gauss-law.pdf}
+            \end{minipage}
+        \end{figure}
+
+        \item Even-odd effect of the algebraic relation between Gauss law in different directions:
+        \[
+        G^{(\mu)}G^{(\nu)} = (-1)^{2S} G^{(\nu)}G^{(\mu)}
+        \]
+    \end{itemize}
+
+    \textbf{\underline{Conclusion:}} When $S\in\mathbb{Z}+\frac{1}{2}$, the 1-form symmetry $\mathbb{Z}^{[1]}_2$ is \textbf{anomalous}.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Full Internal Symmetry Anomaly}
+\begin{frame}{Full Internal Symmetry Anomaly}
+    The authors show that, for all $S$, there is \textbf{no pure 0-form ($\mathbb{Z}^T_2 \times \mathbb{Z}^{(x)}_2 \times \mathbb{Z}^{(y)}_2$) anomaly} or \textbf{mixed anomaly} between the 0-form symmetry and the 1-form symmetry $\mathbb{Z}_2^{[1]}$. 
+
+    The classification of all anomalies associated with the $\mathbb{Z}^T_2 \times \mathbb{Z}^{(x)}_2 \times \mathbb{Z}^{(y)}_2 \times \mathbb{Z}_2^{[1]}$ symmetry is \alert{(Sorry, I don't know why)}
+    \[
+    \mathbb{Z}_2^{17} = \mathbb{Z}_2^{10} \times \mathbb{Z}_2 \times \mathbb{Z}_2^{6}
+    \]
+    \begin{itemize}
+        \item \underline{$\mathbb{Z}_2^{10}$:} Containing only the \textbf{0-form $\mathbb{Z}^T_2 \times \mathbb{Z}^{(x)}_2 \times \mathbb{Z}^{(y)}_2$ symmetry}. 9 of them are classified using group cohomology (like the SPT classification)
+        \[
+        H^4(\mathbb{Z}^T_2 \times \mathbb{Z}^{(x)}_2 \times \mathbb{Z}^{(y)}_2, U(1)) = \mathbb{Z}_2^{9}
+        \]
+        and the other one is beyond-cohomology anomaly \hereref{https://doi.org/10.1103/PhysRevX.3.011016}{Vishwanath and Senthil, PRX 3, 011016 (2013)}\alert{(?)}.
+
+        \item \underline{$\mathbb{Z}_2$:} Associated with the $\mathbb{Z}_2^{[1]}$ \textbf{1-form symmetry} (bosonic or fermionic statistics that the endpoints of strings obey)
+
+        \item \underline{$\mathbb{Z}_2^6$:} Mixed anomalies between the 0-form and 1-form symmetries, which stand for different \textbf{fractionalization patterns} of the $\mathbb{Z}^T_2 \times \mathbb{Z}^{(x)}_2 \times \mathbb{Z}^{(y)}_2$ symmetry on the endpoints of the strings, and are classified by
+        \[
+        H^2(\mathbb{Z}^T_2 \times \mathbb{Z}^{(x)}_2 \times \mathbb{Z}^{(y)}_2, \mathbb{Z}_2) = \mathbb{Z}_2^6
+        \]
     \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Full Internal Symmetry Anomaly}
+    \[
+    \mathbb{Z}_2^{17} = \underbrace{\mathbb{Z}_2^{10}}_{\text{pure 0-form anomaly}} \times \underbrace{\mathbb{Z}_2}_{\text{pure 1-form anomaly}} \times \underbrace{\mathbb{Z}_2^{6}}_{\tiny
+    \begin{array}{c}
+        \text{mixed anomaly } \\
+        \text{(0-form symmetry fractionalization)}
+    \end{array}
+    }
+    \]
+    \begin{itemize}
+        \item \textbf{No pure 0-form anomaly:} 0-form symmetries are on-site \hereref{https://doi.org/10.1103/PhysRevB.99.205139}{Wen, PRB 99, 205139 (2019)}\hereref{https://doi.org/10.1103/PhysRevD.88.045013}{Wen, PRD 88, 045013 (2013)}
+        \item \textbf{No mixed anomaly:} $\mathbb{Z}_2^{(x)}\times \mathbb{Z}_2^{(y)}\times \mathbb{Z}_2^T$ is not fractionalized non-trivially.
 
+        \underline{Sketch of the proof:} 
+        \begin{itemize}
+            \item Prove that the Majorana fermions in a spin-1/2 model do not fractionalize the 0-form symmetry.
+            \item $2S$ copies of the spin-1/2 model $\Leftrightarrow$ Spin-$S$ model
+            \item A half-integer spin model has the same anomaly pattern as the spin-1/2 one.
+            
+            \item The integer spin models are non-anomalous since the classification is $\mathbb{Z}_2$.
+        \end{itemize}
+    \end{itemize}
+\textbf{\underline{Conclusion:}} The model only has a 1-form anomaly for general $S$.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Consequences of the Anomalies}
+\begin{frame}{Consequences of the Anomalies}
+
+    \underline{$S\in\mathbb{Z}+\frac{1}{2}$:} \textbf{Symmetry-enforced exotic quantum matter}
+    \begin{itemize}
+        \item Non-trivial anomaly: long-range entangled state
+        \item 1-form anomaly: deconfined fermionic excitations
+    \end{itemize}
+
+    \underline{$S\in\mathbb{Z}$:}
+    \begin{itemize}
+        \item Absence of anomaly: a $\mathbb{Z}_2^{[1]} \times \mathbb{Z}^T_2 \times \mathbb{Z}^{(x)}_2 \times \mathbb{Z}^{(y)}_2$ symmetric short-ranged entangled ground state is possible.
+        \item Bosonic endpoints could condense, giving rise to no deconfined fractional excitation
+    \end{itemize}
+
+\textbf{\underline{Robustness}:}
+\begin{itemize}
+    \item The discussions are \textbf{purely based on symmetries and anomalies}: The conclusion generally holds if the perturbation respects the $\mathbb{Z}_2^{[1]} \times \mathbb{Z}^T_2 \times \mathbb{Z}^{(x)}_2 \times \mathbb{Z}^{(y)}_2$ symmetry.
+    
+    \item Local weak perturbations respecting $\mathbb{Z}^T_2 \times \mathbb{Z}^{(x)}_2 \times \mathbb{Z}^{(y)}_2$ are allowed since it cannot completely destroy $\mathbb{Z}_2^{[1]}$: Emergent 1-form symmetry.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion}
+\begin{frame}{Conclusion}
+    \begin{itemize}
+        \item The internal symmetries and their anomalies in the spin-$S$ Kitaev model are discussed in a general fashion.
+
+        \item Even-odd effect: The 1-form symmetry is anomalous if $S\in\mathbb{Z}+\frac{1}{2}$.
+
+        \item There is only a pure 1-form anomaly.
+
+        \item The result is robust if the $\mathbb{Z}_2^{[1]} \times \mathbb{Z}^T_2 \times \mathbb{Z}^{(x)}_2 \times \mathbb{Z}^{(y)}_2$ is respected.
+    \end{itemize}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
