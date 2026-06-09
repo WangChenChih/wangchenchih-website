@@ -1,0 +1,153 @@
+\documentclass[professionalfont]{beamer}
+%\usecolortheme{default}
+\usetheme{Madrid}
+\usepackage{subcaption}
+\usepackage{caption}
+\usepackage{tikz}
+\usepackage{dsfont}
+
+\usepackage{pst-all}
+\usepackage{leftidx}
+
+\title{\href{https://doi.org/10.21468/SciPostPhys.16.4.100}{\textbf{Symmetries and Anomalies of Kitaev Spin-$S$ Models: Identifying Symmetry-Enforced Exotic Quantum Matter}}}
+\subtitle{\href{https://doi.org/10.21468/SciPostPhys.16.4.100}{R. Liu, H. T. Lam, H. Ma, \& L. Zou \\ SciPost Phys. 16, 100 (2024)}}
+
+\author{Chen-Chih Wang}
+\institute{NTHU}
+\date{\today}
+
+\newcommand{\anglelr}[1]{\left\langle #1 \right\rangle}
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\de}{\partial}
+\newcommand{\pdif}[1]{\frac{\partial }{\partial #1}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\lr}[1]{\left(#1\right)}
+\newcommand{\lrm}[1]{\left[#1\right]}
+\newcommand{\lrg}[1]{\left\{#1\right\}}
+\newcommand{\lran}[1]{\left\langle #1 \right\rangle}
+\newcommand{\lra}[1]{\left|#1\right|}
+\newcommand{\ket}[1]{\left| #1 \right\rangle}
+\newcommand{\bra}[1]{\left\langle #1 \right|}
+\newcommand{\braket}[2]{\left\langle #1 \right|\left. #2\right\rangle}
+\newcommand{\mrm}[1]{\mathrm{#1}}
+\newcommand{\bo}[1]{\mathbf{#1}}
+\newcommand{\gk}{\gamma_{\mathbf{k}}}
+\newcommand{\uk}{u_{\mathbf{k}}}
+\newcommand{\vk}{v_{\mathbf{k}}}
+\newcommand{\vkp}{v_{\mathbf{k}'}}
+\newcommand{\hereref}[2]{\href{#1}{{\tiny (#2)}}}
+\newcommand{\tinyeq}[1]{{\tiny\[#1\]}}
+
+\newtheorem{axiom}{Axiom}
+
+\newcommand{\wordfig}[2]{\begin{minipage}[h]{#1 cm}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{#2}
+   \end{minipage}}
+   
+\newcommand{\wordfigdir}[2]{
+\begin{minipage}[h]{#1 cm}
+\centering
+	\vspace{0pt}
+	#2
+\end{minipage}}
+
+%\setbeamercolor{frametitle}{fg=black,bg=blue}
+%\setbeamertemplate{frametitle}[default][left]
+%\setbeamerfont{frametitle}{size=\huge}
+%\setbeamerfont{block title}{size=\Large}
+
+\begin{document}
+\footnotesize
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+    \titlepage
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Motivations}
+\begin{frame}{Motivations}
+    \textbf{\underline{Model:}} 
+    \[
+        H = -\sum_{\anglelr{ij}}J_{\alpha_{ij}}S^{\alpha_{ij}}_iS^{\alpha_{ij}}_j
+    \]
+    Useful property
+    \[
+    e^{i\pi S^\mu}e^{i\pi S^\nu} = \epsilon_{\mu\nu\lambda}e^{i\pi S^\lambda} \quad,\quad e^{i\pi S^\mu}e^{i\pi S^\nu} = (-1)^{2S}e^{i\pi S^\nu}e^{i\pi S^\mu}
+    \]
+    Conserved $\mathbb{Z}_2$ flux:
+    \[
+        W_p = \prod_{j\in\de p}e^{i\pi S^{\hat{n}_j}_j} \quad \wordfig{1.5}{honeycomb.pdf}
+    \]
+    \textbf{\underline{Observations:}} Even-odd effect \hereref{https://doi.org/10.1103/PhysRevLett.130.156701}{H. Ma, PRL 130, 156701 (2023)}
+    \begin{itemize}
+        \item $S\in\mathbb{Z}+\frac{1}{2}$: gauge charge is \textbf{fermionic} and the $\mathbb{Z}_2$ gauge field is \textbf{deconfined}.
+        \item $S\in\mathbb{Z}$: gauge charge is \textbf{bosonic} and the $\mathbb{Z}_2$ gauge field can be Higgsed.
+    \end{itemize}
+    
+    \textbf{\underline{Questions:}}
+    \begin{itemize}
+        \item To what extent is the even-odd effect stable against perturbation?
+        \item Can the results be obtained via a more elementary, direct approach (via spins instead of partons)?
+    \end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Symmetries}
+    \begin{itemize}
+        \item \underline{(Global) $\mathbb{Z}_2^{[1]}$ 1-form symmetry:} Generators are two global loops (on a torus)
+        \[
+        \prod_{j\in\mathcal{L}_v}e^{i\pi S^{\hat{n}_j}_j} \quad,\quad \prod_{j\in\mathcal{L}_h}e^{i\pi S^{\hat{n}_j}_j}
+        \]
+
+        \item \underline{$\mathbb{Z}^T_2$ time reversal symmetry:} $S^\mu_i \to -S^\mu_i$
+
+        \item \underline{$\mathbb{Z}^{(x)}_2 \times \mathbb{Z}^{(y)}_2$}: Generators are
+        \[
+        \prod_j e^{i\pi S^x_j} \quad,\quad \prod_j e^{i\pi S^y_j}
+        \]
+        Notice that $e^{i\pi S^x_j}e^{i\pi S^y_j} = e^{i\pi S^z_j}$
+    \end{itemize}
+    \textbf{Full internal symmetry}: $\mathbb{Z}_2^{[1]} \times \mathbb{Z}^T_2 \times \mathbb{Z}^{(x)}_2 \times \mathbb{Z}^{(y)}_2$
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Anomalous 1-Form Symmetry}
+\begin{frame}{Anomalous 1-Form Symmetry}
+    \textbf{\underline{Anomaly}: Presence of obstruction to gauging symmetries.} Here we discuss the 1-form symmetry $\mathbb{Z}_2^{[1]}$.
+    \begin{itemize}
+        \item The action of a generator of $\mathbb{Z}^{[1]}_2$ symmetry 
+        \tinyeq{
+            S^\mu_k \to \lr{\prod_{j\in\mathcal{L}}e^{i\pi S^{\hat{n}_j}_j}} S^\mu_k \lr{\prod_{j\in\mathcal{L}}e^{i\pi S^{\hat{n}_j}_j}}^\dagger = \lambda^\mu_kS^\mu_k
+        }
+        where
+        \tinyeq{
+            \lambda^\mu_k = 
+            \begin{cases}
+                -1, & k\in\mathcal{L} ,\;\hat{n}_k\in\mathcal{L} \\
+                1 , & \text{otherwise.}
+            \end{cases}
+        }
+        \item Introduce the $\mathbb{Z}_2$ gauge field $A_{ij}$ obey the rule of  gauge transformation: $A_{ij} \to \lambda_i^{\alpha_{ij}} A_{ij} \lambda^{\alpha_{ij}}_j$, and then insert them in between matter fields
+        \tinyeq{
+             H = -\sum_{\anglelr{ij}}J_{\alpha_{ij}}S^{\alpha_{ij}}_iS^{\alpha_{ij}}_j \to -\sum_{\anglelr{ij}}J_{\alpha_{ij}}S^{\alpha_{ij}}_i A_{ij} S^{\alpha_{ij}}_j
+        }
+        \item Define the electric fields $E_i^\mu$
+        \tinyeq{
+            \begin{array}{ccccccc}
+                \lr{E_i^\mu}^2=\mathds{1} &,& E_i^{\alpha_{ij}} A_{ij} E_i^{\alpha_{ij}} = - A_{ij} &,& [E_i^\mu, E^\nu_j] = 0 &,& [E_i^\mu, S^\nu_j] = 0
+            \end{array}
+        }
+        
+    \end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Anomalous 1-Form Symmetry}
+    \begin{itemize}
+        \item \item Define the Gauss law (generators of gauge symmetries)
+    \end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
