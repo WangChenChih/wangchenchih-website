@@ -110,3 +110,6 @@ $$
 \delta(E_n - E_0 - \omega)
 \end{align*}
 $$
+
+* [Knolle et. al., Dynamics of a Two-Dimensional Quantum Spin Liquid: Signatures of Emergent Majorana Fermions and Fluxes](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/PhysRevLett.112.207203.pdf)
+* [X.-Y. Song et. al., Low-Energy Spin Dynamics of the Honeycomb Spin Liquid Beyond the Kitaev Limit](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/PhysRevLett.117.037209.pdf)
