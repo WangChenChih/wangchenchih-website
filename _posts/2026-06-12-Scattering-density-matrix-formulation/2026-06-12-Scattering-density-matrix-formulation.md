@@ -20,7 +20,7 @@ $$
 \newcommand{\Tr}{\mathrm{Tr}}
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 $$
-A primary objective of this note is to figure out a potential relation among different types of scattering, such as Raman scattering and neutron scattering, via formulate the master equations using density matrices instead of state vectors used in Lehmann representation. 
+A primary objective of this note is to figure out a potential relation among different types of scattering, such as Raman scattering and neutron scattering, by formulating the master equations using density matrices instead of state vectors used in the Lehmann representation. 
 
 # Raman Scattering
 The master equation that describes the Raman scattering amplitude reads
@@ -43,7 +43,7 @@ $$
 At $T=0$, the master equation about the cross section is
 
 $$
-\frac{\mrm{d}^2 \sigma}{\mrm{d}\Omega\mrm{d}\omega} = \lr{\frac{m}{2\pi}}^2 \frac{k'}{k}\sum_{\sigma\sigma'} p_\sigma \sum_{n} \abs{ \bra{\bo{k}',\sigma',n} \hat{U} \ket{\bo{k},\sigma,0} } \delta\lr{E_n - E_0 - \omega}
+\frac{\mrm{d}^2 \sigma}{\mrm{d}\Omega\mrm{d}\omega} = \lr{\frac{m}{2\pi}}^2 \frac{k'}{k}\sum_{\sigma\sigma'} p_\sigma \sum_{n} \abs{ \bra{\bo{k}',\sigma',n} \hat{U} \ket{\bo{k},\sigma,0} }^2 \delta\lr{E_n - E_0 - \omega}
 $$
 
 $$
@@ -93,7 +93,7 @@ Later on, we will focus on the properties of the real-space magnetic scattering 
 
 ## Magnetic Scattering Function
 
-Similar to the discussion about Raman scattering, the magnetic scattering function can also expressed in terms of density matrices
+Similar to the discussion about Raman scattering, the magnetic scattering function can also be expressed in terms of density matrices
 
 $$
 \begin{align*}
