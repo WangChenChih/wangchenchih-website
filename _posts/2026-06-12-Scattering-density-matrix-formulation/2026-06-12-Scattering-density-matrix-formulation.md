@@ -62,10 +62,22 @@ $$
 $$
 
 Therefore, 
+
 $$
 \frac{\mrm{d}^2 \sigma}{\mrm{d}\Omega\mrm{d}\omega} = (\gamma r_0)^2 \frac{k'}{k} F^2(\bo{Q}) e^{-2W(\bo{Q})} \sum_{\alpha\beta}\lr{\delta_{\alpha\beta} - \frac{Q_\alpha Q_\beta}{Q^2}} S^{\alpha\beta}(\bo{Q},\omega)
 $$
+
 where $S^{\alpha\beta}(\bo{Q},\omega)$ is the magnetic scattering function, which is a quantity related to spin-spin correlations and the magnetic susceptibility. At zero temperature, it reads as
+
+$$
+S^{\alpha\beta}(\bo{Q},\omega) = \sum_{j,j'} e^{i\bo{Q}\cdot\lr{\bo{R}_j - \bo{R}_{j'}}} \sum_{n}\bra{0} \hat{S}^\alpha_{j'} \ket{n} \bra{n} \hat{S}^\beta_j \ket{0} \delta(E_n - E_0 - \omega)
+$$
+
+Later on, we will focus on the properties of the magnetic scattering function because it can completely determine the scattering cross section.
+
+## Magnetic Scattering Function
+
+Similar to the discussion about Raman scattering, the magnetic scattering function can also expressed in terms of density matrices
 
 $$
 S^{\alpha\beta}(\bo{Q},\omega) = \sum_{j,j'} e^{i\bo{Q}\cdot\lr{\bo{R}_j - \bo{R}_{j'}}} \sum_{n}\bra{0} \hat{S}^\alpha_j' \ket{n} \bra{n} \hat{S}^\beta_j \ket{0} \delta(E_n - E_0 - \omega)
