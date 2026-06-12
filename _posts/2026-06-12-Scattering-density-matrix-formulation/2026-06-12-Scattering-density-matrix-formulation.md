@@ -96,9 +96,17 @@ Later on, we will focus on the properties of the real-space magnetic scattering 
 Similar to the discussion about Raman scattering, the magnetic scattering function can also expressed in terms of density matrices
 
 $$
-\tilde{\mathcal{S}}_{jj'}^{\alpha\beta}(\omega) = 
+\begin{align*}
+\tilde{\mathcal{S}}_{jj'}^{\alpha\beta}(\omega) 
+&= 
 \sum_{n}
-\bra{0} \hat{S}^\alpha_j' \ket{n} 
+\bra{0} \hat{S}^\alpha_{j'} \ket{n} 
 \bra{n} \hat{S}^\beta_j \ket{0} 
+\delta(E_n - E_0 - \omega) \\
+&= \sum_{n}
+\Tr \lr{ 
+    \hat{S}^\alpha_{j'} \rho_n \hat{S}^\beta_j \rho_0
+}
 \delta(E_n - E_0 - \omega)
+\end{align*}
 $$
