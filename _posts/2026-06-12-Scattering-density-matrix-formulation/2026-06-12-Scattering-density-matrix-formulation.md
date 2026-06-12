@@ -43,13 +43,30 @@ $$
 At $T=0$, the master equation about the cross section is
 
 $$
-\frac{\mrm{d}^2 \sigma}{\mrm{d}\Omega\mrm{d}\omega} = \lr{\frac{m}{2\pi}}^2 \frac{k'}{k}\sum_{\sigma\sigma'} p_\sigma \sum_{n} \abs{ \bra{\bo{k}',\sigma',n} \hat{U} \ket{\bo{k},\sigma,0} } \delta{E_n - E_0 - \omega}
+\frac{\mrm{d}^2 \sigma}{\mrm{d}\Omega\mrm{d}\omega} = \lr{\frac{m}{2\pi}}^2 \frac{k'}{k}\sum_{\sigma\sigma'} p_\sigma \sum_{n} \abs{ \bra{\bo{k}',\sigma',n} \hat{U} \ket{\bo{k},\sigma,0} } \delta\lr{E_n - E_0 - \omega}
 $$
 
 $$
 \bra{\bo{k}',\sigma',n} \hat{U} \ket{\bo{k},\sigma,0} = 8\pi\gamma\mu_k\mu_B \bra{\sigma',n} \hat{\sigma}\cdot \hat{W}(\bo{Q}) \ket{\sigma,0}
 $$
 
+where $\bo{Q} = \bo{k} - \bo{k}'$ is the amount of momentum transferred from the neutron to the scatterer, also known as the scattering vector.
+
 $$
 \hat{W}(\bo{Q}) = \sum_{i} e^{i\bo{Q}\cdot \bo{r}_i} \frac{1}{Q^2} \lr{\bo{Q}\times \lr{\hat{\bo{s}_i}\times \bo{Q}} - i\bo{Q}\times\hat{\bo{p}}_i}
+$$
+
+For a non-polarized neutron beam, we could set $p_\uparrow = p_\downarrow = 1/2$, and so
+$$
+\sum_{\sigma\sigma'}p_\sigma \bra{\sigma}\sigma_\alpha\ket{\sigma'}\bra{\sigma'}\sigma_\beta\ket{\sigma} = \frac{1}{2}\mathrm{tr}(\sigma_\alpha\sigma_\beta) = \delta_{\alpha\beta}
+$$
+
+Therefore, 
+$$
+\frac{\mrm{d}^2 \sigma}{\mrm{d}\Omega\mrm{d}\omega} = (\gamma r_0)^2 \frac{k'}{k} F^2(\bo{Q}) e^{-2W(\bo{Q})} \sum_{\alpha\beta}\lr{\delta_{\alpha\beta} - \frac{Q_\alpha Q_\beta}{Q^2}} S^{\alpha\beta}(\bo{Q},\omega)
+$$
+where $S^{\alpha\beta}(\bo{Q},\omega)$ is the magnetic scattering function, which is a quantity related to spin-spin correlations and the magnetic susceptibility. At zero temperature, it reads as
+
+$$
+S^{\alpha\beta}(\bo{Q},\omega) = \sum_{j,j'} e^{i\bo{Q}\cdot\lr{\bo{R}_j - \bo{R}_{j'}}} \sum_{n}\bra{0} \hat{S}^\alpha_j' \ket{n} \bra{n} \hat{S}^\beta_j \ket{0} \delta(E_n - E_0 - \omega)
 $$
