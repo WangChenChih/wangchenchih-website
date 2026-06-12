@@ -1,0 +1,131 @@
+\documentclass[12font]{article}
+\title{\textbf{ Pseudo Flat Band }}
+\author{Chen-Chih Wang  }
+\date{\textit{Department of physics, National Tsing Hua University, Hsinchu 30013, Taiwan} \\ (Dated: \today)}
+\usepackage[margin=2cm]{geometry}
+%\usepackage[fleqn]{amsmath}
+%\usepackage{CJK,amsmath}
+\usepackage{amsfonts,amssymb}
+\usepackage{fancyhdr}
+%\pagestyle{fancy}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{threeparttable}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\urlstyle{same}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{dsfont}
+
+\newcommand{\bra}[1]{\left\langle #1 \right|}
+\newcommand{\ket}[1]{\left| #1 \right\rangle}
+\newcommand{\anglelr}[1]{\left\langle #1 \right\rangle}
+\newcommand{\braket}[2]{\left\langle #1 \right|\left. #2 \right\rangle}
+\newcommand{\dif}[1]{\frac{\mathrm{d}}{\mathrm{d}#1}}
+\newcommand{\diff}[2]{\frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\gd}{\boldsymbol{\nabla}}
+\newcommand{\dive}{\boldsymbol{\nabla}\cdot}
+\newcommand{\curl}{\boldsymbol{\nabla}\times}
+\newcommand{\lr}[1]{\left(  #1  \right)}
+\newcommand{\lrm}[1]{\left[  #1  \right]}
+\newcommand{\lrg}[1]{\left\{  #1  \right\}}
+\newcommand{\abs}[1]{\left|  #1  \right|}
+\newcommand{\de}{\partial}
+\newcommand{\pdif}[1]{\frac{\partial}{\partial#1}}
+\newcommand{\pdiff}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\mrm}[1]{\mathrm{#1}}
+\newcommand{\bo}[1]{\mathbf{#1}}
+\newcommand{\bog}[1]{\boldsymbol{#1}}
+\newcommand{\vint}[3]{\int_{#1}#2\cdot\mathrm{d}\mathbf{#3}}
+\newcommand{\voint}[3]{\oint_{#1}#2\cdot\mathrm{d}\mathbf{#3}}
+\newcommand{\Vint}{\int\mrm{d}^3\bo{r}'}
+\newcommand{\rr}{\mathbf{r} - \mathbf{r}'}
+\newcommand{\arr}{\left|\mathbf{r} - \mathbf{r}'\right|}
+
+\begin{document}
+\maketitle
+
+%\fontsize{12pt}{18pt}\selectfont
+
+
+\begin{abstract}
+  I found that one can obtain a flat band solution by pure mathematical trick. In other words, for some systems there seems to be two different solution to the band structure. If one can fund a local particle representation to diagonalize the Hamiltonian, then one can find the flat band, and which is dubbed the \emph{pseudo flat band} in this note.
+\end{abstract}
+
+\section{Ising model}
+Starting with the one dimensional Ising Hamiltonian without the external magnetic field,
+\[
+\hat{H}_{\mrm{Ising}} = -\sum_{i}S^x_i S^x_{i+1}
+\]
+with the one dimensional Jordan-Wigner (JW) transformation,
+\[
+\left\{
+\begin{aligned}
+& S^x_i = \lrm{\prod_{j<i}\lr{1-2c_j^\dagger c_j}}\lr{c_i^\dagger + c_i} \\
+& S^y_i = \lrm{\prod_{j<i}\lr{1-2c_j^\dagger c_j}}i\lr{c_i^\dagger - c_i} \\
+& S^z_i = 1 - 2c_i^\dagger c_i
+\end{aligned}
+\right.
+\]
+The Ising Hamiltonian can be written as,
+\[
+\hat{H}_{\mrm{Ising}} = -\sum_{i}\lr{c_i^\dagger - c_i}\lr{c_{i+1}^\dagger + c_{i+1}} \equiv -\sum_{i}i\alpha_{i+1}\beta_{i}
+\]
+where 
+\[
+\alpha_i \equiv c_i^\dagger + c_i \;,\; \beta_i \equiv i\lr{c_i^\dagger - c_i}
+\]
+Similar to the Kitaev's trick, we can define an Ising operator
+\[\hat{u}_i \equiv i\alpha_{i+1}\beta_i\]
+we can check that $\hat{u}_i^2 = \mathds{1}$. Moreover, each $\hat{u}_i$ commutes with all the other one, that is $[\hat{u}_i,\hat{u}_j] = 0$. Thus each $\hat{u}_i$ commutes with the Hamiltonian and hence its eigenvalue is a good quantum number. Because of these properties, such an abelian $\mathbb{Z}_2$ operators can be represented by fermion operators $\eta$ in such a way that,
+\[
+\hat{u}_i \equiv 1 - 2\eta_i^\dagger \eta_i
+\]
+we can check that this representation preserves the ablian as well as the $\mathbb{Z}_2$ properties. Plugging this representation into the original Hamiltonian gives,
+\[
+\hat{H}_{\mrm{Ising}} = -\sum_{i}\hat{u}_i = \sum_{i}\lr{2\eta_i^\dagger\eta_i - 1} = \sum_{k}2\eta_k^\dagger\eta_k - N
+\]
+in the final step we Fourier transform the fermion, which is redundant in some sense since the Hamiltonian is already diagonal before doing that. Eventually we obtain the flat band $\epsilon(k) = 2$, which is a constant. That makes sense since the fermion $\eta$, the elementary excitation in this diagonalization scheme, is completely local in the real space, i.e. no hopping term can make them move to other lattice sites. 
+
+On the other hand, if we diagonalize the Hamiltonian in the JW fermion representation, we have,
+\begin{align*}
+  \hat{H}_{\mrm{Ising}} &= \sum_{i}\lrm{c_{i+1}^\dagger c_i^\dagger - c_{i+1}^\dagger c_i + \mrm{H.c.}} \\
+  &= \sum_{k}\lrm{e^{-ik}c_{k}^\dagger c_{-k}^\dagger - e^{-ik} c_k^\dagger c_k + \mrm{H.c.}} \\
+  &= \sum_{k}\lrm{e^{-ik}c_{k}^\dagger c_{-k}^\dagger - \cos k c_k^\dagger c_k + \mrm{H.c.}} \\
+  &= \begin{pmatrix}
+       c_k^\dagger & c_{-k} 
+     \end{pmatrix}\begin{pmatrix}
+                    -\cos k & e^{-ik} \\
+                    e^{ik} & \cos k 
+                  \end{pmatrix}\begin{pmatrix}
+                                 c_k \\
+                                 c_{-k}^\dagger 
+                               \end{pmatrix} + E_0
+\end{align*}
+The matrix sandwiched between spinors in the last line can be further represented as,
+\[
+\begin{pmatrix}
+-\cos k & e^{-ik} \\
+e^{ik} & \cos k 
+\end{pmatrix} = \cos k\sigma^x + \sin k \sigma^y - \cos k \sigma^z
+\]
+thus the dispersion is
+\begin{equation}\label{real band structure.e}
+  \epsilon_{\pm}\lr{k} = \pm\sqrt{1 + \cos^2 k}
+\end{equation}
+which is obviously dispersive and doesn't consist with the flat band result solved by $\eta$ fermion representation.
+
+
+\begin{thebibliography}{99}
+
+    \bibitem{}{}
+
+\end{thebibliography}
+
+\end{document}

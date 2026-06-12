@@ -1,0 +1,125 @@
+\documentclass[12font]{article}
+\title{\textbf{ Can the Gutzwiller Projection be Obtained from Gauge Constraint?}}
+\author{Chen-Chih Wang  }
+\date{\textit{Department of physics, National Tsing Hua University, Hsinchu 30013, Taiwan} \\ (Dated: \today)}
+\usepackage[margin=2cm]{geometry}
+%\usepackage[fleqn]{amsmath}
+%\usepackage{CJK,amsmath}
+\usepackage{amsfonts,amssymb}
+\usepackage{fancyhdr}
+%\pagestyle{fancy}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{threeparttable}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\urlstyle{same}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{dsfont}
+
+\newcommand{\bra}[1]{\left\langle #1 \right|}
+\newcommand{\ket}[1]{\left| #1 \right\rangle}
+\newcommand{\anglelr}[1]{\langle #1 \rangle}
+\newcommand{\Anglelr}[1]{\left\langle #1 \right\rangle}
+\newcommand{\braket}[2]{\left\langle #1 \right|\left. #2 \right\rangle}
+\newcommand{\dif}[1]{\frac{\mathrm{d}}{\mathrm{d}#1}}
+\newcommand{\diff}[2]{\frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\gd}{\boldsymbol{\nabla}}
+\newcommand{\dive}{\boldsymbol{\nabla}\cdot}
+\newcommand{\curl}{\boldsymbol{\nabla}\times}
+\newcommand{\lr}[1]{\left(  #1  \right)}
+\newcommand{\lrm}[1]{\left[  #1  \right]}
+\newcommand{\lrg}[1]{\left\{  #1  \right\}}
+\newcommand{\abs}[1]{\left|  #1  \right|}
+\newcommand{\de}{\partial}
+\newcommand{\pdif}[1]{\frac{\partial}{\partial#1}}
+\newcommand{\pdiff}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\mrm}[1]{\mathrm{#1}}
+\newcommand{\bo}[1]{\mathbf{#1}}
+\newcommand{\bog}[1]{\boldsymbol{#1}}
+\newcommand{\vint}[3]{\int_{#1}#2\cdot\mathrm{d}\mathbf{#3}}
+\newcommand{\voint}[3]{\oint_{#1}#2\cdot\mathrm{d}\mathbf{#3}}
+\newcommand{\Vint}{\int\mrm{d}^3\bo{r}'}
+\newcommand{\rr}{\mathbf{r} - \mathbf{r}'}
+\newcommand{\arr}{\left|\mathbf{r} - \mathbf{r}'\right|}
+\newcommand{\alert}[1]{{\color{red}#1}}
+
+\begin{document}
+\maketitle
+
+%\fontsize{12pt}{18pt}\selectfont
+
+
+\begin{abstract}
+  Here I try to find the Gutzwiller projector from the gauge constraint in U(1) or SU(2) gauge theory, similar to the case that the gauge constraint projector in the Kitaev $\mathbb{Z}_2$ gauge theory is equivalent to the Gutzwiller projection in the spinon representation.
+\end{abstract}
+
+\section{The Gauge Transformation in the Kitaev Model}
+Here I am trying to guess how Kitaev build the $\mathbb{Z}_2$ gauge theory in his model, and discuss if I can use the similar approach to discuss the U(1) or SU(2) or higher dimension cases.
+
+\subsection{$\mathbb{Z}_2$ Gauge Theory in the Kitaev Model}
+The typical $\mathbb{Z}_2$ gauge theory consists of $\mathbb{Z}_2$ gauge field $\sigma^z_j(i)$ living on links of a lattice\footnote{For $\sigma_j^z(i)$, $i$ represents the lattice site and $j$ the direction pointing to the neighboring sites.} and its dual operator $\sigma^x_j(i)$ defined in such a way that $\sigma^x\sigma^z\sigma^x = -\sigma^z$, which means $\sigma^x$ can flip the sign of the gauge field $\sigma^z$. The \textbf{Hamiltonian} reads
+\[\hat{H} = \sum_{i,j}\sigma^x_j(i) + g\sum_{p}\prod_{(ij)\in p}\sigma^z_j(i)\]
+The $\mathbb{Z}_2$ gauge charge is defined as
+\[\hat{Q}(i):= \prod_{j}\sigma_j^x(i)\]
+and the \textbf{Hilbert space} (physical) is formed by states satisfying\footnote{The gauge charge operator can be considered the generator of the $\mathbb{Z}_2$ gauge transformation. Such an operator has the properties that $[\hat{Q}(i),\hat{H}] = 0$ and $[\hat{Q}(i),\hat{Q}](j) = 0$.} 
+\[\hat{Q}(i)\ket{\psi} = +\ket{\psi}\;\forall_i\]
+and these states are called \emph{physical states}. For those states with eigenvalue $-1$ of the gauge charge operator are called the \emph{unphysical states}.
+
+In the Kitaev model\footnote{The $\mathbb{Z}_2$ gauge field in the Kitaev model doesn't have dynamics. The Hamiltonian contains only the coupling between the gauge field and the matter field, no pure gauge term is included. Actually I'm trying to write down the effective gauge theory for the Kiaev model (to integrate out the matter field) and to see what is the eventual form of the gauge Hamiltonian.}, the $\mathbb{Z}_2$ gauge field is $\hat{u}_{ij}$ so we have the correspondence 
+\[\hat{u}_{ij} =  \sigma^z_j(i)\]
+Now we have to find the dual operator to play the role of $\sigma^x$, which can flip the gauge field. If one is familiar with the Kitaev model then he/she would observe the following property
+\[(ib^{\alpha_{ik}}_ic_i)\hat{u}_{ij}(ib^{\alpha_{ik}}_ic_i) = \begin{cases}
+                                                                 -\hat{u}_{ij}, & \mbox{if } j=k \\
+                                                                 \hat{u}_{ij}, & \mbox{otherwise}
+                                                               \end{cases}\]
+and $ib^{\alpha_{ij}}_ic_i$ is Hermitian. So we have seen that 
+\[ib^{\alpha_{ij}}_ic_i = \sigma^x_j(i)\]
+Thus the gauge charge operator, i.e. the generator of the $\mathbb{Z}_2$ gauge transform, is then
+\begin{equation}\label{D operator.e}
+  \hat{Q}(i) = \prod_{j}\sigma^x_j(i) = \prod_{j}ib^{\alpha_{ij}}_ic_i = \prod_{\mu = x,y,z}ib^{\mu}_ic_i = ib^x_ib^y_ib^z_ic_i = \hat{D}_i
+\end{equation}
+therefore the gauge constraint projector is
+\[\mathcal{P} = \prod_{i}\lr{\frac{\mathds{1}+\hat{Q}_i}{2}} = \prod_{i}\lr{\frac{\mathds{1}+\hat{D}_i}{2}}\]
+This result consists with Kitaev's argument. In Burnell's work we have seen that this gauge projection is actually equivalent to the Gutzwiller projection under the spinon representation
+\[\mathcal{P} = \prod_{i}\lr{n_{i\uparrow} + n_{i\downarrow}}\lr{2-n_{i\uparrow} - n_{i\downarrow}}\]
+Based on this, I wonder if we can use the method above to deal with the U(1) or SU(2) gauge theory and obtain the similar result. If so, we can use the Gutzwiller projection to improve our comprehension about the parton gauge theory.
+
+\subsection{U(1) Gauge Theory}
+Here I and trying to do the same thing in the U(1) scenario. In the U(1) gauge theory, the simplest Hamiltonian is
+\[\hat{H} = \sum_{ij}\frac{1}{2}E_j(i)^2 - \frac{1}{g}\sum_{i,jk}\cos\lr{\Delta_jA_k(i) - \Delta_kA_j(i)}\]
+Where
+\[[A_k(i),E_l(j)] = i\delta_{ij}\delta_{kl}\] 
+The gauge charge operator, the generator of the U(1) gauge transformation, is defined by
+\[\hat{Q}(i) = \Delta_jE_j(i)\]
+and the physical Hilbert space is formed by those state with no gauge charge. In other words, the physical states satisfy
+\[\hat{Q}(i)\ket{\psi_{\text{phys}}} = 0\;\forall_i\]
+
+The projector is a little bit tricky here
+\[\mathcal{P} = \prod_{i}\delta\lr{\hat{Q}(i)}\]
+where the value of the $\delta$-function is unity only if the input value is zero, otherwise it is zero. 
+
+The U(1) gauge transformation is generated by the charge operator
+\[\hat{U}\lr{\lrg{\theta}} = \prod_{i}e^{i\hat{Q}(i)\theta\lr{i}}\]
+because
+\[\hat{U}\lr{\lrg{\theta}}A_j\lr{i}\hat{U}\lr{\lrg{\theta}}^\dagger = A_j\lr{i} + \Delta_j\theta\lr{i}\]
+Acting it onto a physical state changes nothing because of the definition of the physical state,
+\[\hat{U}\lr{\lrg{\theta}}\ket{\psi_\text{phys}} = \prod_{i}e^{i\hat{Q}(i)\theta\lr{i}}\ket{\psi_\text{phys}} = \prod_{i}\mathds{1}\ket{\psi_\text{phys}} = \ket{\psi_\text{phys}}\]
+so the physical states are actually those states that are invariant under the gauge transformation. 
+
+In partons mean field theory, the U(1) gauge field arises from the Berry connection $\anglelr{f^\dagger_{i}f_j}\sim e^{iA_{ij}}$ like stuff. \alert{try to find the corresponding $E_{ij}$}
+
+
+\begin{thebibliography}{99}
+
+    \bibitem{}{}
+
+\end{thebibliography}
+
+\end{document}

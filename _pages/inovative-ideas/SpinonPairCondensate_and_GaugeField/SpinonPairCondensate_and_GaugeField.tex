@@ -1,0 +1,92 @@
+\documentclass[12font]{article}
+\title{\textbf{ Spinon Pair Condensate and Gauge Field }}
+\author{Chen-Chih Wang  }
+\date{\textit{Department of physics, National Tsing Hua University, Hsinchu 30013, Taiwan} \\ (Dated: \today)}
+\usepackage[margin=2cm]{geometry}
+%\usepackage[fleqn]{amsmath}
+%\usepackage{CJK,amsmath}
+\usepackage{amsfonts,amssymb}
+\usepackage{fancyhdr}
+%\pagestyle{fancy}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{threeparttable}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\urlstyle{same}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{dsfont}
+
+\newcommand{\bra}[1]{\left\langle #1 \right|}
+\newcommand{\ket}[1]{\left| #1 \right\rangle}
+\newcommand{\anglelr}[1]{\left\langle #1 \right\rangle}
+\newcommand{\braket}[2]{\left\langle #1 \right|\left. #2 \right\rangle}
+\newcommand{\dif}[1]{\frac{\mathrm{d}}{\mathrm{d}#1}}
+\newcommand{\diff}[2]{\frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\gd}{\boldsymbol{\nabla}}
+\newcommand{\dive}{\boldsymbol{\nabla}\cdot}
+\newcommand{\curl}{\boldsymbol{\nabla}\times}
+\newcommand{\lr}[1]{\left(  #1  \right)}
+\newcommand{\lrm}[1]{\left[  #1  \right]}
+\newcommand{\lrg}[1]{\left\{  #1  \right\}}
+\newcommand{\abs}[1]{\left|  #1  \right|}
+\newcommand{\de}{\partial}
+\newcommand{\pdif}[1]{\frac{\partial}{\partial#1}}
+\newcommand{\pdiff}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\mrm}[1]{\mathrm{#1}}
+\newcommand{\bo}[1]{\mathbf{#1}}
+\newcommand{\bog}[1]{\boldsymbol{#1}}
+\newcommand{\vint}[3]{\int_{#1}#2\cdot\mathrm{d}\mathbf{#3}}
+\newcommand{\voint}[3]{\oint_{#1}#2\cdot\mathrm{d}\mathbf{#3}}
+\newcommand{\Vint}{\int\mrm{d}^3\bo{r}'}
+\newcommand{\rr}{\mathbf{r} - \mathbf{r}'}
+\newcommand{\arr}{\left|\mathbf{r} - \mathbf{r}'\right|}
+
+\begin{document}
+\maketitle
+
+%\fontsize{12pt}{18pt}\selectfont
+
+
+\begin{abstract}
+  Here I try to borrow the gauge theory and the Cooper pair stuffs in the BCS theory to comprehend the physics of spinons.
+\end{abstract}
+
+\section{Introduction}
+In the BCS theory, electrons in a conventional superconductor form Cooper pairs and then condense to the superconducting state, hence the superconducting state can be considered the Cooper pair coherent state. The Cooper pair condensate leads to the non-zero value of the expectation value of the Cooper pair operator,
+\[\anglelr{B_k} = \anglelr{f_{-k\downarrow}f_{k\uparrow}} = \Delta \neq 0\]
+and which is exactly the BCS gap. 
+
+In the spinon theory there's a similar argument that the ground state of a spin system can be
+
+\begin{enumerate}
+  \item BCS condensation gives mass to photons via the Anderson-Higgs mechanism. This is because electrons are minimal coupled to the EM U(1) gauge field. Similarly, In the parton gauge theory, those spinons are minimal coupled to the emerged gauge theory (note that the gauge group of the corresponding gauge theory is given by the IGG of the system, which is actually determined by the system Hamiltonian), thus the similar discussion about the gauge field and the pairing condensate in the BCS theory should be able to repeated here.
+  
+  \item In the spinon theory, especially the PSG theory proposed by Wen, the parameter $\eta_{ij} = \anglelr{f_{i\uparrow}f_{j\downarrow}}$ describes that the ground state is a RVB liquid since $\eta_{ij}$ can be considered the order parameter of spin singlet paring forming on the link $(ij)$, and which corresponds to the amount of \emph{entanglement} of the ground state to some extend. 
+  
+  \item Further more, the $\eta_{ij}$ can be considered the spinon analogue of the BCS gap $\Delta$. So it might be possible to build the following correspondence:
+      \[
+      \begin{aligned}
+        \text{Cooper pair condensate} \quad &\Longleftrightarrow \quad \text{Spinon pair condensate} \\
+        \text{BCS gap $\Delta$} \quad &\Longleftrightarrow \quad \text{Entanglement order parameter $\eta_{ij}$} \\
+        \text{Anderson-Higgs mechanism of the EM field} \quad &\Longleftrightarrow \quad \text{Anderson-Higgs mechanism of the emerged gauge field} 
+      \end{aligned}
+      \]
+\end{enumerate}
+
+
+
+\begin{thebibliography}{99}
+
+    \bibitem{}{}
+
+\end{thebibliography}
+
+\end{document}
+

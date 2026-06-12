@@ -1,0 +1,114 @@
+\documentclass[12font]{article}
+\title{\textbf{ Possible Relations between Topological Entanglement Entropy and Chiral Central Charge in a Chiral Spin Liquid}}
+\author{Chen-Chih Wang  }
+\date{\textit{Department of physics, National Tsing Hua University, Hsinchu 30013, Taiwan} \\ (Dated: \today)}
+\usepackage[margin=2cm]{geometry}
+%\usepackage[fleqn]{amsmath}
+%\usepackage{CJK,amsmath}
+\usepackage{amsfonts,amssymb}
+\usepackage{fancyhdr}
+%\pagestyle{fancy}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{threeparttable}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\urlstyle{same}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{dsfont}
+\usepackage{comment}
+\newtheorem{theorem}{Theorem}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{proposition}[theorem]{Proposition}
+
+\numberwithin{equation}{section}
+
+\newcommand{\vac}{\mrm{vac}}
+\newcommand{\Bra}[1]{\left\langle #1 \right|}
+\newcommand{\Ket}[1]{\left| #1 \right\rangle}
+\newcommand{\bra}[1]{\langle #1 |}
+\newcommand{\ket}[1]{| #1 \rangle}
+\newcommand{\anglelr}[1]{\left\langle #1 \right\rangle}
+\newcommand{\sanglelr}[1]{\langle #1 \rangle}
+\newcommand{\braket}[2]{\langle #1 | #2 \rangle}
+\newcommand{\Bbraket}[2]{\left\langle #1 \right|\left. #2 \right\rangle}
+\newcommand{\dif}[1]{\frac{\mathrm{d}}{\mathrm{d}#1}}
+\newcommand{\diff}[2]{\frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\gd}{\boldsymbol{\nabla}}
+\newcommand{\dive}{\boldsymbol{\nabla}\cdot}
+\newcommand{\curl}{\boldsymbol{\nabla}\times}
+\newcommand{\lr}[1]{\left(  #1  \right)}
+\newcommand{\lrm}[1]{\left[  #1  \right]}
+\newcommand{\lrg}[1]{\left\{  #1  \right\}}
+\newcommand{\abs}[1]{\left|  #1  \right|}
+\newcommand{\de}{\partial}
+\newcommand{\pdif}[1]{\frac{\partial}{\partial#1}}
+\newcommand{\pdiff}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\mrm}[1]{\mathrm{#1}}
+\newcommand{\bo}[1]{\mathbf{#1}}
+\newcommand{\bog}[1]{\boldsymbol{#1}}
+\newcommand{\vint}[3]{\int_{#1}#2\cdot\mathrm{d}\mathbf{#3}}
+\newcommand{\voint}[3]{\oint_{#1}#2\cdot\mathrm{d}\mathbf{#3}}
+\newcommand{\Vint}{\int\mrm{d}^3\bo{r}'}
+\newcommand{\rr}{\mathbf{r} - \mathbf{r}'}
+\newcommand{\arr}{\left|\mathbf{r} - \mathbf{r}'\right|}
+\newcommand{\nx}{\hat{\bo{n}}_1}
+\newcommand{\ny}{\hat{\bo{n}}_2}
+\newcommand{\alert}[1]{{\color{red}#1}}
+\newcommand{\alertV}[1]{{\color{violet}#1}}
+\newcommand{\Tr}{\mrm{Tr}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\newcommand{\wordfig}[2]{\begin{minipage}[h]{#1 cm}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{#2}
+   \end{minipage}}
+
+\begin{document}
+\maketitle
+
+I conjecture that a chiral spin liquid might imply a non-zero topological entanglement entropy. Such an intuition is led by the following ways of thinking.
+
+Wen \emph{et. al.} have shown that a chiral spin liquid can be represented by a Chern-Simons theory effectively in low energy if the time-dimension is included \cite{WenChiral}. Such a theory can also be interpreted by a TQFT hosting anyon statistics and hence a non-trivial topological entanglement entropy $\gamma = \ln \mathcal{D}$ given by the quantum dimension $\mathcal{D}$ exists \cite{LevinTEE, topoEE}. The quantum dimension is well defined as long as the TQFT is given \cite{Witten}. So we can say that if there is a well-defined TQFT that successfully interprets the chiral spin liquid state of the spin system, then the topological entanglement entropy will be automatically given. To some extends, \textbf{that means a chiral spin liquid implies a non-trivial topological entanglement entropy}. 
+
+On the other hand, Ref.\cite{ModularComB, PRL128, PRL129} give a relation between the \emph{modular commutator} and the chiral central charge. The definition of the modular commutator $J(A,B,C)$, where $\{A,B,C\}$  is a geometric partition that tripartite a subregion of the system, is given by 
+\[
+J(A,B,C) := i\Tr_{ABC}\lr{\rho_{ABC}[K_{AB}, K_{BC}]} = i\anglelr{[K_{AB}, K_{BC}]}
+\]  
+where $\rho_X=\Tr_X\rho$ is the reduced density matrix of the region $X$, and $K_{X}\equiv -\ln\rho_X$ is the entanglement Hamiltonian. The important relation between modular commutator\footnote{The modular commutator $J(A,B,C)$ is proven to be topologically invariant no matter how do we tripartite the subregion, and the value vanishes if the system has TRS \cite{ModularComB}.} and the chiral central charge $c_-$ is
+\[
+J(A,B,C) = \frac{\pi}{3}c_-
+\]
+A non-zero chiral central charge indicates the TRS breaking of the chiral spin liquid ground state, and the chiral spin order parameter 
+\[
+E_{ijk} \equiv \anglelr{\bo{S}_i\cdot\lr{\bo{S}_j\times\bo{S}_k}}
+\]
+defined  in Ref.\cite{WenChiral} plays a similar role. So I came up with an intuition that there might be a relation connecting the chiral order parameter and the chiral central charge of a chiral spin liquid, if any. Plus the previous discussion about the conjecture of the topological entanglement entropy, \textbf{I feel like the topological entanglement entropy and the chiral order parameter as well as the chiral central charge in a chiral spin liquid could be unified in some ways}.
+
+A mathematical intuition inspired by the modular commutator is that the chiral order parameter $E_{ijk}$ can be written in another form
+\[
+\anglelr{\bo{S}_i\cdot\lr{\bo{S}_j\times\bo{S}_k}} = i\anglelr{[(\bo{S}_k\cdot\bo{S}_j), (\bo{S}_j\cdot\bo{S}_i)]}
+\]
+, which is of the form similar to the modular commutator if $\{k,j,i\}\to\{A,B,C\}$ and $K_{ij} \to \bo{S}_i\cdot\bo{S}_j$. According to the result given by Ref.\cite{Peschel}, the entanglement Hamiltonian is in the same form of the original Hamiltonian for free-fermion systems. Although most of the strongly correlated spin systems are far away from the free-fermion type, usually we can assume that the validity of the parton mean-field theory and then transform the Hamiltonian into a effective free-fermion system. After that, the entanglement Hamiltonian can be solved approximately, and should be able (I guess) to be transform back to the Heisenberg form. So in the end of the day, I expect the entanglement Hamiltonian will still be  roughly in a Heisenberg form, which agrees with $K_{ij}\propto\bo{S}_{i}\cdot\bo{S}_j$ if we require that the reduced density matrix reproduces the symmetry of the correlation functions of the original Heisenberg model. 
+
+
+\begin{thebibliography}{99}
+    \bibitem{WenChiral}\href{https://doi.org/10.1103/PhysRevB.39.11413}{X. G. Wen, Frank Wilczek, and A. Zee, \emph{Chiral spin states and superconductivity}, Phys. Rev. B \textbf{39}, 11413 (1989)}
+    \bibitem{LevinTEE}\href{https://doi.org/10.1103/PhysRevLett.96.110405}{M. Levin, X. Wen, \emph{Detecting Topological Order in a Ground State Wave Function}, Phys. Rev. Lett. \textbf{96}, 110405 (2006)}
+    \bibitem{topoEE}\href{https://doi.org/10.1103/PhysRevLett.96.110404}{Alexei Kitaev and John Preskill, \emph{Topological Entanglement Entropy}, Phys. Rev. Lett. \textbf{96}, 110404 (2006)}
+    \bibitem{Witten}\href{https://link.springer.com/article/10.1007/BF01217730}{E. Witten, \emph{Quantum field theory and the Jones polynomial}, Commun. Math. Phys. \textbf{121}, 351 (1989)}
+    \bibitem{ModularComB}\href{https://doi.org/10.1103/PhysRevB.106.075147}{Isaac H. Kim, Bowen Shi, Kohtaro Kato, and Victor V. Albert, \emph{Modular commutator in gapped quantum many-body systems}, Phys. Rev. B \textbf{106}, 075147 (2022)}
+    \bibitem{PRL128}\href{https://doi.org/10.1103/PhysRevLett.128.176402}{Isaac H. Kim, Bowen Shi, Kohtaro Kato, and Victor V. Albert, \emph{Chiral Central Charge from a Single Bulk Wave Function}, Phys. Rev. Lett. \textbf{128}, 176402 (2022)}
+    \bibitem{PRL129}\href{https://doi.org/10.1103/PhysRevLett.129.260402}{Yijian Zou, Bowen Shi, Jonathan Sorce, Ian T. Lim and Isaac H. Kim, \emph{Modular Commutators in Conformal Field Theory}, Phys. Rev. Lett. \textbf{129}, 260402 (2022)}
+    \bibitem{Peschel}\href{https://doi.org/10.1088/0305-4470/36/14/101}{ Ingo Peschel, \emph{Calculation of reduced density matrices from correlation functions}, J. Phys. A: Math. Gen. \textbf{36}, L205 (2003)}
+\end{thebibliography}
+\end{document} 
