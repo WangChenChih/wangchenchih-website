@@ -20,7 +20,6 @@ $$
 \newcommand{\Tr}{\mathrm{Tr}}
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 $$
-
 A primary objective of this note is to figure out a potential relation among different types of scattering, such as Raman scattering and neutron scattering, via formulate the master equations using density matrices instead of state vectors used in Lehmann representation. 
 
 # Raman Scattering
@@ -39,3 +38,18 @@ I(\omega) &= 2\pi \sum_{n}\Tr\lr{R \ket{n}\bra{n} R \ket{0}\bra{0}} \delta{E_n -
 \end{align*}
 $$
 
+# Neutron Scattering (Magnetic Signal)
+
+At $T=0$, the master equation about the cross section is
+
+$$
+\frac{\mrm{d}^2 \sigma}{\mrm{d}\Omega\mrm{d}\omega} = \lr{\frac{m}{2\pi}}^2 \frac{k'}{k}\sum_{\sigma\sigma'} p_\sigma \sum_{n} \abs{ \bra{\bo{k}',\sigma',n} \hat{U} \ket{\bo{k},\sigma,0} } \delta{E_n - E_0 - \omega}
+$$
+
+$$
+\bra{\bo{k}',\sigma',n} \hat{U} \ket{\bo{k},\sigma,0} = 8\pi\gamma\mu_k\mu_B \bra{\sigma',n} \hat{\sigma}\cdot \hat{W}(\bo{Q}) \ket{\sigma,0}
+$$
+
+$$
+\hat{W}(\bo{Q}) = \sum_{i} e^{i\bo{Q}\cdot \bo{r}_i} \frac{1}{Q^2} \lr{\bo{Q}\times \lr{\hat{\bo{s}_i}\times \bo{Q}} - i\bo{Q}\times\hat{\bo{p}}_i}
+$$
