@@ -82,7 +82,7 @@ $$
 and we could also define the *real-space magnetic scattering function* as
 
 $$
-\tilde{\mathcal{S}}^{\alpha\beta}_{j,j'}(\omega)
+\tilde{\mathcal{S}}^{\alpha\beta}_{j,j'}(\omega) = 
 \sum_{n}
 \bra{0} \hat{S}^\alpha_{j'} \ket{n} 
 \bra{n} \hat{S}^\beta_j \ket{0} 
