@@ -35,7 +35,7 @@ where $R$ stands for the Raman vertex. This master equation can be reformulated 
 $$
 \begin{align*}
 I(\omega) &= 2\pi \sum_{n}\Tr\lr{R \ket{n}\bra{n} R \ket{0}\bra{0}} \delta{E_n - E_0 - \omega} \\
-&= 2\pi \sum_{n}\Tr\lr{R \rho_n R \rho_0} \delta{E_n - E_0 - \omega}
+&= 2\pi \sum_{n}\Tr\lr{R \rho_n R \rho_0} \delta\lr{E_n - E_0 - \omega}
 \end{align*}
 $$
 
