@@ -1,6 +1,6 @@
 ---
 title: 'Scattering Theory -- Density Matrix Formulation'
-date: 2025-11-19
+date: 2026-06-12
 permalink: /posts/2026/06/density-matrix-scattering/
 tags:
   - physics
@@ -53,5 +53,6 @@ $$
 where $R$ stands for the Raman vertex. This master equation can be reformulated as follows
 
 $$
-I(\omega) = 2\pi \sum_{n}\Tr
+I(\omega) = 2\pi \sum_{n}\Tr\lr{R \ket{n}\bra{n} R \ket{0}\bra{0}} \delta{E_n - E_0 - \omega}
 $$
+

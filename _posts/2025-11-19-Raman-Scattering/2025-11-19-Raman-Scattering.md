@@ -22,7 +22,7 @@ $$
 Note that the operator $R$ depends on the polarizations of the internal and scattered light. Which can be rewritten into another form using the spectral representation
 
 $$
-\langle R(t)R(0)\rangle = \bra{0}R(t)R(0)\ket{0} = \sum_{n}e^{i(E_0-E_n)t}\langle 0|R|n\rangle\langle n|R|0\rangle
+\langle R(t)R(0)\rangle = \bra{0}R(t)R(0)\ket{0} = \sum_{n}e^{i(E_0-E_n)t}\bra{0}R|n\rangle\langle n|R|0\rangle
 $$
 
 Based on this, the intensity $I(\omega)$ in the spectral representation reads
