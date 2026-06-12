@@ -199,6 +199,7 @@ exclude:
   - README
   - tmp
   - vendor
+  - tex-note # tex version of notes   
 keep_files:
   - .git
   - .svn
