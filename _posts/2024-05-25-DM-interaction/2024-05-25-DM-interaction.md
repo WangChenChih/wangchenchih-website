@@ -24,6 +24,9 @@ $$
 The Dzyaloshinskii-Moriya interaction, also known as the antisymmetric interaction, 
 
 # Microscopic Origin: a Simple Interpretation
+- [T. Moriya, Anisotropic Superexchange Interaction and Weak Ferromagnetism](https://wangchenchih.github.io/wangchenchih-website/_posts/2024-05-25-DM-interaction/references/PhysRev.120.91.pdf)
+- [N. E. Bonesteel, Theory of anisotropic superexchange in insulating cuprates](https://wangchenchih.github.io/wangchenchih-website/_posts/2024-05-25-DM-interaction/references/PhysRevB.47.11302.pdf) (Specifically, see Eq. (3.10))
+
 Consider an insulator, where each localized electron $i$ contributes to the local magnetic moment by its spin \(\bo{S}_i\) and angular momentum \(\bo{L}_i\), then the interaction Hamiltonian of a subsystem consisting of only two electrons can be written as
 
 $$
@@ -33,12 +36,15 @@ $$
 where the last two terms describe the spin-orbit copling, while the first term represents the spin exchange interaction between two electrons. Treating the above Hamiltonian as an interaction (the main Hamiltonian is unknown in this context, but we assume its eigenstates are known and the orbit and spin are decoupled) and perform the second order perturbation, we have
 
 $$
-\begin{align*}
-E' &= \sum_{n_1,n_2}\frac{|\bra{n_1,n_2} H' \ket{0_1,0_2}|^2}{E_0 - E_n} \\
-&= 
-\end{align*}
+\hat{H}_{\mathrm{spin}} = \sum_{n_1}\sum_{n_2}\frac{\bra{0_1,0_2} H' \ket{n_1,n_2}\bra{n_1,n_2} H' \ket{0_1,0_2}}{E_0 - E_n} 
+$$
+
+$$
+\bra{n_1,n_2} H' \ket{0_1,0_2} = - J \mathbf{S}_1\cdot\mathbf{S}_2 \delta_{n_10_1}\delta_{n_20_2} + \lambda \mathbf{S}_1\cdot\mathbf{L}_1 + \lambda \mathbf{S}_2\cdot\mathbf{L}_2
 $$
 
 $$
 \mathbf{D} = -i\lambda J \left( \sum_{n_1}\frac{\bra{0_1} \mathbf{L}_1 \ket{n_1}}{E_{n_1} - E_{0_1}}  - \sum_{n_2}\frac{\bra{0_2} \mathbf{L}_2 \ket{n_2}}{E_{n_2} - E_{0_2}} \right)
 $$
+
+In conclusion, the key to the DM interaction is the *spin-orbit coupling*. 
