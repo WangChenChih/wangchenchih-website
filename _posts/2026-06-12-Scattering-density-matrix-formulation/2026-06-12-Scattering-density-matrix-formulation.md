@@ -111,5 +111,10 @@ $$
 \end{align*}
 $$
 
+A comparison between the inelastic neutron scattering and the Raman scattering technique in diagnosing of quantum spin liquids
+
+* [Wulferding et. al., Raman spectroscopic diagnostic of quantum spin liquids](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/JPhysCondensMatter.32.043001.pdf)
+
 * [Knolle et. al., Dynamics of a Two-Dimensional Quantum Spin Liquid: Signatures of Emergent Majorana Fermions and Fluxes](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/PhysRevLett.112.207203.pdf)
 * [X.-Y. Song et. al., Low-Energy Spin Dynamics of the Honeycomb Spin Liquid Beyond the Kitaev Limit](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/PhysRevLett.117.037209.pdf)
+* [Knolle et. al., Raman Scattering Signatures of Kitaev Spin Liquids in \(A_2IrO_3\) Iridates with A = Na or Li](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/PhysRevLett.113.187201.pdf)
