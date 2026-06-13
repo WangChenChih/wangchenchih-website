@@ -1,7 +1,7 @@
 ---
 title: 'Dzyaloshinskii-Moriya Interaction'
-date: 2026-05-25
-permalink: /posts/2025/05/DM-interaction/
+date: 2024-05-25
+permalink: /posts/2024/05/DM-interaction/
 tags:
   - physics
 ---
@@ -22,6 +22,9 @@ $$
 $$
 
 The Dzyaloshinskii-Moriya interaction, also known as the antisymmetric interaction, 
+
+Here lists several review articles
+- [Theory of Monoaxial Chiral Helimagnet](https://www.sciencedirect.com/science/chapter/bookseries/abs/pii/S0081194715000041)
 
 # Microscopic Origin: a Simple Interpretation
 - [T. Moriya, Anisotropic Superexchange Interaction and Weak Ferromagnetism](https://wangchenchih.github.io/wangchenchih-website/_posts/2024-05-25-DM-interaction/references/PhysRev.120.91.pdf)
