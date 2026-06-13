@@ -23,6 +23,8 @@ $$
 A primary objective of this note is to figure out a potential relation among different types of scattering, such as Raman scattering and neutron scattering, by formulating the master equations using density matrices instead of state vectors used in the Lehmann representation. 
 
 # Raman Scattering
+- [Devereaux, inelstic light scattering from correlated electrons](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/RevModPhys.79.175.pdf)
+
 The master equation that describes the Raman scattering amplitude reads
 
 $$
@@ -115,6 +117,7 @@ A comparison between the inelastic neutron scattering and the Raman scattering t
 
 * [Wulferding et. al., Raman spectroscopic diagnostic of quantum spin liquids](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/JPhysCondensMatter.32.043001.pdf)
 
+For the Kitaev model
 * [Knolle et. al., Dynamics of a Two-Dimensional Quantum Spin Liquid: Signatures of Emergent Majorana Fermions and Fluxes](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/PhysRevLett.112.207203.pdf)
 * [X.-Y. Song et. al., Low-Energy Spin Dynamics of the Honeycomb Spin Liquid Beyond the Kitaev Limit](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/PhysRevLett.117.037209.pdf)
 * [Knolle et. al., Raman Scattering Signatures of Kitaev Spin Liquids in \(A_2IrO_3\) Iridates with A = Na or Li](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/PhysRevLett.113.187201.pdf)

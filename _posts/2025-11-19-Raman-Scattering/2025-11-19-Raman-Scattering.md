@@ -13,6 +13,8 @@ Raman scattering has become a powerful experimental tool to detect novel phases 
 
 # Basic Raman
 
+- [Devereaux, inelstic light scattering from correlated electrons](https://wangchenchih.github.io/wangchenchih-website/_posts/2025-11-19-Raman-Scattering/RevModPhys.79.175.pdf)
+
 The scattering intensity is given by
 
 $$
