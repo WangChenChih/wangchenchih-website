@@ -38,3 +38,7 @@ E' &= \sum_{n_1,n_2}\frac{|\bra{n_1,n_2} H' \ket{0_1,0_2}|^2}{E_0 - E_n} \\
 &= 
 \end{align*}
 $$
+
+$$
+\mathbf{D} = -i\lambda J \left( \sum_{n_1}\frac{\bra{0_1} \mathbf{L}_1 \ket{n_1}}{E_{n_1} - E_{0_1}}  - \sum_{n_2}\frac{\bra{0_2} \mathbf{L}_2 \ket{n_2}}{E_{n_2} - E_{0_2}} \right)
+$$
