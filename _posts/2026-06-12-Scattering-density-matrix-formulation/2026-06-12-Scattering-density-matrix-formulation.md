@@ -42,10 +42,11 @@ I(\omega) &= 2\pi \sum_{n}\Tr\lr{R \ket{n}\bra{n} R \ket{0}\bra{0}} \delta{E_n -
 $$
 
 # Neutron Scattering (Magnetic Signal)
-Neutron scattering is a commonly used technique to study the spin correlation in condensed matter systems, providing information to discriminate between different magnetic phases.
+Neutron scattering is a commonly used technique to study the spin correlation in condensed matter systems, providing information to discriminate between different magnetic phases. The distinction between these magnetic phases are often indicated by the symmetry differences in the underlying spin correlation functions, and neutron scattering technique is the very method that is able to reflect these traits.
 
 A major drawback of the neutron scattering method is its weak scattering cross section and limited course strength, meaning that the sample size (the size of one single domain) is required to be relatively large compared with other techniques.
 
+- [W Marshall and R D Lowde, Magnetic correlations and neutron scattering](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/RepProgPhys.31.705.pdf)
 - [Price et. al., An Introduction to Neutron Scattering](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/Neutron-Scattering-Fundamentals_Chap_1.pdf)
 - [Chatterji, Magnetic Neutron Scattering](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/Chatterji_magnetic-neutron-scattering.pdf)
 - [Igor A. Zaliznyak and John M. Tranquada, Neutron Scattering and Its Application to Strongly Correlated Systems](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/Neutron-Scattering-and-Its-Application-to-Strongly-Correlated-Systems.pdf)
