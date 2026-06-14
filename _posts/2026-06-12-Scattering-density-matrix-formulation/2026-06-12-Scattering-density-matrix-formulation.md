@@ -24,6 +24,7 @@ A primary objective of this note is to figure out a potential relation among dif
 
 # Raman Scattering
 - [Devereaux, inelstic light scattering from correlated electrons](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/RevModPhys.79.175.pdf)
+- [Joachim Deisenhofer and Peter Lemmens, Optical Techniques for Systems with Competing Interactions](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/Optical-Techniques-for-Systems-with-Competing-Interactions.pdf)
 
 The master equation that describes the Raman scattering amplitude reads
 
@@ -46,7 +47,7 @@ A major drawback of the neutron scattering method is its weak scattering cross s
 - [Price et. al., An Introduction to Neutron Scattering](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/Neutron-Scattering-Fundamentals_Chap_1.pdf)
 - [Chatterji, Magnetic Neutron Scattering](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/Chatterji_magnetic-neutron-scattering.pdf)
 - [Igor A. Zaliznyak and John M. Tranquada, Neutron Scattering and Its Application to Strongly Correlated Systems](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/Neutron-Scattering-and-Its-Application-to-Strongly-Correlated-Systems.pdf)
-- [Steven T. Bramwell, Neutron-Scattering-and-Highly-Frustrated-Magnetism](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/Neutron-Scattering-and-Highly-Frustrated-Magnetism.pdf)
+- [Steven T. Bramwell, Neutron Scattering and Highly Frustrated Magnetism](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/Neutron-Scattering-and-Highly-Frustrated-Magnetism.pdf)
 
 At $T=0$, the master equation about the cross section is
 
