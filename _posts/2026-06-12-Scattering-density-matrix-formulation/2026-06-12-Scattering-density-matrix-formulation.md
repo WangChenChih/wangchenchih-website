@@ -41,10 +41,12 @@ I(\omega) &= 2\pi \sum_{n}\Tr\lr{R \ket{n}\bra{n} R \ket{0}\bra{0}} \delta{E_n -
 $$
 
 # Neutron Scattering (Magnetic Signal)
+A major drawback of the neutron scattering method is its weak scattering cross section and limited course strength, meaning that the sample size (the size of one single domain) is required to be relatively large compared with other techniques.
 
 - [Price et. al., An Introduction to Neutron Scattering](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/Neutron-Scattering-Fundamentals_Chap_1.pdf)
 - [Chatterji, Magnetic Neutron Scattering](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/Chatterji_magnetic-neutron-scattering.pdf)
 - [Igor A. Zaliznyak and John M. Tranquada, Neutron Scattering and Its Application to Strongly Correlated Systems](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/Neutron-Scattering-and-Its-Application-to-Strongly-Correlated-Systems.pdf)
+- [Steven T. Bramwell, Neutron-Scattering-and-Highly-Frustrated-Magnetism](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/Neutron-Scattering-and-Highly-Frustrated-Magnetism.pdf)
 
 At $T=0$, the master equation about the cross section is
 
