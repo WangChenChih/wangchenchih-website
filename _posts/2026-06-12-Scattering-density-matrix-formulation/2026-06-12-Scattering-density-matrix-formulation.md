@@ -1,5 +1,5 @@
 ---
-title: 'Scattering Theory -- Density Matrix Formulation'
+title: 'Scattering Techniques in Condensed Matter'
 date: 2026-06-12
 permalink: /posts/2026/06/density-matrix-scattering/
 tags:
@@ -42,6 +42,8 @@ I(\omega) &= 2\pi \sum_{n}\Tr\lr{R \ket{n}\bra{n} R \ket{0}\bra{0}} \delta{E_n -
 $$
 
 # Neutron Scattering (Magnetic Signal)
+Neutron scattering is a commonly used technique to study the spin correlation in condensed matter systems, providing information to discriminate between different magnetic phases.
+
 A major drawback of the neutron scattering method is its weak scattering cross section and limited course strength, meaning that the sample size (the size of one single domain) is required to be relatively large compared with other techniques.
 
 - [Price et. al., An Introduction to Neutron Scattering](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/Neutron-Scattering-Fundamentals_Chap_1.pdf)
