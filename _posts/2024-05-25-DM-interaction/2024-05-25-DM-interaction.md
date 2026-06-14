@@ -20,7 +20,6 @@ $$
 \newcommand{\Tr}{\mathrm{Tr}}
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 $$
-
 The Dzyaloshinskii-Moriya interaction, also known as the antisymmetric interaction, 
 
 Here lists several review articles
