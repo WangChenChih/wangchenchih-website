@@ -44,6 +44,7 @@ $$
 
 - [Price et. al., An Introduction to Neutron Scattering](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/Neutron-Scattering-Fundamentals_Chap_1.pdf)
 - [Chatterji, Magnetic Neutron Scattering](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/Chatterji_magnetic-neutron-scattering.pdf)
+- [Igor A. Zaliznyak and John M. Tranquada, Neutron Scattering and Its Application to Strongly Correlated Systems](https://wangchenchih.github.io/wangchenchih-website/_posts/2026-06-12-Scattering-density-matrix-formulation/references/Neutron-Scattering-and-Its-Application-to-Strongly-Correlated-Systems.pdf)
 
 At $T=0$, the master equation about the cross section is
 
