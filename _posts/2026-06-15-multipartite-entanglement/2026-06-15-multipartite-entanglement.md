@@ -22,3 +22,4 @@ $$
 $$
 In this notes, I would like to review materials on multipartite entanglement, including different types of theoretical definition of entanglement measure and their relation with the experimental observables.
 
+# Multi-invariant
