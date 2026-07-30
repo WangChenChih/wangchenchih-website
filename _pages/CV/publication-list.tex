@@ -1,0 +1,34 @@
+\documentclass[12font]{article}
+
+\input{packages}
+\input{new_environment_def}
+
+%%%%%%%%%%%%%%% basic info %%%%%%%%%%%%%%%%
+\newcommand{\name}{Chen-Chih Wang}
+\newcommand{\zhname}{王晨志}
+\newcommand{\email}{good.wangchanz@gapp.nthu.edu.tw}
+
+\begin{document}
+
+%%%%%%%%%%%%%%% header %%%%%%%%%%%%%%%%%%
+\fancyhead[L]{\href{https://wangchenchih.github.io/wangchenchih-website/}{Homepage}}
+\fancyhead[C]{\name}
+\fancyhead[R]{\href{mailto:\email}{\email}}
+
+%%%%%%%%%%%%%%% title %%%%%%%%%%%%%%%
+\fontsize{20pt}{30pt}\selectfont
+\begin{center}
+\textbf{Publication List}
+\end{center}
+
+
+%%%%%%%%%%%%%%% main %%%%%%%%%%%%%%%
+\fontsize{12pt}{16pt}\selectfont
+
+\bibliographystyle{my_apsrev4-2}
+\nocite{*} % Includes all items from publist.bib
+\renewcommand{\refname}{} % For article/CV document classes
+\vspace{-3em}             % Optional: adjust vertical spacing if needed
+\bibliography{publist}
+
+\end{document}
