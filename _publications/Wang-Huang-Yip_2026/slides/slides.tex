@@ -231,8 +231,8 @@ In the Majorana fermion representation, the model is equivalent to a system of f
         \]
         \item Organization due to the exact 1-form Wilson symmetry:
         \[
-        \rho \propto \mathcal{P}^{(p)} \sum_{\alert{[\mathfrak{D}]}}\anglelr{\Sigma_\mathfrak{D}}\Sigma_{\mathfrak{D}} \quad ; \quad 
-        \mathcal{P}^{(p)} := 
+        \rho \propto \hat{\Pi} \sum_{\alert{[\mathfrak{D}]}}\anglelr{\Sigma_\mathfrak{D}}\Sigma_{\mathfrak{D}} \quad ; \quad 
+        \hat{\Pi} := 
         \underbrace{
             \lr{\frac{\mathds{1} + \Tilde{W}_h}{2}} \lr{\frac{\mathds{1} + \Tilde{W}_v}{2}} 
         }_{\text{topological projector (global Wilson)}}
@@ -243,7 +243,7 @@ In the Majorana fermion representation, the model is equivalent to a system of f
         \item Normalize $\tr \rho = 1$ to get the final result:
         \[
         \boxed{
-            \rho = \frac{1}{2^{N - N_p}}\mathcal{P}^{(p)} \sum_{[\mathfrak{D}]}\anglelr{\Sigma_\mathfrak{D}}\Sigma_{\mathfrak{D}}
+            \rho = \frac{1}{2^{N - N_p}}\hat{\Pi} \sum_{[\mathfrak{D}]}\anglelr{\Sigma_\mathfrak{D}}\Sigma_{\mathfrak{D}}
         }
         \]
     \end{itemize}
@@ -258,13 +258,13 @@ In the Majorana fermion representation, the model is equivalent to a system of f
             \item [(iii)] Normalization condition $\tr \rho =1$
         \end{enumerate}
         \[
-        \rho_A \propto \sum_{\mathfrak{D}\subset A}\anglelr{\Sigma_{\mathfrak{D}}}\Sigma_{\mathfrak{D}} \propto \mathcal{P}^{(p)}_A\sum_{[\mathfrak{D}]\subset A}\anglelr{\Sigma_\mathfrak{D}}\Sigma_{\mathfrak{D}} 
+        \rho_A \propto \sum_{\mathfrak{D}\subset A}\anglelr{\Sigma_{\mathfrak{D}}}\Sigma_{\mathfrak{D}} \propto \hat{\Pi}_A\sum_{[\mathfrak{D}]\subset A}\anglelr{\Sigma_\mathfrak{D}}\Sigma_{\mathfrak{D}} 
         \mathop{\longrightarrow}^{\text{normalize}}
         \boxed{
-            \frac{1}{2^{N^A-N^A_p}} \mathcal{P}^{(p)}_A \sum_{[\mathfrak{D}]\subset A} \anglelr{\Sigma_\mathfrak{D}} \Sigma_{\mathfrak{D}} 
+            \frac{1}{2^{N^A-N^A_p}} \hat{\Pi}_A \sum_{[\mathfrak{D}]\subset A} \anglelr{\Sigma_\mathfrak{D}} \Sigma_{\mathfrak{D}} 
         }
         \]
-        \item Define \textit{projected string operators}: $\mathcal{S}_\mathfrak{D}^{(A)} := \mathcal{P}^{(p)}_A\Sigma_\mathfrak{D}$. In this way, $\mathcal{S}_\mathfrak{D}^{(A)} = \mathcal{S}_\mathfrak{D'}^{(A)}$ if $\mrm{EP}(\mathfrak{D}) = \mrm{EP}(\mathfrak{D}')$.
+        \item Define \textit{projected string operators}: $\mathcal{S}_\mathfrak{D}^{(A)} := \hat{\Pi}_A\Sigma_\mathfrak{D}$. In this way, $\mathcal{S}_\mathfrak{D}^{(A)} = \mathcal{S}_\mathfrak{D'}^{(A)}$ if $\mrm{EP}(\mathfrak{D}) = \mrm{EP}(\mathfrak{D}')$.
         \item Representing density matrices in terms of projected string operators:
         \[
         \boxed{
@@ -435,7 +435,7 @@ But the gauge field here is \textit{fictitious}. To use spin representation (phy
         \item The exact \textbf{1-form Wilson symmetry} makes the density matrix \textbf{organized}. Such an organized form is equivalent to the fermion density matrix.
         \begin{itemize}
             \item The \textbf{string operators} directly reflect the \textbf{fermionic statistics}.
-            \item The \textbf{gauge} DoF is encoded in the flux-free projecto\textbf{}r $\mathcal{P}^{(p)}$, and the \textbf{matter} DoF emerges at endpoints of projected string operators $\mathcal{S}_{\mathfrak{D}}$. 
+            \item The \textbf{gauge} DoF is encoded in the flux-free projecto\textbf{}r $\hat{\Pi}$, and the \textbf{matter} DoF emerges at endpoints of projected string operators $\mathcal{S}_{\mathfrak{D}}$. 
         \end{itemize}
 
         \item As proposed by [\href{https://doi.org/10.1103/PhysRevX.15.011001}{\footnotesize W.-T. Xu \textit{et al}. PRX \textbf{15}, 011001 (2025)}], the \textbf{exact 1-form Wilson symmetry} with the \textbf{exact Gauss law} gives an extensively degenerate entanglement spectrum.
@@ -480,11 +480,11 @@ But the gauge field here is \textit{fictitious}. To use spin representation (phy
     
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Multi-connected Region: Web Patch}
+\begin{frame}{Multi-connected Region}
 \begin{itemize}
-    \item For a multi-connected region with genus number $g$, there is a set of \textit{web patch} configurations $\lrg{ \mathfrak{D}_{\mrm{WP}}^{(1)}, \mathfrak{D}_{\mrm{WP}}^{(2)},\cdots,\mathfrak{D}_{\mrm{WP}}^{(g)} }$ such that $\tr_{\bar{A}} \lr{\Sigma_{\mathfrak{D}\ominus \mathfrak{D}_{\mrm{WP}}^{(n)}} } \neq 0$ if $\mathfrak{D}\subset A$
-    \item In general, however, $\Sigma_{\mathfrak{D}\ominus \mathfrak{D}_{\mrm{WP}}^{(n)}} \neq \Sigma_{\mathfrak{D}}\Sigma_{\mathfrak{D}_{\mrm{WP}}^{(n)}}$, thus the reduced density matrix cannot be organized as before.
-    \item The web patch is invalid in the fermion representation: $\tr_{\bar{A},F}\lr{\mathcal{M}_{\mathfrak{D}\ominus \mathfrak{D}_{\mrm{WP}}^{(n)}} } = 0$
+    \item For a multi-connected region with genus number $g$, there is a set of configurations $\lrg{ \mathfrak{H}^{(1)}, \mathfrak{H}^{(2)},\cdots,\mathfrak{H}^{(g)} }$ such that $\tr_{\bar{A}} \lr{\Sigma_{\mathfrak{D}\ominus \mathfrak{H}^{(n)}} } \neq 0$ if $\mathfrak{D}\subset A$
+    \item In general, however, $\Sigma_{\mathfrak{D}\ominus \mathfrak{H}^{(n)}} \neq \Sigma_{\mathfrak{D}}\Sigma_{\mathfrak{H}^{(n)}}$, thus the reduced density matrix cannot be organized as before.
+    \item The web patch is invalid in the fermion representation: $\tr_{\bar{A},F}\lr{\mathcal{M}_{\mathfrak{D}\ominus \mathfrak{H}^{(n)}} } = 0$
 \end{itemize}
     \begin{figure}
         \centering
