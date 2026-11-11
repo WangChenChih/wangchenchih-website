@@ -7,9 +7,9 @@ author_profile: true
 ---
 
 
-![Alt Text](https://wangchenchih.github.io/wangchenchih-website/_pages/icon/icon/icon_yin.svg) ![Alt Text](https://wangchenchih.github.io/wangchenchih-website/_pages/icon/icon/icon_yang.svg)
+![Alt Text](https://wangchenchih.github.io/wangchenchih-website/_pages/icon/icon/icon_yin.svg){ width=40% } ![Alt Text](https://wangchenchih.github.io/wangchenchih-website/_pages/icon/icon/icon_yang.svg){ width=40% }
 
-I made my logo using [Inkscape](https://inkscape.org/). It takes about two days for me to design and make the logo, in which some design ingenuity and symbolism are incorporated.
+I made my logo using [Inkscape](https://inkscape.org/). It took me about two days to design and make the logo, in which some design ingenuity and symbolism are incorporated.
 
 # Concept behind the Work
 
