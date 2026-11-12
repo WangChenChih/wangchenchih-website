@@ -140,16 +140,16 @@
         \mathcal{P}_G=\prod_{i}\lr{\frac{\mathds{1}+D_i}{2}} \quad,\quad D_i =  b^x_ib^y_ib^z_ic_i \Leftarrow -i\sigma^x_i\sigma^y_i\sigma^z_i
         }
         }
-        % \item Separability of the entanglement entropy \scite{https://doi.org/10.1103/PhysRevLett.105.080501}{(Yao and Qi, PRL\textbf{105} 080501)}
-        % \[
-        % \boxed{S_A = S_A^F + S_A^G}
-        % \]
-
+            \vspace{-2em}
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.3\linewidth]{figures/gutzwiller_illu.pdf}
         \end{figure}
-        
+
+        \item Separability of the entanglement entropy \scite{https://doi.org/10.1103/PhysRevLett.105.080501}{(Yao and Qi, PRL\textbf{105} 080501)}
+        \[
+        \boxed{S_A = S_A^F + S_A^G}
+        \]
     \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -166,9 +166,9 @@ In the Majorana fermion representation, the model is equivalent to a system of f
     $b^{\alpha_{ij}}_i\hat{u}_{ij}b^{\alpha_{ij}}_i = -\hat{u}_{ij} \Longrightarrow [\alert{\boldsymbol{A_{ij}}}, \valert{\boldsymbol{E_{i'j'}}}] = i\delta_{ii'}\delta_{jj'}$
 
     \item \textbf{Gutzwiller projection} as a \textbf{Gauss law} constraint: $D_i = b_i^xb_i^yb_i^zc_i = 1$. The ground state is
-    \sequ{
+    \[
         \prod_{i}\lr{\frac{\mathds{1}+D_i}{2}}\ket{u}\ket{M} \quad;\quad \text{Fix the gauge: $\bra{u}\hat{u}_{ij}\ket{u}=+1\forall\anglelr{ij}$}
-    }
+    \]
 
     %%%%%%%%%%%%%%%% problems %%%%%%%%%%%%%%%%
     % \alert{
@@ -183,38 +183,39 @@ In the Majorana fermion representation, the model is equivalent to a system of f
 \section{Motivation}
 \begin{frame}{Motivation}
     \begin{itemize}
-        \item A direct \textbf{entanglement} analysis from the \textbf{physical density matrix}  
+    \item<1->  A direct \textbf{entanglement} analysis from the \textbf{physical density matrix}  
         \begin{itemize}
             \item Gutzwiller projection is needed in the fermionic representation.
             \item Using physical \textbf{spin}s rather than Majorana fermions
             \item Odd number of sites: ill-defined Majorana fermionic Hilbert space
             \item Cutting gauge fields on links (add figures)
-
+    
                 \vspace{-1.5em}
-            
-            \begin{figure}[H]
-                \flushright
-                \includegraphics[width=0.3\linewidth]{figures/cutting-gauge.pdf}
-            \end{figure}
+                
+            \onslide<2->{
+                \begin{flushright}
+                    \includegraphics[width=0.3\linewidth]{figures/cutting-gauge.pdf}
+                \end{flushright}
+            }
         \end{itemize}
-
-        \pause
         
-        \item \textbf{$\mathbb{Z}_2$ gauge theory} with \textbf{1-form symmetry}: organization of entanglement spectrum 
+    \item<3-> \textbf{$\mathbb{Z}_2$ gauge theory} with \textbf{1-form symmetry}: organization of entanglement spectrum 
         \begin{itemize}
             \item How do these symmetries restrict the entanglement spectrum structure?
             \item Directly solving the entanglement spectrum rather than using the replica trick
         \end{itemize}
-        {\tiny(\href{https://doi.org/10.1103/PhysRevX.15.011001}{ Xu \textit{et al}. PRX \textbf{15}, 011001 (2025)})}
+        
+        \scite{https://doi.org/10.1103/PhysRevX.15.011001}{Xu \textit{et al}. PRX \textbf{15}, 011001 (2025)}
     \end{itemize}
 
-\pause
 
+\onslide<4->{
 \textbf{\underline{Recent New Development:}}
 \begin{itemize}
     \item Subsystems with holes (genus number $g>0$)
     \item Quantum magic: direct calculation of the \textit{stabilizer R\'enyi entropy}
 \end{itemize}
+}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Kitaev Model: Properties of Spin Correlation Functions}
@@ -238,12 +239,11 @@ In the Majorana fermion representation, the model is equivalent to a system of f
             = 
             \lr{\wordfig{1}{figures/oplus_result}}
             \]
-        \item String operators form a projective representation
+        \item String operators as a representation of the $\mathbb{Z}_2$ algebra
             \[
                  \boxed{
-                    \Sigma_\mathfrak{D}\Sigma_{\mathfrak{D}'} = \varphi(\mathfrak{D},\mathfrak{D}')\Sigma_{\mathfrak{D}\ominus\mathfrak{D}'}
+                    \Sigma_\mathfrak{D}\Sigma_{\mathfrak{D}'} \propto \Sigma_{\mathfrak{D}\ominus\mathfrak{D}'}
                  }
-                 \quad;\quad \varphi(\mathfrak{D},\mathfrak{D}')=\pm 1
             \]
         
     \end{itemize}
@@ -256,7 +256,10 @@ In the Majorana fermion representation, the model is equivalent to a system of f
             Exact 1-form symmetry: Wilson loop $\Sigma_{\mathcal{C}}\ket{\psi_0} = W_{\mathcal{C}}\ket{\psi_0} = \ket{\psi_0}$
         \item The expectation values are identical up to a sign if the strings are identical up to a loop $\mathcal{C}$
             \[
-                \anglelr{\Sigma_{\mathfrak{D}\ominus \mathcal{C}}} = \varphi(\mathfrak{D},\mathcal{C})\anglelr{\Sigma_{\mathfrak{D}}\Sigma_{\mathcal{C}}} = \varphi(\mathfrak{D},\mathcal{C})\anglelr{\Sigma_{\mathfrak{D}}W_{\mathcal{C}}} = \varphi(\mathfrak{D},\de A)\anglelr{\Sigma_{\mathfrak{D}}}
+                \anglelr{\Sigma_{\mathfrak{D}\ominus \mathcal{C}}} 
+                \propto \anglelr{\Sigma_{\mathfrak{D}}W_{\mathcal{C}}} 
+                \propto 
+                \anglelr{\Sigma_{\mathfrak{D}}}
             \]
         \item Equivalence relation:
             \[
@@ -285,8 +288,6 @@ In the Majorana fermion representation, the model is equivalent to a system of f
         \[
         \rho 
         \propto 
-        \sum_{\mathfrak{D}} \underbrace{\eta_\mathfrak{D}\anglelr{\Sigma_\mathfrak{D}}}_{\mathfrak{C}_\mathfrak{D}} \Sigma_{\mathfrak{D}}
-        \equiv
         \sum_{\mathfrak{D}} \mathfrak{C}_\mathfrak{D} \Sigma_{\mathfrak{D}}
         \]
         
@@ -334,7 +335,7 @@ In the Majorana fermion representation, the model is equivalent to a system of f
 %%%%%%%%%%%
 \begin{frame}{The 1st Layer Organization}
     \begin{itemize}
-        \item Following the same spirit to construct the reduced density matrix: 
+        \item Following the same spirit to construct the \textbf{reduced density matrix}: 
         % \begin{enumerate}
         %     \item [(i)] Hermiticity
         %     \item [(ii)] Ability of reproducing expectation values of observables
@@ -389,10 +390,10 @@ In the Majorana fermion representation, the model is equivalent to a system of f
     \centering
     \begin{minipage}{0.55\linewidth}
         \begin{itemize}
-            \item<1-> \textit{Majorana representation} of string operators: {\tiny$\mathcal{M}_{\mathfrak{D}} := \prod_{\anglelr{ij}\in\mathfrak{D}}ic_jc_i$}, which satisfies the same algebra (statistics)
-            \sequ{
-                \mathcal{M}_{\mathfrak{D}} \mathcal{M}_{\mathfrak{D}'} = \varphi(\mathfrak{D},\mathfrak{D}') \mathcal{M}_{\mathfrak{D}\ominus\mathfrak{D}'}
-            }
+            % \item<1-> \textit{Majorana representation} of string operators: {\tiny$\mathcal{M}_{\mathfrak{D}} := \prod_{\anglelr{ij}\in\mathfrak{D}}ic_jc_i$}, which satisfies the same algebra (statistics)
+            % \sequ{
+            %     \mathcal{M}_{\mathfrak{D}} \mathcal{M}_{\mathfrak{D}'} = \varphi(\mathfrak{D},\mathfrak{D}') \mathcal{M}_{\mathfrak{D}\ominus\mathfrak{D}'}
+            % }
             \item<1-> Difference in the Hilbert space dimension:
             \sequ{
                 \dim{\mathcal{H}}_S / \dim{\mathcal{H}}_{F} = 2^{\color{purple} \abs{\de A}/2 - 1}
@@ -555,6 +556,38 @@ But the gauge field here is \textit{fictitious}. To use the spin representation 
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Topological Effect}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.4\linewidth]{figures/separate-fermions.pdf}
+        \hspace{2em}\includegraphics[width=0.4\linewidth]{figures/separate-fermions_string.pdf}
+        
+    \end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Topological Effect}
+    \begin{figure}
+        \centering
+        \includegraphics[height=0.5\textheight]{figures/wilson-wp-inter.pdf}
+        \hspace{2em}
+        \includegraphics[height=0.5\textheight]{figures/vison-loop-fermion-parity.pdf}
+    \end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Take Home Message}
+    \begin{itemize}
+        \item The organization of the density matrix has two layers
+        \begin{itemize}
+            \item The \textbf{first} layer is the equivalence class structure that stems from the 1-form Wilson symmetry.
+            \item The \textbf{second} layer is the extensive degeneracy in the entanglement spectrum caused by the 1-form Wilson symmetry together with the Gauss-law constraint.
+        \end{itemize}
+
+        \item The degeneracy in the entanglement spectrum obeys an area law. This fact is reflected by the $\xi$ operators defined along the boundary.
+
+        \item Odd number of lattice sites: Fermion parity provides an additional degeneracy.
+    \end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Quantum Magic}
 \begin{frame}{Quantum Magic}
 
@@ -641,6 +674,34 @@ M_{n}\lr{\ket{\psi}} :=
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Quantum Magic}
+    For 1-dimensional systems
+    \[
+    \rho
+    =
+    \frac{1}{2^{N - N_\xi}}
+    \lr{\frac{\mathds{1} + \tilde{Z}}{2}}
+    \prod_{\hat{\xi}\in\Omega}
+    \lr{\frac{\mathds{1} + \hat{\xi}}{2}}
+    \sum_{[\mathfrak{D}]}
+    \mathfrak{C}_\mathfrak{D}
+    \Sigma_\mathfrak{D}
+    \]
+
+    \[
+    \rho_A
+    =
+    \frac{1}{2^{N^A - N^A_\xi}}
+    \prod_{\hat{\xi} \in \tilde{\Omega}_A}
+    \lr{\frac{\mathds{1} + \hat{\xi}}{2}}
+    \sum_{[\mathfrak{D}]\subset A} \mathfrak{C}_\mathfrak{D} \Sigma_\mathfrak{D}
+    \]
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Quantum Magic}
+    \[
+    W_{2}(l) = \frac{1}{4}\ln\left[\left(\frac{L}{\pi}\right)\sin\left(\frac{\pi l}{L}\right)\right]
+    \]
+    \scite{https://doi.org/10.1103/ylsz-dm3y}{M. Hoshino, M. Oshikawa, and Y. Ashida, Phys. Rev. X \textbf{16}, 011037}
     \begin{figure}
         \centering
         \includegraphics[width=0.5\linewidth]{figures/mutual_SRE.pdf}
