@@ -121,26 +121,7 @@
         \end{tabular}
     \end{table}
 \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Motivation}
-\begin{frame}{Motivation}
-    \begin{itemize}
-        \item Entanglement analysis: Could we construct a reduced density matrix without relying on the fermionic representation?
-        \begin{itemize}
-            \item Fermionic representation needs Gutzwiller projection.
-            \item Use physical \textbf{spin} operators to describe a spin system.
-        \end{itemize}
-        
-        \item Would spin representation be a better tool to understand the entanglement? 
-        
-        \item A recent work on the entanglement of $\mathbb{Z}_2$ gauge theory with 1-form symmetries  \href{https://doi.org/10.1103/PhysRevX.15.011001}{\footnotesize W.-T. Xu \textit{et al}. PRX \textbf{15}, 011001 (2025)}: Could we apply this theory to make the entanglement structure of the Kitaev model clearer?
-        \begin{itemize}
-            \item Directly solve the entanglement spectrum
-            \item Do not use the replica trick
-        \end{itemize}
-    \end{itemize}
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%% main %%%%%%%%%%%%%%%%%%%%%
 \section{Kitaev Model}
 \begin{frame}{Kitaev Model: an Introduction}
     \begin{itemize}
@@ -159,10 +140,12 @@
         \mathcal{P}_G=\prod_{i}\lr{\frac{\mathds{1}+D_i}{2}} \quad,\quad D_i =  b^x_ib^y_ib^z_ic_i \Leftarrow -i\sigma^x_i\sigma^y_i\sigma^z_i
         }
         }
-        \item Separability of the entanglement entropy \scite{https://doi.org/10.1103/PhysRevLett.105.080501}{(Yao and Qi, PRL\textbf{105} 080501)}
-        \[
-        \boxed{S_A = S_A^F + S_A^G}
-        \]
+        % \item Separability of the entanglement entropy \scite{https://doi.org/10.1103/PhysRevLett.105.080501}{(Yao and Qi, PRL\textbf{105} 080501)}
+        % \[
+        % \boxed{S_A = S_A^F + S_A^G}
+        % \]
+
+        \alert{ add Gutzwiller illustration}
         
     \end{itemize}
 \end{frame}
@@ -171,27 +154,57 @@
 In the Majorana fermion representation, the model is equivalent to a system of free Majorana fermions (matter field) coupled to a static $\mathbb{Z}_2$ gauge field
 \begin{itemize}
 
-    \item Define the gauge field $\hat{u}_{ij} = e^{iA_{ij}}$, then the elementary $\mathbb{Z}_2$ gauge flux reads 
+    \item Define the \textbf{gauge field} $\hat{u}_{ij} = e^{i \alert{\boldsymbol{A_{ij}}}}$, then the elementary \textbf{$\mathbb{Z}_2$ gauge flux} reads 
     \sequ{
     e^{i\Phi} = \exp\lr{i\oint_{\de p} A} = \prod_{\anglelr{ij}\in\de p}\hat{u}_{ij} = \prod_{\anglelr{ij}\in\de p}\dimer{i}{j} =: W_p
     }
     
-    \item The electric field in the gauge field that flips the gauge field is $\boxed{b^{\alpha_{ij}}_i \to e^{i\pi E_{ij}}}$ because
-    $b^{\alpha_{ij}}_i\hat{u}_{ij}b^{\alpha_{ij}}_i = -\hat{u}_{ij} $
+    \item The \textbf{electric field} in the gauge field that flips the gauge field is $\boxed{b^{\alpha_{ij}}_i \to e^{i\pi \valert{\boldsymbol{E_{ij}}}}}$ because
+    $b^{\alpha_{ij}}_i\hat{u}_{ij}b^{\alpha_{ij}}_i = -\hat{u}_{ij} \Longrightarrow [\alert{\boldsymbol{A_{ij}}}, \valert{\boldsymbol{E_{i'j'}}}] = i\delta_{ii'}\delta_{jj'}$
 
-    \item Gutzwiller projection as a Gauss law constraint: $D_i = b_i^xb_i^yb_i^zc_i = 1$. The ground state is
+    \item \textbf{Gutzwiller projection} as a \textbf{Gauss law} constraint: $D_i = b_i^xb_i^yb_i^zc_i = 1$. The ground state is
     \sequ{
         \prod_{i}\lr{\frac{\mathds{1}+D_i}{2}}\ket{u}\ket{M} \quad;\quad \text{Fix the gauge: $\bra{u}\hat{u}_{ij}\ket{u}=+1\forall\anglelr{ij}$}
     }
 
     %%%%%%%%%%%%%%%% problems %%%%%%%%%%%%%%%%
-    \alert{
-    \item Both definitions $b^{\alpha_{ij}}_i = e^{i\pi E_{ij}}$ and $b^{\alpha_{ij}}_j = e^{i\pi E_{ij}}$ are valid.
-    \item The Gauss law is a physical constraint and cannot be broken.
-    }
+    % \alert{
+    % \item Both definitions $b^{\alpha_{ij}}_i = e^{i\pi E_{ij}}$ and $b^{\alpha_{ij}}_j = e^{i\pi E_{ij}}$ are valid.
+    % \item The Gauss law is a physical constraint and cannot be broken.
+    % }
     
 \end{itemize}
 
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Motivation}
+\begin{frame}{Motivation}
+    \begin{itemize}
+        \item A direct \textbf{entanglement} analysis from the \textbf{physical density matrix}  
+        \begin{itemize}
+            \item Gutzwiller projection is needed in the fermionic representation.
+            \item Using physical \textbf{spin}s rather than Majorana fermions
+            \item Odd number of sites: ill-defined Majorana fermionic Hilbert space
+            \item \alert{Cutting gauge fields on links (add figures)}
+        \end{itemize}
+
+        \pause
+        
+        \item \textbf{$\mathbb{Z}_2$ gauge theory} with \textbf{1-form symmetry}: organization of entanglement spectrum 
+        \begin{itemize}
+            \item How do these symmetries restrict the entanglement spectrum structure?
+            \item Directly solving the entanglement spectrum rather than using the replica trick
+        \end{itemize}
+        {\tiny(\href{https://doi.org/10.1103/PhysRevX.15.011001}{ Xu \textit{et al}. PRX \textbf{15}, 011001 (2025)})}
+    \end{itemize}
+
+\pause
+
+\textbf{\underline{Recent New Development:}}
+\begin{itemize}
+    \item Subsystems with holes (genus number $g>0$)
+    \item Quantum magic: direct calculation of the \textit{stabilizer R\'enyi entropy}
+\end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Kitaev Model: Properties of Spin Correlation Functions}
@@ -226,12 +239,12 @@ In the Majorana fermion representation, the model is equivalent to a system of f
     \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Organization: Equivalence Relation}
+\section{Organization: Equivalence Relation (the 1st Layer)}
 \begin{frame}{Organization: Equivalence Relation}
     \begin{itemize}
         \item  
             Exact 1-form symmetry: Wilson loop $\Sigma_{\mathcal{C}}\ket{\psi_0} = W_{\mathcal{C}}\ket{\psi_0} = \ket{\psi_0}$
-        \item The weights are identical up to a sign if the strings are identical up to a loop $\mathcal{C}$
+        \item The expectation values are identical up to a sign if the strings are identical up to a loop $\mathcal{C}$
             \[
                 \anglelr{\Sigma_{\mathfrak{D}\ominus \mathcal{C}}} = \varphi(\mathfrak{D},\mathcal{C})\anglelr{\Sigma_{\mathfrak{D}}\Sigma_{\mathcal{C}}} = \varphi(\mathfrak{D},\mathcal{C})\anglelr{\Sigma_{\mathfrak{D}}W_{\mathcal{C}}} = \varphi(\mathfrak{D},\de A)\anglelr{\Sigma_{\mathfrak{D}}}
             \]
@@ -251,19 +264,36 @@ In the Majorana fermion representation, the model is equivalent to a system of f
     \end{figure}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Organization of Density Matrix}
+\begin{frame}{The 1st Layer Organization}
     \begin{itemize}
-        \item Suppose the observables are a set of $\mathbb{Z}_2$ traceless Hermitian operators: $\lrg{\mathcal{O}_n^2 = \mathds{1}}$, then the density matrix can be expanded in terms of these observables
+        \item<1-> The density matrix of a spin-1/2 system can be expanded in terms of Pauli-group elements
         \[
-        \rho \propto \sum_{n}\tr(\mathcal{O}_n^\dagger\rho)\mathcal{O}_n = \sum_{n}\anglelr{\mathcal{O}_n}\mathcal{O}_n
+        \rho \propto \sum_{\mathsf{S}\in \mathcal{P}_N} \anglelr{\mathsf{S}} \mathsf{S}
         \]
-        \item For the spin-$1/2$ Kitaev model, the observables are Pauli strings.
+
+        \item<1-> The string operators $\Sigma_\mathfrak{D}$ in the spin-$1/2$ Kitaev model are Pauli strings up to a sign.
         \[
-        \rho \propto \sum_{\mathfrak{D}}\anglelr{\Sigma_\mathfrak{D}}\Sigma_{\mathfrak{D}}
+        \rho 
+        \propto 
+        \sum_{\mathfrak{D}} \underbrace{\eta_\mathfrak{D}\anglelr{\Sigma_\mathfrak{D}}}_{\mathfrak{C}_\mathfrak{D}} \Sigma_{\mathfrak{D}}
+        \equiv
+        \sum_{\mathfrak{D}} \mathfrak{C}_\mathfrak{D} \Sigma_{\mathfrak{D}}
         \]
-        \item Organization due to the exact 1-form Wilson symmetry:
+        
+        \item<2-> Strings belonging to the same class can be grouped.
+        \[ 
+        \begin{aligned}
+            \mathfrak{C}_{\mathfrak{D}_1} \Sigma_{\mathfrak{D}_1} + \mathfrak{C}_{\mathfrak{D}_2} \Sigma_{\mathfrak{D}_2} 
+            &\to \mathfrak{C}_{\mathfrak{D}_1} \Sigma_{\mathfrak{D}_1} + \mathfrak{C}_{\mathfrak{D}_1} W\Sigma_{\mathfrak{D}_1} \\
+            &\onslide<3->{\to \underbrace{\alert{\lr{\mathds{1} + W}}}_{\text{projector}} \mathfrak{C}_{\mathfrak{D}_1} \Sigma_{\mathfrak{D}_1} }
+        \end{aligned}
+        \quad
+        \wordfig{1.5}{figures/small-equi-strings.pdf}
+        \]
+        \item<4-> Organization due to the exact 1-form Wilson symmetry:
         \[
-        \rho \propto \hat{\Pi} \sum_{\alert{[\mathfrak{D}]}}\anglelr{\Sigma_\mathfrak{D}}\Sigma_{\mathfrak{D}} \quad ; \quad 
+        \rho 
+        \propto  \sum_{\alert{[\mathfrak{D}]}} \mathfrak{C}_\mathfrak{D} \hat{\Pi}\Sigma_{\mathfrak{D}} \quad ; \quad 
         \hat{\Pi} := 
         \underbrace{
             \lr{\frac{\mathds{1} + \Tilde{W}_h}{2}} \lr{\frac{\mathds{1} + \Tilde{W}_v}{2}} 
@@ -272,87 +302,126 @@ In the Majorana fermion representation, the model is equivalent to a system of f
             \prod_{p}\lr{\frac{\mathds{1} + W_p}{2}}
         }_{\text{flux-free projector}}
         \]
-        \item Normalize $\tr \rho = 1$ to get the final result:
-        \[
-        \boxed{
-            \rho = \frac{1}{2^{N - N_p}}\hat{\Pi} \sum_{[\mathfrak{D}]}\anglelr{\Sigma_\mathfrak{D}}\Sigma_{\mathfrak{D}}
-        }
-        \]
     \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Organization of Reduced Density Matrix}
+\begin{frame}{The 1st Layer Organization}
+    Normalize $\tr \rho = 1$ to get the final result:
+    \[
+    \boxed{
+        \rho = \frac{1}{2^{\color{red} N/2}} \sum_{\color{red} [\mathfrak{D}]} \mathfrak{C}_\mathfrak{D} \hat{\Pi}\Sigma_{\mathfrak{D}}
+    }
+    \]
+    \textbf{\underline{Physical Interpretation:}}
+    
+    Since $\mrm{EP(\mathfrak{D})} = \mrm{EP}(\mathfrak{D}')$ iff $[\mathfrak{D}] = [\mathfrak{D}']$, the equivalent fermion density matrix $\rho^F$ looks the same as $\rho$. 
+    \[
+    \rho^F = \frac{1}{2^{\color{red} N/2}}\sum_{ \color{red} \mrm{EP}(\mathfrak{D})}\lr{\text{fermion Op.}} 
+    = 
+    \frac{1}{2^{\color{red} N/2}}\sum_{\color{red} [\mathfrak{D}]\subset A}\lr{\text{fermion Op.}}
+    \]
+\end{frame}
+%%%%%%%%%%%
+\begin{frame}{The 1st Layer Organization}
     \begin{itemize}
         \item Following the same spirit to construct the reduced density matrix: 
-        \begin{enumerate}
-            \item [(i)] Hermiticity
-            \item [(ii)] Ability of reproducing expectation values of observables
-            \item [(iii)] Normalization condition $\tr \rho =1$
-        \end{enumerate}
+        % \begin{enumerate}
+        %     \item [(i)] Hermiticity
+        %     \item [(ii)] Ability of reproducing expectation values of observables
+        %     \item [(iii)] Normalization condition $\tr \rho =1$
+        % \end{enumerate}
         \[
-        \rho_A \propto \sum_{\mathfrak{D}\subset A}\anglelr{\Sigma_{\mathfrak{D}}}\Sigma_{\mathfrak{D}} \propto \hat{\Pi}_A\sum_{[\mathfrak{D}]\subset A}\anglelr{\Sigma_\mathfrak{D}}\Sigma_{\mathfrak{D}} 
+        \rho_A 
+        \propto \sum_{\mathfrak{D}\subset A} \mathfrak{C}_{\mathfrak{D}} \Sigma_{\mathfrak{D}} 
+        % \propto \hat{\Pi}_A\sum_{[\mathfrak{D}]\subset A}\anglelr{\Sigma_\mathfrak{D}}\Sigma_{\mathfrak{D}} 
         \mathop{\longrightarrow}^{\text{normalize}}
         \boxed{
-            \frac{1}{2^{N^A-N^A_p}} \hat{\Pi}_A \sum_{[\mathfrak{D}]\subset A} \anglelr{\Sigma_\mathfrak{D}} \Sigma_{\mathfrak{D}} 
+            \frac{1}{2^{N^A-N^A_p}}  \sum_{[\mathfrak{D}]\subset A} \mathfrak{C}_\mathfrak{D} \hat{\Pi}_A\Sigma_{\mathfrak{D}} 
         }
         \]
-        \item Define \textit{projected string operators}: $\mathcal{S}_\mathfrak{D}^{(A)} := \hat{\Pi}_A\Sigma_\mathfrak{D}$. In this way, $\mathcal{S}_\mathfrak{D}^{(A)} = \mathcal{S}_\mathfrak{D'}^{(A)}$ if $\mrm{EP}(\mathfrak{D}) = \mrm{EP}(\mathfrak{D}')$.
-        \item Representing density matrices in terms of projected string operators:
+        % \item Define \textit{projected string operators}: $\mathcal{S}_\mathfrak{D}^{(A)} := \hat{\Pi}_A\Sigma_\mathfrak{D}$. In this way, $\mathcal{S}_\mathfrak{D}^{(A)} = \mathcal{S}_\mathfrak{D'}^{(A)}$ if $\mrm{EP}(\mathfrak{D}) = \mrm{EP}(\mathfrak{D}')$.
+        % \item Representing density matrices in terms of projected string operators:
+        % \[
+        % \boxed{
+        %     \rho _A 
+        %     =
+        %     \frac{1}{2^{N^A - N^A_p}}\sum_{[\mathfrak{D}]\subset A}\anglelr{\Sigma_\mathfrak{D}}\mathcal{S}_{\mathfrak{D}}^{(A)}
+        % }
+        % \]
+        \item A geometric relation to area law: $\boxed{\abs{\de A} = N^A - 2N^A_p + 2}$
+        \item Physical interpretation: \textbf{\color{purple} area law} + \textbf{\color{red} Majorana fermion}
         \[
         \boxed{
-            \rho _A 
-            =
-            \frac{1}{2^{N^A - N^A_p}}\sum_{[\mathfrak{D}]\subset A}\anglelr{\Sigma_\mathfrak{D}}\mathcal{S}_{\mathfrak{D}}^{(A)}
+            \rho_A 
+            = 
+            \frac{1}{2^{ {\color{purple}\lr{\abs{\de A}/2 - 1}}}} 
+            \lr{
+                \frac{1}{2^{\color{red} N^A/2}} 
+                \sum_{{\color{red} [\mathfrak{D}]} \subset A}
+                \mathfrak{C}_\mathfrak{D} \hat{\Pi}_A
+                \Sigma_{\mathfrak{D}}
+            }
         }
         \]
+        The equivalent fermion density matrix $\rho_A^F$ looks the same as $\rho_A$. 
+        \[
+        \rho_A^F = \frac{1}{2^{\color{red} N^A/2}}\sum_{ \color{red} \mrm{EP}(\mathfrak{D})\subset A}\lr{\text{fermion Op.}} 
+        = 
+        \frac{1}{2^{\color{red} N^A/2}}\sum_{\color{red} [\mathfrak{D}]\subset A}\lr{\text{fermion Op.}}
+        \]
     \end{itemize}
-{\small \textbf{\underline{Remark}:}} Since $\mrm{EP(\mathfrak{D})} = \mrm{EP}(\mathfrak{D}')$ iff $[\mathfrak{D}] = [\mathfrak{D}']$, the equivalent fermion density matrix $\rho_A^F$ looks the same as $\rho_A$. 
-\[
-\rho_A^F = \frac{1}{2^{N^A/2}}\sum_{\mrm{EP}(\mathfrak{D})\subset A}\lr{\text{fermion Op.}} = \frac{1}{2^{N^A/2}}\sum_{[\mathfrak{D}]\subset A}\lr{\text{fermion Op.}}
-\]
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Organization: Block-Diagonal Structure}
+\section{Organization: Block-Diagonal Structure (The 2nd Layer)}
 \begin{frame}{Organization: Block-Diagonal Structure}
 
 \begin{figure}
     \centering
-    \begin{minipage}{0.4\linewidth}
-        \includegraphics[width=\linewidth]{figures/block-diag-illust.pdf}
-    \end{minipage}
     \begin{minipage}{0.55\linewidth}
         \begin{itemize}
-            \item \textit{Majorana representation} of string operators: {\tiny$\mathcal{M}_{\mathfrak{D}} := \prod_{\anglelr{ij}\in\mathfrak{D}}ic_jc_i$}, which satisfies the same algebra (statistics)
+            \item<1-> \textit{Majorana representation} of string operators: {\tiny$\mathcal{M}_{\mathfrak{D}} := \prod_{\anglelr{ij}\in\mathfrak{D}}ic_jc_i$}, which satisfies the same algebra (statistics)
             \sequ{
                 \mathcal{M}_{\mathfrak{D}} \mathcal{M}_{\mathfrak{D}'} = \varphi(\mathfrak{D},\mathfrak{D}') \mathcal{M}_{\mathfrak{D}\ominus\mathfrak{D}'}
             }
-            \item Difference in the Hilbert space dimension:
+            \item<1-> Difference in the Hilbert space dimension:
             \sequ{
-                \tr_{A,F} \mathcal{M}^{(A)}_{\varnothing} = 2^{N^A/2}
-                \neq 
-                \tr_A \mathcal{S}^{(A)}_{\varnothing} = 2^{N^A-N^A_p}
+                \dim{\mathcal{H}}_S / \dim{\mathcal{H}}_{F} = 2^{\color{purple} \abs{\de A}/2 - 1}
             }
-            \item Conjecture: projected string operators are \textit{block diagonal}: {\tiny $\mathcal{S}^{(A)}_{\mathfrak{D}} = \frac{1}{2^{L-1}} \bigoplus_{n=1}^{2^{L-1}}\mathcal{M}^{(n)}_{\mathfrak{D}}$}
+            
+            \vspace{-1em}
+            
+            \item<2-> Conjecture: projected string operators are \textbf{block diagonal} $\rightarrow$ Extensive degeneracy  {\tiny $\hat{\Pi}\Sigma_{\mathfrak{D}} = \frac{1}{2^{\abs{\de A}/2-1}} \bigoplus_{n=1}^{2^{\abs{\de A}/2 -1}}\mathcal{M}^{(n)}_{\mathfrak{D}}$}
         \end{itemize}
     \end{minipage}
+    \onslide<2->{
+        \begin{minipage}{0.4\linewidth}
+            \includegraphics[width=\linewidth]{figures/block-diag-illust.pdf}
+        \end{minipage}
+    }
 \end{figure}
 
         
 
+\onslide<3->{
 \textbf{\underline{Observation}:} A degenerate entanglement spectrum leads to the separability of the entanglement entropy
 \sequ{
-    \rho = \frac{1}{d} \bigoplus_{n=1}^{d}\varrho \Rightarrow S^{(n)}(\rho) 
+    \rho = \frac{1}{d} \bigoplus_{n=1}^{d}\varrho \Rightarrow R_n(\rho) 
     = 
     \frac{1}{1-n}\ln\lrm{\frac{1}{d^{n-1}}\mrm{Tr}\lr{\varrho^n}} 
     = 
-    \underbrace{S^{(n)}(\varrho)}_{\text{matter}} + \underbrace{\ln d}_{\text{gauge}}
+    \underbrace{R_n(\varrho)}_{\text{matter}} + \underbrace{\ln d}_{\text{gauge}}
+}
 }
 
+\vspace{-2em}
+
+\onslide<4->{
 \textbf{\underline{Questions}:}
 \begin{itemize}
     \item Can we directly prove that the entanglement spectrum is degenerate?
     \item How could they be related to \textit{gauge fields}?
 \end{itemize}
+}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Review: W.-T. Xu \textit{et al}. PRX \textbf{15}, 011001 (2025)}
@@ -364,6 +433,7 @@ Review the method discovered by a recent work [\href{https://doi.org/10.1103/Phy
     \includegraphics[width=0.5\linewidth]{figures/contribution-1.png}
 \end{figure}
 \begin{itemize}
+    \item The Gauss law operator in a $\mathbb{Z}_2$ gauge theory: $X_v\prod_{e\in\mathcal{N}(v)}X_e \equiv X_vA_v$
     \item Exact Gauss law $[\rho, X_e]=0\;\forall e\in \de R$: block-diagonal structure $\rho = \bigoplus_{\lrg{x}}\varrho_{\lrg{x}}$
     
     \item Exact 1-form Wilson loop symmetry $[W_{\mathcal{C}/2},\rho] = 0$ relates different blocks since $W_{\mathcal{C}/2} X_e W_{\mathcal{C}/2}^\dagger = -X_e \;\forall e\in \de R$
@@ -373,7 +443,7 @@ Review the method discovered by a recent work [\href{https://doi.org/10.1103/Phy
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Block-Diagonal Density Matrix in the Kitaev Model}
+\section{The 2nd Layer Organization}
 \begin{frame}{Block-Diagonal Density Matrix in the Kitaev Model}
 
 In the Kitaev model:
@@ -382,15 +452,16 @@ In the Kitaev model:
 
         \item Exact 1-form Wilson symmetry: $\anglelr{W_\mathcal{C}} = \anglelr{\Sigma_{\mathcal{C}}} = 1$ for any closed loop $\mathcal{C}$.
     \end{itemize}
-But the gauge field here is \textit{fictitious}. To use spin representation (physical):
+
+\pause 
+
+But the gauge field here is \textit{fictitious}. To use the spin representation (physical):
     \begin{itemize}
         \item Connecting two \textit{deconfined} degrees of freedom to form physical objects
         
-        \item Use electric fields to define a set of operators $\hat{\xi}_n := \alert{\sigma^{\mu_n}_n} \valert{\Sigma_{\mathcal{C}_n}} \alert{\sigma^{\mu_{n+1}}_{n+1}}$ along the boundary of the entanglement cut.
-
-        \item Eventually, we obtain $L=\frac{1}{2}\abs{\de A}$ independent $\hat{\xi}$-operators, and they satisfy 
+        \item Use electric fields to define a set of operators $\hat{\xi}_n := \alert{\sigma^{\mu_n}_n} \valert{\Sigma_{\mathcal{C}_n}} \alert{\sigma^{\mu_{n+1}}_{n+1}}$ along the boundary of the entanglement cut. These operators commute with strings in $A$:
         \[
-        \boxed{[\mathcal{S}_{\mathfrak{D}}^{(A)} , \hat{\xi}_{n}] = 0 \quad;\quad \mathfrak{D}\subset A }
+        \boxed{[\Sigma_\mathfrak{D} , \hat{\xi}_{n}] = 0 \quad;\quad \mathfrak{D}\subset A }
         \]
     \end{itemize}
     
@@ -400,23 +471,18 @@ But the gauge field here is \textit{fictitious}. To use spin representation (phy
         \includegraphics[width=\linewidth]{figures/linking-string-electric-field.pdf}
         \end{minipage}
         \hspace{4mm}
-        \begin{minipage}{0.26\linewidth}
-            \includegraphics[width=\linewidth]{figures/xi-wilson-flip.pdf}
+        \begin{minipage}{0.35\linewidth}
+        \includegraphics[width=\linewidth]{figures/gauss-string-commuting.pdf}
         \end{minipage}
     \end{figure}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Block-Diagonal Density Matrix in the Kitaev Model}
+\begin{frame}{The 2nd Layer Organization}
     \begin{itemize}
+        \item There are $L=\frac{1}{2}\abs{\de A}$ independent $\hat{\xi}$-operators along the boundary.
         \item String operators are block-diagonalized by $\hat{\xi}$-operators
         \item Non-contractible Wilson operators flip $\hat{\xi}$-operators, making different blocks identical
-        \item Matching the Hilbert space dimension and considering the identical algebra between $\mathcal{S}$ and $\mathcal{M}$
-        \sequ{
-        \boxed{
-        \mathcal{S}^{(A)}_{\mathfrak{D}} = \frac{1}{2^{L-1}} \bigoplus_{n=1}^{2^{L-1}}\mathcal{M}^{(n)}_{\mathfrak{D}}
-        }
-        }
-        \item Reduced density matrix is also block-diagonal: extensive degeneracy of the entanglement spectrum
+        \item The reduced density matrix is also block-diagonal: extensive degeneracy of the entanglement spectrum
          \sequ{
          \boxed{
         \rho_A = \frac{1}{2^{L-1}} \bigoplus_{n=1}^{2^{L-1}}\rho_A^F
@@ -430,8 +496,8 @@ But the gauge field here is \textit{fictitious}. To use spin representation (phy
 
     \begin{figure}
         \centering
-        \begin{minipage}{0.26\linewidth}
-        \includegraphics[width=\linewidth]{figures/linking-string-electric-field.pdf}
+        \begin{minipage}{0.35\linewidth}
+        \includegraphics[width=\linewidth]{figures/Kitaev-Gauss-law-entanglement.pdf}
         \end{minipage}
         \hspace{4mm}
         \begin{minipage}{0.26\linewidth}
@@ -444,33 +510,140 @@ But the gauge field here is \textit{fictitious}. To use spin representation (phy
 \begin{frame}{Odd Number of Sites}
     \begin{figure}
     \centering
-    \includegraphics[width=0.25\linewidth]{figures/xi-wilson-flip_odd.pdf}
-    \hspace{0.5cm}
-    \includegraphics[width=0.25\linewidth]{figures/Xi-def.pdf}
+    \onslide<1->{
+        \begin{minipage}{0.25\linewidth}
+            \includegraphics[width=\textwidth]{figures/xi-wilson-flip_odd.pdf}
+        \end{minipage}
+    }
+    \hspace{0.2cm}
+    \onslide<2->{
+    \begin{minipage}{0.25\linewidth}
+        \includegraphics[width=\textwidth]{figures/Xi-def.pdf}
+    \end{minipage}
+    }
+    \hspace{0.2cm}
+    \onslide<3->{
+        \begin{minipage}{0.25\linewidth}
+        \[
+        \rho_A
+        \cong
+        \lr{
+        \wordfig{2.5}{figures/parity-blocks.pdf}
+        }
+        \]
+        \end{minipage}
+    }
     \end{figure}
 \begin{itemize}
-    \item When $N^A$ is odd, an equivalent fermion system is ill-defined: We need to borrow a fermion from the gauge sector.
-    \item For odd $N^A$, there is always an unpaired site at the boundary.
+    \item<1-> When $N^A$ is odd, an equivalent fermion system is ill-defined: We need to borrow a fermion from the gauge sector.
+    \item<1-> For odd $N^A$, there is always an unpaired site at the boundary.
 
-    \item We can define an additional operator $\Xi_A$ that also commutes with $\rho_A$, yielding an additional 2-fold degeneracy in the entanglement spectrum
+    \item<2-> We can define an additional operator $\Xi_A$ that also commutes with $\rho_A$, yielding an additional 2-fold degeneracy in the entanglement spectrum
     \[
     \hat{\Xi}_A \equiv \sigma^\mu_l \Sigma_{\mathfrak{D}_{\mrm{DC}}^{A(l)}} \to \lr{\prod_{\anglelr{ij}\in  \mathfrak{D}^{A(l)}_{\mrm{DC}}} \hat{u}_{ij}} \underbrace{\lr{b^\mu_l\prod_{i\in A}c_i}}_{\text{fermion parity}}
+    \] 
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Quantum Magic}
+\begin{frame}{Quantum Magic}
+
+\begin{itemize}
+    \item The plaquette operators and global loops form a stabilizer group
+    $
+    \anglelr{
+    W_{p_1}, W_{p_2},\cdots
+    }
+    $
+    \item The \textbf{gauge part} of the Kitaev ground state ($\ket{\mrm{Gnd}} \propto \rho \ket{\phi}$) is a \textbf{stabilizer projector}.
+    \[
+        \ket{\mrm{Gnd}}
+        =
+        C(\phi)
+        \underbrace{
+        \lr{\frac{\mathds{1} + \tilde{W}_v}{2}} 
+        \lr{\frac{\mathds{1} + \tilde{W}_h}{2}}
+        \prod_{p} \lr{\frac{\mathds{1} + W_p}{2}}
+        }_{=\hat{\Pi} \quad \text{gauge ($=$stabilizer)}}
+        \underbrace{
+        \lrm{
+            \frac{1}{2^{N - N_p}}
+            \sum_{[\mathfrak{D}]} \mathfrak{C}_{\mathfrak{D}}
+            \Sigma_\mathfrak{D}
+        }
+        }_{\text{matter}}
+        \ket{\phi}
+    \]
+    \item The \textbf{matter part} controls the \textbf{non-stabilizerness} of the state.
+\end{itemize}
+
+\pause
+
+\textbf{\underline{Stabilizer R\'enyi Entropy (SRE)}}
+\[
+M_{n}\lr{\ket{\psi}} := 
+\frac{1}{1 - n} 
+\ln\lr{
+    \sum_{\mathsf{S}\in\mathcal{P}_N}
+    \frac{1}{2^N}
+    \mrm{Tr}\lr{\rho\mathsf{S}}^{2n}
+}
+=
+\frac{1}{1 - n}
+\ln\lr{
+    \frac{1}{2^{\color{red} N/2}}
+    \sum_{\color{red}[\mathfrak{D}]} \eta_\mathfrak{D}^n \mathfrak{C}_\mathfrak{D}^{2n}
+}
+\]
+\begin{itemize}
+    \item The result depends only on the equivalence classes (endpoints), and the number of effective degrees of freedom is \alert{$N/2$}.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Quantum Magic}
+    \begin{figure}
+        \centering
+        \includegraphics[height=0.3\textheight]{figures/w_4_h_4.pdf}
+        \includegraphics[height=0.3\textheight]{figures/w_4_h_4_magic-phase-diagram.png}
+        \includegraphics[height=0.3\textheight]{figures/w_4_h_4_vs-mag.pdf}
+    \end{figure}
+    
+\pause
+
+    \[
+    \text{\textbf{\underline{Mixed-State SRE:}}}
+    \qquad
+    \tilde{M}_2\lr{\rho} = 
+    -\ln\lr{
+            \frac{1}{2^N}
+            \sum_{\mathsf{S}\in\tilde{\mathcal{P}}_N}
+            \mrm{Tr}\lr{\rho\mathsf{S}}^{4}
+        }
+    - R_2\lr{\rho}
     \]
     
-\end{itemize}
+    \begin{figure}
+        \centering
+        \includegraphics[height=0.3\textheight]{_publications/slides_archive/2026_NTHU_miniworkshop_QuantumInfo-CFT/figures/subsys_SRE_size_compare.pdf}
+        \includegraphics[height=0.3\textheight]{_publications/slides_archive/2026_NTHU_miniworkshop_QuantumInfo-CFT/figures/subsys_SRE_size_compare_2nd_deri.pdf}
+        \includegraphics[height=0.3\textheight]{figures/w_4_h_4_magic-phase-diagram_thermolimit.png}
+    \end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Quantum Magic}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.5\linewidth]{figures/mutual_SRE.pdf}
+    \end{figure}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Summary}
 \begin{frame}{Summary}
     \begin{itemize}
-        \item The entanglement structure of the Kitaev ground state is studied completely in terms of \textbf{physical spin representation}.
-        \item The exact \textbf{1-form Wilson symmetry} makes the density matrix \textbf{organized}. Such an organized form is equivalent to the fermion density matrix.
-        \begin{itemize}
-            \item The \textbf{string operators} directly reflect the \textbf{fermionic statistics}.
-            \item The \textbf{gauge} DoF is encoded in the flux-free projecto\textbf{}r $\hat{\Pi}$, and the \textbf{matter} DoF emerges at endpoints of projected string operators $\mathcal{S}_{\mathfrak{D}}$. 
-        \end{itemize}
+        \item The entanglement structure is demonstrated in terms of \textbf{physical spins}.
+        \item The exact \textbf{1-form Wilson symmetry} makes the density matrix \textbf{organized}. 
 
-        \item As proposed by [\href{https://doi.org/10.1103/PhysRevX.15.011001}{\footnotesize W.-T. Xu \textit{et al}. PRX \textbf{15}, 011001 (2025)}], the \textbf{exact 1-form Wilson symmetry} with the \textbf{exact Gauss law} gives an extensively degenerate entanglement spectrum.
+        \item The \textbf{exact 1-form Wilson symmetry} with the \textbf{exact Gauss law} gives an extensively degenerate entanglement spectrum.
         \begin{itemize}
             \item \textit{Glue} the fictitious electric fields back to form physical operators $\hat{\xi}$ in the spin representation.
             \item The reduced density matrix is composed of identical copies of the fermionic density matrix.
@@ -478,11 +651,13 @@ But the gauge field here is \textit{fictitious}. To use spin representation (phy
         \end{itemize}
 
         \item \textbf{Odd} number of lattice sites: \textbf{Fermion parity} provides an additional degeneracy.
+
+        \item The \textbf{gauge part} is referred to as the \textbf{stabilizer}, while the \textbf{matter part} governs the \textbf{non-stabilizerness}.
     \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Unsolved Problems and Outlooks}
-\begin{frame}{Unsolved Problems and Outlooks}
+\section{Unsolved Problems and Outlook}
+\begin{frame}{Unsolved Problems and Outlook}
     \begin{itemize}
         \item To get the \textbf{true topological entanglement entropy}, we need an exact 't Hooft symmetry and make it spontaneously broken. 
         \item Higher spin Kitaev model: Expectation values don't provide sufficient conditions.
