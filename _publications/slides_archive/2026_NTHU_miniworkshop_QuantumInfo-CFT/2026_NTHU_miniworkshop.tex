@@ -213,7 +213,7 @@ In the Majorana fermion representation, the model is equivalent to a system of f
 \textbf{\underline{Recent New Development:}}
 \begin{itemize}
     \item Subsystems with holes (genus number $g>0$)
-    \item Quantum magic: direct calculation of the \textit{stabilizer R\'enyi entropy}
+    \item Quantum magic: direct calculation of the \textit{stabilizer R\'enyi entropy} (SRE)
 \end{itemize}
 }
 \end{frame}
@@ -566,11 +566,38 @@ But the gauge field here is \textit{fictitious}. To use the spin representation 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Topological Effect}
+
     \begin{figure}
         \centering
-        \includegraphics[height=0.5\textheight]{figures/wilson-wp-inter.pdf}
+        \includegraphics[height=0.4\textheight]{figures/wilson-wp-inter.pdf}
         \hspace{2em}
-        \includegraphics[height=0.5\textheight]{figures/vison-loop-fermion-parity.pdf}
+        \includegraphics[height=0.4\textheight]{figures/vison-loop-fermion-parity.pdf}
+    \end{figure}
+    \[
+    \tilde{T}_{\de\Gamma}
+    =
+    \exp\lr{i\pi\oint_{\de\Gamma} E_\perp \mrm{d}\ell}
+    \leftrightsquigarrow
+    \prod_{\hat{\xi} \in \de \Gamma}\hat{\xi} 
+    =
+    \Sigma_{\mathfrak{H}}
+    \leftrightsquigarrow
+    \prod_{i\in\Gamma}c_i
+    \propto
+    (-1)^{F_\Gamma} 
+    \;; \quad F_\Gamma = \sum_{i\in\Gamma} n_i
+    \]
+    \[
+    \oint_{\de\Gamma} E_\perp \mrm{d}\ell = \sum_{i\in\Gamma} n_i \Rightarrow \nabla\cdot E = \rho.
+    \]
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Topological Effect}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.4\linewidth]{figures/inner-outer-assemble_1.pdf}
+        \hspace{2mm}
+        \includegraphics[width=0.4\linewidth]{figures/inner-outer-assemble_2.pdf}
     \end{figure}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -673,8 +700,13 @@ M_{n}\lr{\ket{\psi}} :=
     \end{figure}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Quantum Magic}
-    For 1-dimensional systems
+\section{Quantum Magic -- 1D Model and CFT}
+\begin{frame}{Quantum Magic -- 1D Model and CFT}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.5\linewidth]{_publications/slides_archive/2026_NTHU_miniworkshop_QuantumInfo-CFT/figures/fig2_Feng-Zhang-Xiang.pdf}
+    \end{figure}
+    Density matrices of the ground state of a 1-dimensional system are partially stabilized by $\xi$-operators:
     \[
     \rho
     =
@@ -697,15 +729,18 @@ M_{n}\lr{\ket{\psi}} :=
     \]
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Quantum Magic}
+\begin{frame}{Quantum Magic -- 1D Model and CFT}
+    
+    \begin{figure}
+        \centering
+        \includegraphics[height=0.35\textheight]{figures/local_SRE_vs_gamma.pdf}
+        \includegraphics[height=0.35\textheight]{figures/mutual_SRE.pdf}
+    \end{figure}
+\textbf{\underline{Mutual SRE:}}
     \[
     W_{2}(l) = \frac{1}{4}\ln\left[\left(\frac{L}{\pi}\right)\sin\left(\frac{\pi l}{L}\right)\right]
     \]
     \scite{https://doi.org/10.1103/ylsz-dm3y}{M. Hoshino, M. Oshikawa, and Y. Ashida, Phys. Rev. X \textbf{16}, 011037}
-    \begin{figure}
-        \centering
-        \includegraphics[width=0.5\linewidth]{figures/mutual_SRE.pdf}
-    \end{figure}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Summary}
@@ -727,127 +762,127 @@ M_{n}\lr{\ket{\psi}} :=
     \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Unsolved Problems and Outlook}
-\begin{frame}{Unsolved Problems and Outlook}
-    \begin{itemize}
-        \item To get the \textbf{true topological entanglement entropy}, we need an exact 't Hooft symmetry and make it spontaneously broken. 
-        \item Higher spin Kitaev model: Expectation values don't provide sufficient conditions.
-        \item Multi-connected subregion
-    \end{itemize}
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Toric Code Model: True Topological Entanglement entropy}
+% \section{Unsolved Problems and Outlook}
+% \begin{frame}{Unsolved Problems and Outlook}
+%     \begin{itemize}
+%         \item To get the \textbf{true topological entanglement entropy}, we need an exact 't Hooft symmetry and make it spontaneously broken. 
+%         \item Higher spin Kitaev model: Expectation values don't provide sufficient conditions.
+%         \item Multi-connected subregion
+%     \end{itemize}
+% \end{frame}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Toric Code Model: True Topological Entanglement entropy}
 
-    \begin{itemize}
-        \item Reduced density matrix of a Kitaev ground state 
-            \sequ{
-                \rho_A = \frac{1}{2^{N^A-N^A_p-N^A_s-2g}} \prod_{n=1}^{g}\lr{\frac{\mathds{1} + T_{\mathcal{L}^{(n)}}}{2}} \prod_{n=1}^{g}\lr{\frac{\mathds{1} + W_{\mathcal{L}^{(n)}}}{2}} \prod_{p\in A}\lr{\frac{\mathds{1} + P_p}{2}} \prod_{s\in A}\lr{\frac{\mathds{1} + S_s}{2}}
-            }
-            \begin{figure}
-                \centering
-                \includegraphics[width=0.45\linewidth]{figures/non-trivial-genus_toric-code.pdf}
-            \end{figure}
+%     \begin{itemize}
+%         \item Reduced density matrix of a Kitaev ground state 
+%             \sequ{
+%                 \rho_A = \frac{1}{2^{N^A-N^A_p-N^A_s-2g}} \prod_{n=1}^{g}\lr{\frac{\mathds{1} + T_{\mathcal{L}^{(n)}}}{2}} \prod_{n=1}^{g}\lr{\frac{\mathds{1} + W_{\mathcal{L}^{(n)}}}{2}} \prod_{p\in A}\lr{\frac{\mathds{1} + P_p}{2}} \prod_{s\in A}\lr{\frac{\mathds{1} + S_s}{2}}
+%             }
+%             \begin{figure}
+%                 \centering
+%                 \includegraphics[width=0.45\linewidth]{figures/non-trivial-genus_toric-code.pdf}
+%             \end{figure}
         
-        \item Entanglement entropy: If the density matrix is proportional to a projector $\rho_A = C\mathcal{P}$
-            \sequ{
-                S^{(n)}_A = \frac{1}{1-n}\ln \tr \rho_A^n = \frac{1}{1-n}\ln \lr{C^{n-1} \tr\rho_A} = -\ln C = \lr{\abs{\de A} - (j+g)}\ln 2
-            }
-    \end{itemize}
+%         \item Entanglement entropy: If the density matrix is proportional to a projector $\rho_A = C\mathcal{P}$
+%             \sequ{
+%                 S^{(n)}_A = \frac{1}{1-n}\ln \tr \rho_A^n = \frac{1}{1-n}\ln \lr{C^{n-1} \tr\rho_A} = -\ln C = \lr{\abs{\de A} - (j+g)}\ln 2
+%             }
+%     \end{itemize}
     
         
     
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Multi-connected Region}
-\begin{itemize}
-    \item For a multi-connected region with genus number $g$, there is a set of configurations $\lrg{ \mathfrak{H}^{(1)}, \mathfrak{H}^{(2)},\cdots,\mathfrak{H}^{(g)} }$ such that $\tr_{\bar{A}} \lr{\Sigma_{\mathfrak{D}\ominus \mathfrak{H}^{(n)}} } \neq 0$ if $\mathfrak{D}\subset A$
-    \item In general, however, $\Sigma_{\mathfrak{D}\ominus \mathfrak{H}^{(n)}} \neq \Sigma_{\mathfrak{D}}\Sigma_{\mathfrak{H}^{(n)}}$, thus the reduced density matrix cannot be organized as before.
-    \item The web patch is invalid in the fermion representation: $\tr_{\bar{A},F}\lr{\mathcal{M}_{\mathfrak{D}\ominus \mathfrak{H}^{(n)}} } = 0$
-\end{itemize}
-    \begin{figure}
-        \centering
-        \includegraphics[width=0.5\linewidth]{figures/web-patch.pdf}
-    \end{figure}
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \end{frame}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Multi-connected Region}
+% \begin{itemize}
+%     \item For a multi-connected region with genus number $g$, there is a set of configurations $\lrg{ \mathfrak{H}^{(1)}, \mathfrak{H}^{(2)},\cdots,\mathfrak{H}^{(g)} }$ such that $\tr_{\bar{A}} \lr{\Sigma_{\mathfrak{D}\ominus \mathfrak{H}^{(n)}} } \neq 0$ if $\mathfrak{D}\subset A$
+%     \item In general, however, $\Sigma_{\mathfrak{D}\ominus \mathfrak{H}^{(n)}} \neq \Sigma_{\mathfrak{D}}\Sigma_{\mathfrak{H}^{(n)}}$, thus the reduced density matrix cannot be organized as before.
+%     \item The web patch is invalid in the fermion representation: $\tr_{\bar{A},F}\lr{\mathcal{M}_{\mathfrak{D}\ominus \mathfrak{H}^{(n)}} } = 0$
+% \end{itemize}
+%     \begin{figure}
+%         \centering
+%         \includegraphics[width=0.5\linewidth]{figures/web-patch.pdf}
+%     \end{figure}
+% \end{frame}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Contribution 2: Exact 1-Form Wilson}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Contribution 2: Exact 1-Form Wilson}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\linewidth]{figures/PEPS.png}
-\end{figure}
-\begin{itemize}
-    \item \textbf{Symmetry of the tensor network} derives the \textbf{0-form Ising symmetry} and the \textbf{1-form Wilson loop symmetry}.
-\end{itemize}
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.8\linewidth]{figures/PEPS.png}
+% \end{figure}
+% \begin{itemize}
+%     \item \textbf{Symmetry of the tensor network} derives the \textbf{0-form Ising symmetry} and the \textbf{1-form Wilson loop symmetry}.
+% \end{itemize}
 
-\end{frame}
+% \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Contribution 2: Exact 1-Form Wilson}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Contribution 2: Exact 1-Form Wilson}
 
-\begin{figure}
-    \centering
-    \includegraphics[height=0.25\textheight]{figures/boundary-matrix.png}
-    \includegraphics[height=0.25\textheight]{figures/transfer-matrix-symmetry.png}
-\end{figure}
-\begin{itemize}
-{\footnotesize
-    \item \href{https://doi.org/10.1103/PhysRevB.83.245134}{Transfer matrix of a tensor network gives reduced density matrix (in the virtual space)}
-    {\tiny
-    \[
-    \mathbb{T}\ket{\sigma_{R}} \propto \ket{\sigma_{R}} \quad\Rightarrow\quad \ket{\sigma_R}\to \sigma_L \quad\Rightarrow\quad \rho \sim  \sigma_L^T \sigma_R
-    \]
-    }
+% \begin{figure}
+%     \centering
+%     \includegraphics[height=0.25\textheight]{figures/boundary-matrix.png}
+%     \includegraphics[height=0.25\textheight]{figures/transfer-matrix-symmetry.png}
+% \end{figure}
+% \begin{itemize}
+% {\footnotesize
+%     \item \href{https://doi.org/10.1103/PhysRevB.83.245134}{Transfer matrix of a tensor network gives reduced density matrix (in the virtual space)}
+%     {\tiny
+%     \[
+%     \mathbb{T}\ket{\sigma_{R}} \propto \ket{\sigma_{R}} \quad\Rightarrow\quad \ket{\sigma_R}\to \sigma_L \quad\Rightarrow\quad \rho \sim  \sigma_L^T \sigma_R
+%     \]
+%     }
 
-    \item Symmetry of the tensor network becomes the symmetry of the reduced density matrix
-    {\tiny
-    \[
-    \begin{aligned}
-    \lr{\prod_iX_i\otimes\prod_iX_i}\mathbb{T}\lr{\prod_iX_i\otimes\prod_iX_i} &= \mathbb{T} \\
-    (Z_j\otimes Z_j)\mathbb{T}(Z_j\otimes Z_j)&= \mathbb{T}\;\forall j
-    \end{aligned}
-    \quad\Rightarrow\quad
-    \begin{aligned}
-        \lr{\prod_iX_i}\sigma_{L(R)}\lr{\prod_iX_i} &= \sigma_{L(R)} \\
-        Z_j \sigma_{L(R)}Z_j &= \sigma_{L(R)} \;\forall j
-    \end{aligned}
-    \]
-    }
+%     \item Symmetry of the tensor network becomes the symmetry of the reduced density matrix
+%     {\tiny
+%     \[
+%     \begin{aligned}
+%     \lr{\prod_iX_i\otimes\prod_iX_i}\mathbb{T}\lr{\prod_iX_i\otimes\prod_iX_i} &= \mathbb{T} \\
+%     (Z_j\otimes Z_j)\mathbb{T}(Z_j\otimes Z_j)&= \mathbb{T}\;\forall j
+%     \end{aligned}
+%     \quad\Rightarrow\quad
+%     \begin{aligned}
+%         \lr{\prod_iX_i}\sigma_{L(R)}\lr{\prod_iX_i} &= \sigma_{L(R)} \\
+%         Z_j \sigma_{L(R)}Z_j &= \sigma_{L(R)} \;\forall j
+%     \end{aligned}
+%     \]
+%     }
 
-    \item Therefore, two operators $\prod_iX_i$ and $Z_j$ commute with the reduced density matrix, yielding $2$-fold degeneracy in the entanglement spectrum.
-}
-\end{itemize}
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Contribution 3: Spontaneous 1-form Symmetry Breaking}
+%     \item Therefore, two operators $\prod_iX_i$ and $Z_j$ commute with the reduced density matrix, yielding $2$-fold degeneracy in the entanglement spectrum.
+% }
+% \end{itemize}
+% \end{frame}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Contribution 3: Spontaneous 1-form Symmetry Breaking}
 
-\begin{itemize}
-    \item Implementing the 1-form 't Hooft loop symmetry
-    \[
-    \rho \sim \frac{1 + T_{C_y}}{2}\exp\lr{-H_E}
-    \]
+% \begin{itemize}
+%     \item Implementing the 1-form 't Hooft loop symmetry
+%     \[
+%     \rho \sim \frac{1 + T_{C_y}}{2}\exp\lr{-H_E}
+%     \]
     
-    \item The 1-form 't Hooft loop symmetry is spontaneously broken: $T_{C_y}\ket{\psi} \neq \ket{\psi}$, so the expectation value satisfies the perimeter law: $\anglelr{T_{C}}\sim e^{-\abs{C}}$.
+%     \item The 1-form 't Hooft loop symmetry is spontaneously broken: $T_{C_y}\ket{\psi} \neq \ket{\psi}$, so the expectation value satisfies the perimeter law: $\anglelr{T_{C}}\sim e^{-\abs{C}}$.
 
-    \item Entanglement entropy:
-    \[
-    S_n = \frac{1}{1-n}\ln\mrm{Tr}\rho^n \mathop{\approx }^{\abs{\de R}\to \infty} -\frac{f(1/n) - f(1)}{1/n - 1}\abs{\de R} \underbrace{- \ln 2}_{\text{topo EE}} 
-    \]
-\end{itemize}
+%     \item Entanglement entropy:
+%     \[
+%     S_n = \frac{1}{1-n}\ln\mrm{Tr}\rho^n \mathop{\approx }^{\abs{\de R}\to \infty} -\frac{f(1/n) - f(1)}{1/n - 1}\abs{\de R} \underbrace{- \ln 2}_{\text{topo EE}} 
+%     \]
+% \end{itemize}
 
-\end{frame}
+% \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{This Wilson is not that Wilson}
-A Wilson operator defined in the Kitaev model decomposes into a Wilson loop and a 't~Hooft loop defined in the toric code (Wen plaquette) model: $W^{(\mrm{K})} = W^{(\mrm{t.c.})}T^{(\mrm{t.c.})}$
-    \begin{figure}
-        \centering
-        \includegraphics[width=0.6\linewidth]{figures/wilson-deconfined.pdf}
-    \end{figure}
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{This Wilson is not that Wilson}
+% A Wilson operator defined in the Kitaev model decomposes into a Wilson loop and a 't~Hooft loop defined in the toric code (Wen plaquette) model: $W^{(\mrm{K})} = W^{(\mrm{t.c.})}T^{(\mrm{t.c.})}$
+%     \begin{figure}
+%         \centering
+%         \includegraphics[width=0.6\linewidth]{figures/wilson-deconfined.pdf}
+%     \end{figure}
+% \end{frame}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \end{document} 
