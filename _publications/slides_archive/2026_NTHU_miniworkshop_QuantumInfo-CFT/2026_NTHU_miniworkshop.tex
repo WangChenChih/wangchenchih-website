@@ -708,8 +708,8 @@ M_{n}\lr{\ket{\psi}} :=
         \centering
             {\footnotesize
             \begin{align*}
-                H &= -J_x\sum_{i\in \text{odd}}\sigma^x_{i} \sigma^x_{i+1} \\ 
-                & \hspace{5em} - J_y\sum_{i\in \text{even}}\sigma^y_{i} \sigma^y_{i+1}
+                H &= -\alert{J_x} \sum_{i\in \text{odd}}\sigma^x_{i} \sigma^x_{i+1} \\ 
+                & \hspace{5em} - \valert{J_y} \sum_{i\in \text{even}}\sigma^y_{i} \sigma^y_{i+1}
             \end{align*}
             }
             % \includegraphics[width=\textwidth]{figures/chain.pdf}
@@ -726,15 +726,17 @@ M_{n}\lr{\ket{\psi}} :=
             \centering
             \includegraphics[width=\textwidth]{figures/chain_xi.pdf}
         \end{minipage}
-        \begin{minipage}{0.6\textwidth}
-            {\tiny
+        \begin{minipage}{0.65\textwidth}
+            {\footnotesize
             \begin{align*}
                 &\rho
                 =
                 \frac{1}{2^{N - N_\xi}}
-                \lr{\frac{\mathds{1} + \tilde{Z}}{2}}
-                \prod_{\hat{\xi}\in\Omega}
-                \lr{\frac{\mathds{1} + \hat{\xi}}{2}}
+                \underbrace{
+                    \lr{\frac{\mathds{1} + \tilde{Z}}{2}}
+                    \prod_{\hat{\xi}\in\Omega}
+                    \lr{\frac{\mathds{1} + \hat{\xi}}{2}}
+                }_{\text{stabilizer part}}
                 \sum_{[\mathfrak{D}]}
                 \mathfrak{C}_\mathfrak{D}
                 \Sigma_\mathfrak{D} \\
