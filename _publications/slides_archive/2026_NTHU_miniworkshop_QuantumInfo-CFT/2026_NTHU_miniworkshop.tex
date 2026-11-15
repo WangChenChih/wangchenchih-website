@@ -557,22 +557,51 @@ But the gauge field here is \textit{fictitious}. To use the spin representation 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Topological Effect}
+\begin{itemize}
+    \item 
+\end{itemize}
     \begin{figure}
         \centering
-        \includegraphics[width=0.4\linewidth]{figures/separate-fermions.pdf}
-        \hspace{2em}\includegraphics[width=0.4\linewidth]{figures/separate-fermions_string.pdf}
+        \includegraphics[width=0.3\linewidth]{figures/separate-fermions.pdf}
+        \hspace{1em}\includegraphics[width=0.3\linewidth]{figures/separate-fermions_string.pdf}\hspace{1em}\includegraphics[width=0.3\linewidth]{figures/separate-fermions_even-even.pdf}
         
     \end{figure}
+\begin{align*}
+    \rho_A^F&\propto 
+    \sum_{[\mathfrak{D}]\in\text{even}}\mathfrak{C}_\mathfrak{D} \hat{\Pi}_A\Sigma_\mathfrak{D} 
+    \valert{
+    +
+    \sum_{[\mathfrak{D}]\in\text{odd}}\mathfrak{C}_\mathfrak{D} \hat{\Pi}_A\Sigma_\mathfrak{D}
+    }   \\
+    \rho_A &\propto \sum_{[\mathfrak{D}] \in \text{even}} \mathfrak{C}_\mathfrak{D} \mathcal{M}_\mathfrak{D}     
+\end{align*}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Topological Effect}
-
+\begin{itemize}
+    \item $\text{'t Hooft loop} = \text{subsystem fermion parity} = \text{Vison loop}$.
+    \item The 't Hooft loop commutes with the reduced density matrix.
+    \item $\rho_{A}
+            =
+            \frac{1}{2^{N^A - N^A_p}}
+            \hat{\Pi}_A
+            \alert{\lr{\mathds{1} + W_\mathcal{L}}}
+            \sum_{[\mathfrak{D}]\subset A}
+            \lr{
+                \mathfrak{C}_\mathfrak{D} \Sigma_\mathfrak{D} 
+                +
+                \alert{
+                \mathfrak{C}_{\mathfrak{D} \ominus \mathfrak{H}} \Sigma_{\mathfrak{D}\ominus\mathfrak{H}}
+                }
+            }$.
+\end{itemize}
     \begin{figure}
         \centering
         \includegraphics[height=0.4\textheight]{figures/wilson-wp-inter.pdf}
         \hspace{2em}
         \includegraphics[height=0.4\textheight]{figures/vison-loop-fermion-parity.pdf}
     \end{figure}
+    {\tiny
     \[
     \tilde{T}_{\de\Gamma}
     =
@@ -590,16 +619,17 @@ But the gauge field here is \textit{fictitious}. To use the spin representation 
     \[
     \oint_{\de\Gamma} E_\perp \mrm{d}\ell = \sum_{i\in\Gamma} n_i \Rightarrow \nabla\cdot E = \rho.
     \]
+    }
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Topological Effect}
-    \begin{figure}
-        \centering
-        \includegraphics[width=0.4\linewidth]{figures/inner-outer-assemble_1.pdf}
-        \hspace{2mm}
-        \includegraphics[width=0.4\linewidth]{figures/inner-outer-assemble_2.pdf}
-    \end{figure}
-\end{frame}
+% \begin{frame}{Topological Effect}
+%     \begin{figure}
+%         \centering
+%         \includegraphics[width=0.4\linewidth]{figures/inner-outer-assemble_1.pdf}
+%         \hspace{2mm}
+%         \includegraphics[width=0.4\linewidth]{figures/inner-outer-assemble_2.pdf}
+%     \end{figure}
+% \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Take Home Message}
     \begin{itemize}
