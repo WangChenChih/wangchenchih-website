@@ -158,9 +158,21 @@ In the Majorana fermion representation, the model is equivalent to a system of f
 \begin{itemize}
 
     \item Define the \textbf{gauge field} $\hat{u}_{ij} = e^{i \alert{\boldsymbol{A_{ij}}}}$, then the elementary \textbf{$\mathbb{Z}_2$ gauge flux} reads 
-    \sequ{
-    e^{i\Phi} = \exp\lr{i\oint_{\de p} A} = \prod_{\anglelr{ij}\in\de p}\hat{u}_{ij} = \prod_{\anglelr{ij}\in\de p}\dimer{i}{j} =: W_p
-    }
+    \begin{figure}
+        \centering
+        \begin{minipage}{0.4\textwidth}
+            {\tiny
+            \begin{align*}
+                e^{i\Phi} &= \exp\lr{i\oint_{\de p} A} = \prod_{\anglelr{ij}\in\de p}\hat{u}_{ij} \\
+                &\to \prod_{\anglelr{ij}\in\de p}\dimer{i}{j} =: W_p
+            \end{align*}
+            }
+        \end{minipage}
+        \begin{minipage}{0.35\textwidth}
+            \includegraphics[width=\textwidth]{figures/A-and-E-fields.pdf}
+        \end{minipage}
+    \end{figure}
+            
     
     \item The \textbf{electric field} in the gauge field that flips the gauge field is $\boxed{b^{\alpha_{ij}}_i \to e^{i\pi \valert{\boldsymbol{E_{ij}}}}}$ because
     $b^{\alpha_{ij}}_i\hat{u}_{ij}b^{\alpha_{ij}}_i = -\hat{u}_{ij} \Longrightarrow [\alert{\boldsymbol{A_{ij}}}, \valert{\boldsymbol{E_{i'j'}}}] = i\delta_{ii'}\delta_{jj'}$
@@ -457,18 +469,16 @@ Review the method discovered by a recent work [\href{https://doi.org/10.1103/Phy
 \section{The 2nd Layer Organization}
 \begin{frame}{Block-Diagonal Density Matrix in the Kitaev Model}
 
-In the Kitaev model:
+% In the Kitaev model:
+%     \begin{itemize}
+%         \item Exact Gauss law: From the electric field $b^{\alpha_{ij}}_i = e^{i\pi E_{ij}}$ at the boundary.
+
+%         \item Exact 1-form Wilson symmetry: $\anglelr{W_\mathcal{C}} = \anglelr{\Sigma_{\mathcal{C}}} = 1$ for any closed loop $\mathcal{C}$.
+%     \end{itemize}
+
+In the Kitaev model, the gauge field here is \textit{fictitious}. So we need to
     \begin{itemize}
-        \item Exact Gauss law: From the electric field $b^{\alpha_{ij}}_i = e^{i\pi E_{ij}}$ at the boundary.
-
-        \item Exact 1-form Wilson symmetry: $\anglelr{W_\mathcal{C}} = \anglelr{\Sigma_{\mathcal{C}}} = 1$ for any closed loop $\mathcal{C}$.
-    \end{itemize}
-
-\pause 
-
-But the gauge field here is \textit{fictitious}. To use the spin representation (physical):
-    \begin{itemize}
-        \item Connecting two \textit{deconfined} degrees of freedom to form physical objects
+        \item Connect two \textit{deconfined} degrees of freedom to form physical objects
         
         \item Use electric fields to define a set of operators $\hat{\xi}_n := \alert{\sigma^{\mu_n}_n} \valert{\Sigma_{\mathcal{C}_n}} \alert{\sigma^{\mu_{n+1}}_{n+1}}$ along the boundary of the entanglement cut. These operators commute with strings in $A$:
         \[
@@ -478,11 +488,11 @@ But the gauge field here is \textit{fictitious}. To use the spin representation 
     
     \begin{figure}
         \centering
-        \begin{minipage}{0.26\linewidth}
+        \begin{minipage}{0.35\linewidth}
         \includegraphics[width=\linewidth]{figures/linking-string-electric-field.pdf}
         \end{minipage}
         \hspace{4mm}
-        \begin{minipage}{0.35\linewidth}
+        \begin{minipage}{0.42\linewidth}
         \includegraphics[width=\linewidth]{figures/gauss-string-commuting.pdf}
         \end{minipage}
     \end{figure}
@@ -556,25 +566,50 @@ But the gauge field here is \textit{fictitious}. To use the spin representation 
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Take Home Message}
+    \begin{itemize}
+        \item The organization of the density matrix has two layers
+        \begin{itemize}
+            \item The \textbf{first} layer is the equivalence class structure that stems from the 1-form Wilson symmetry.
+            \item The \textbf{second} layer is the extensive degeneracy in the entanglement spectrum caused by the 1-form Wilson symmetry together with the Gauss-law constraint.
+        \end{itemize}
+
+        \item The degeneracy in the entanglement spectrum obeys an area law. This fact is reflected by the $\xi$ operators defined along the boundary.
+
+        \item Odd number of lattice sites: Fermion parity provides an additional degeneracy.
+    \end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Topological Effect}
-\begin{itemize}
-    \item 
-\end{itemize}
+    \begin{itemize}
+        \item Strings cannot cross the environment (Pauli operators are traceless). 
+        \item As a consequence, only even-parity components survive (even parity for each separated component). 
+    \end{itemize}
     \begin{figure}
         \centering
-        \includegraphics[width=0.3\linewidth]{figures/separate-fermions.pdf}
-        \hspace{1em}\includegraphics[width=0.3\linewidth]{figures/separate-fermions_string.pdf}\hspace{1em}\includegraphics[width=0.3\linewidth]{figures/separate-fermions_even-even.pdf}
-        
+        \begin{minipage}{0.25\linewidth}
+            \includegraphics[width=\textwidth]{figures/separate-fermions.pdf}
+        \end{minipage}
+        \begin{minipage}{0.6\linewidth}
+            \begin{align*}
+            \rho_A & \propto 
+            \sum_{[\mathfrak{D}]\in\text{even}}\mathfrak{C}_\mathfrak{D} \hat{\Pi}_A\Sigma_\mathfrak{D} 
+            \valert{
+            +
+            \sum_{[\mathfrak{D}]\in\text{odd}}\mathfrak{C}_\mathfrak{D} \hat{\Pi}_A\Sigma_\mathfrak{D}
+            }   \\
+            \rho_A^F &\propto \sum_{[\mathfrak{D}] \in \text{even}} \mathfrak{C}_\mathfrak{D} \mathcal{M}_\mathfrak{D}     
+        \end{align*}
+        \end{minipage}
     \end{figure}
-\begin{align*}
-    \rho_A^F&\propto 
-    \sum_{[\mathfrak{D}]\in\text{even}}\mathfrak{C}_\mathfrak{D} \hat{\Pi}_A\Sigma_\mathfrak{D} 
-    \valert{
-    +
-    \sum_{[\mathfrak{D}]\in\text{odd}}\mathfrak{C}_\mathfrak{D} \hat{\Pi}_A\Sigma_\mathfrak{D}
-    }   \\
-    \rho_A &\propto \sum_{[\mathfrak{D}] \in \text{even}} \mathfrak{C}_\mathfrak{D} \mathcal{M}_\mathfrak{D}     
-\end{align*}
+
+        \vspace{-1em}
+    
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.3\linewidth]{figures/separate-fermions_string.pdf}\hspace{1em}\includegraphics[width=0.3\linewidth]{figures/separate-fermions_even-even.pdf}
+    \end{figure}
+        
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Topological Effect}
@@ -630,20 +665,6 @@ But the gauge field here is \textit{fictitious}. To use the spin representation 
 %         \includegraphics[width=0.4\linewidth]{figures/inner-outer-assemble_2.pdf}
 %     \end{figure}
 % \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Take Home Message}
-    \begin{itemize}
-        \item The organization of the density matrix has two layers
-        \begin{itemize}
-            \item The \textbf{first} layer is the equivalence class structure that stems from the 1-form Wilson symmetry.
-            \item The \textbf{second} layer is the extensive degeneracy in the entanglement spectrum caused by the 1-form Wilson symmetry together with the Gauss-law constraint.
-        \end{itemize}
-
-        \item The degeneracy in the entanglement spectrum obeys an area law. This fact is reflected by the $\xi$ operators defined along the boundary.
-
-        \item Odd number of lattice sites: Fermion parity provides an additional degeneracy.
-    \end{itemize}
-\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Quantum Magic}
 \begin{frame}{Quantum Magic}
@@ -790,29 +811,23 @@ M_{n}\lr{\ket{\psi}} :=
         \includegraphics[height=0.35\textheight]{figures/local_SRE_vs_gamma.pdf}
         \includegraphics[height=0.35\textheight]{figures/mutual_SRE.pdf}
     \end{figure}
-\textbf{\underline{Mutual SRE:}}
+\textbf{\underline{Mutual SRE:}} $W_\alpha(A:B) = M_\alpha(\rho_A) + M_\alpha(\rho_B) - M_{\alpha}(\rho_{AB})$.
     \[
     W_{2}(l) = \frac{1}{4}\ln\left[\left(\frac{L}{\pi}\right)\sin\left(\frac{\pi l}{L}\right)\right]
     \]
     \scite{https://doi.org/10.1103/ylsz-dm3y}{M. Hoshino, M. Oshikawa, and Y. Ashida, Phys. Rev. X \textbf{16}, 011037}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Summary}
-\begin{frame}{Summary}
+\begin{frame}{Take home message}
+\textbf{\underline{Topological Effect:}}
     \begin{itemize}
-        \item The entanglement structure is demonstrated in terms of \textbf{physical spins}.
-        \item The exact \textbf{1-form Wilson symmetry} makes the density matrix \textbf{organized}. 
-
-        \item The \textbf{exact 1-form Wilson symmetry} with the \textbf{exact Gauss law} gives an extensively degenerate entanglement spectrum.
-        \begin{itemize}
-            \item \textit{Glue} the fictitious electric fields back to form physical operators $\hat{\xi}$ in the spin representation.
-            \item The reduced density matrix is composed of identical copies of the fermionic density matrix.
-            \item Separability of the entanglement entropy
-        \end{itemize}
-
-        \item \textbf{Odd} number of lattice sites: \textbf{Fermion parity} provides an additional degeneracy.
-
-        \item The \textbf{gauge part} is referred to as the \textbf{stabilizer}, while the \textbf{matter part} governs the \textbf{non-stabilizerness}.
+        \item Subsystem fermion parity provides a constraint
+        \item $\text{'t Hooft loop} = \text{subsystem fermion parity} = \text{Vison loop}$.
+    \end{itemize}
+\textbf{\underline{Quantum Magic:}}
+    \begin{itemize}
+        \item In the 2D Kitaev model, the Wilson loops serve as stabilizers.
+        \item In the 1D Kitaev model, it is the $\xi$-operators that serve as stabilizers.
     \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
