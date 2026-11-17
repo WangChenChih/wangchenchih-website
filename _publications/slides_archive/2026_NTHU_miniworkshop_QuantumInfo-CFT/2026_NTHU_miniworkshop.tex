@@ -244,7 +244,7 @@ In the Majorana fermion representation, the model is equivalent to a system of f
 
         \item $\mathbb{Z}_2$ algebra of strings
             \[
-            \mathfrak{D}\ominus \mathfrak{D}' := \mathfrak{D}\cup\mathfrak{D}' - \mathfrak{D}\cap \mathfrak{D}' \quad:\quad 
+            \mathfrak{D}\ominus \mathfrak{D}'  \quad:\quad 
             \lr{\wordfig{1}{figures/oplus_1}}
             \ominus
             \lr{\wordfig{1}{figures/oplus_2}} 
@@ -261,33 +261,33 @@ In the Majorana fermion representation, the model is equivalent to a system of f
     \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Organization: Equivalence Relation (the 1st Layer)}
-\begin{frame}{Organization: Equivalence Relation}
-    \begin{itemize}
-        \item  
-            Exact 1-form symmetry: Wilson loop $\Sigma_{\mathcal{C}}\ket{\psi_0} = W_{\mathcal{C}}\ket{\psi_0} = \ket{\psi_0}$
-        \item The expectation values are identical up to a sign if the strings are identical up to a loop $\mathcal{C}$
-            \[
-                \anglelr{\Sigma_{\mathfrak{D}\ominus \mathcal{C}}} 
-                \propto \anglelr{\Sigma_{\mathfrak{D}}W_{\mathcal{C}}} 
-                \propto 
-                \anglelr{\Sigma_{\mathfrak{D}}}
-            \]
-        \item Equivalence relation:
-            \[
-            \boxed{
-                [\mathfrak{D}] = \lrg{\mathfrak{D'} \; : \; \exists\text{  $\mathcal{C}$ composed by closed loops such that }\mathfrak{D}'\ominus\mathcal{C}=\mathfrak{D}}
-            }
-            \]
-        \item Endpoints perspective: $\mrm{EP(\mathfrak{D})} = \mrm{EP}(\mathfrak{D}')$ iff $[\mathfrak{D}] = [\mathfrak{D}']$ $\Rightarrow$ Emerging fermions at endpoints of strings 
+% \section{Organization: Equivalence Relation (the 1st Layer)}
+% \begin{frame}{Organization: Equivalence Relation}
+%     \begin{itemize}
+%         \item  
+%             Exact 1-form symmetry: Wilson loop $\Sigma_{\mathcal{C}}\ket{\psi_0} = W_{\mathcal{C}}\ket{\psi_0} = \ket{\psi_0}$
+%         \item The expectation values are identical up to a sign if the strings are identical up to a loop $\mathcal{C}$
+%             \[
+%                 \anglelr{\Sigma_{\mathfrak{D}\ominus \mathcal{C}}} 
+%                 \propto \anglelr{\Sigma_{\mathfrak{D}}W_{\mathcal{C}}} 
+%                 \propto 
+%                 \anglelr{\Sigma_{\mathfrak{D}}}
+%             \]
+%         \item Equivalence relation:
+%             \[
+%             \boxed{
+%                 [\mathfrak{D}] = \lrg{\mathfrak{D'} \; : \; \exists\text{  $\mathcal{C}$ composed by closed loops such that }\mathfrak{D}'\ominus\mathcal{C}=\mathfrak{D}}
+%             }
+%             \]
+%         \item Endpoints perspective: $\mrm{EP(\mathfrak{D})} = \mrm{EP}(\mathfrak{D}')$ iff $[\mathfrak{D}] = [\mathfrak{D}']$ $\Rightarrow$ Emerging fermions at endpoints of strings 
             
-    \end{itemize}
-    \begin{figure}
-        \centering
-        \includegraphics[width=0.4\linewidth]{figures/equivalent.pdf}
-        \includegraphics[width=0.4\linewidth]{figures/equivalent_loop.pdf}
-    \end{figure}
-\end{frame}
+%     \end{itemize}
+%     \begin{figure}
+%         \centering
+%         \includegraphics[width=0.4\linewidth]{figures/equivalent.pdf}
+%         \includegraphics[width=0.4\linewidth]{figures/equivalent_loop.pdf}
+%     \end{figure}
+% \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{The 1st Layer Organization}
     \begin{itemize}
@@ -313,7 +313,7 @@ In the Majorana fermion representation, the model is equivalent to a system of f
         \quad
         \wordfig{1.5}{figures/small-equi-strings.pdf}
         \]
-        \item<4-> Organization due to the exact 1-form Wilson symmetry:
+        \item<4-> Organization due to the \textbf{exact 1-form Wilson symmetry}:
         \[
         \rho 
         \propto  \sum_{\alert{[\mathfrak{D}]}} \mathfrak{C}_\mathfrak{D} \hat{\Pi}\Sigma_{\mathfrak{D}} \quad ; \quad 
@@ -668,6 +668,33 @@ In the Kitaev model, the gauge field here is \textit{fictitious}. So we need to
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Quantum Magic}
 \begin{frame}{Quantum Magic}
+\textbf{\underline{A Brief Intro}}
+    \begin{itemize}
+        \item A state $\ket{\psi}$ is stabilized by $\anglelr{g_1, g_2,\cdots}$ if $g_i\ket{\psi} = \ket{\psi}$.
+        \item The density matrix of a stabilizer state: $\rho \propto\prod_{i} \frac{\mathds{1} + g_i}{2}$
+        \item \textbf{Gottesman–Knill theorem:} stabilized states can be simulated on classical computers in polynomial time.
+    \end{itemize}
+
+\pause
+
+    \textbf{\underline{Stabilizer R\'enyi Entropy (SRE)}}
+    \begin{itemize}
+        \item Definition:
+            \[
+            M_\alpha(\ket{\psi})
+            :=
+            \frac{1}{1-\alpha}
+            \ln\lr{
+                \frac{1}{2^N}
+                \sum_{\mathsf{S} }
+                \bra{\psi} \mathsf{S} \ket{\psi}^\alpha
+            }
+            \]
+        \item 
+    \end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Quantum Magic}
 
 \begin{itemize}
     \item The plaquette operators and global loops form a stabilizer group
@@ -700,7 +727,7 @@ In the Kitaev model, the gauge field here is \textit{fictitious}. So we need to
 
 \pause
 
-\textbf{\underline{Stabilizer R\'enyi Entropy (SRE)}}
+\textbf{\underline{SRE of the Kitaev ground state:}}
 \[
 M_{n}\lr{\ket{\psi}} := 
 \frac{1}{1 - n} 
@@ -717,7 +744,8 @@ M_{n}\lr{\ket{\psi}} :=
 }
 \]
 \begin{itemize}
-    \item The result depends only on the equivalence classes (endpoints), and the number of effective degrees of freedom is \alert{$N/2$}.
+    \item The result depends only on the equivalence classes (endpoints), and the number of effective degrees of freedom is \alert{$N/2$}. \scite{https://arxiv.org/abs/2608.25929}{E. Lamma et al., arXiv:2608.25929}
+    \item The picture is no longer valid for non-simply connected subsystems.
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -812,9 +840,18 @@ M_{n}\lr{\ket{\psi}} :=
         \includegraphics[height=0.35\textheight]{figures/mutual_SRE.pdf}
     \end{figure}
 \textbf{\underline{Mutual SRE:}} $W_\alpha(A:B) = M_\alpha(\rho_A) + M_\alpha(\rho_B) - M_{\alpha}(\rho_{AB})$.
-    \[
-    W_{2}(l) = \frac{1}{4}\ln\left[\left(\frac{L}{\pi}\right)\sin\left(\frac{\pi l}{L}\right)\right]
-    \]
+    \begin{figure}
+        \centering
+        
+        \begin{minipage}{0.25\textwidth}
+            \includegraphics[width=\textwidth]{figures/mutual_illustration.pdf}
+        \end{minipage}
+        \begin{minipage}{0.6\textwidth}
+            \[
+            W_{2}(l) = \frac{1}{4}\ln\left[\left(\frac{L}{\pi}\right)\sin\left(\frac{\pi l}{L}\right)\right]
+            \]
+        \end{minipage}
+    \end{figure}
     \scite{https://doi.org/10.1103/ylsz-dm3y}{M. Hoshino, M. Oshikawa, and Y. Ashida, Phys. Rev. X \textbf{16}, 011037}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -826,6 +863,7 @@ M_{n}\lr{\ket{\psi}} :=
     \end{itemize}
 \textbf{\underline{Quantum Magic:}}
     \begin{itemize}
+        \item Density matrices reflect the quantum information aspects of the Kitaev model more effectively.
         \item In the 2D Kitaev model, the Wilson loops serve as stabilizers.
         \item In the 1D Kitaev model, it is the $\xi$-operators that serve as stabilizers.
     \end{itemize}
