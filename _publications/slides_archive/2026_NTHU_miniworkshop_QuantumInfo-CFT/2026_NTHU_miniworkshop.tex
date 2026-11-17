@@ -233,9 +233,20 @@ In the Majorana fermion representation, the model is equivalent to a system of f
 \begin{frame}{Kitaev Model: Properties of Spin Correlation Functions}
     \begin{itemize}
         \item Two-spin correlation functions are short-ranged \scite{https://doi.org/10.1103/PhysRevLett.98.247201}{(Baskaran, Mandal, and Shankar, PRL\textbf{98}, 247201)}
-            \sequ{
+
+        \begin{figure}
+            \flushright
+            \begin{minipage}{0.5\textwidth}
+                \sequ{
                 \anglelr{\sigma^\mu_i\sigma^\nu_j} = \bra{M}ic_ic_j\ket{M} \underbrace{\bra{u} ib^\mu_ib^\nu_j \ket{u}}_{\text{vanishes if $ib^\mu_ib^\nu_j\neq \hat{u}_{ij}$}}
-            }
+                }
+            \end{minipage}
+            \begin{minipage}{0.25\textwidth}
+                \includegraphics[width=\textwidth]{figures/short-range-corr.pdf}
+            \end{minipage}
+        \end{figure}
+
+        \vspace{-1em}
 
         \item Multi-spin correlation functions can ONLY be string-like 
             \[
@@ -244,7 +255,7 @@ In the Majorana fermion representation, the model is equivalent to a system of f
 
         \item $\mathbb{Z}_2$ algebra of strings
             \[
-            \mathfrak{D}\ominus \mathfrak{D}'  \quad:\quad 
+            \boldsymbol{\mathfrak{D}\ominus \mathfrak{D}'}  \quad:\quad 
             \begin{aligned}
                 &\lr{\wordfig{1}{figures/Z2add_dimer}}
                 \ominus
@@ -699,6 +710,17 @@ In the Kitaev model, the gauge field here is \textit{fictitious}. So we need to
             \]
         \item A measure of how spread the Pauli spectrum is ($\anglelr{\mathsf{S}} = 0\vee 1$ for stabilizer states)
     \end{itemize}
+
+    \pause
+
+\textbf{\underline{Eample: Toric Code}}
+    \begin{itemize}
+        \item The ground state of the toric code model is stabilized by the star and plaquette operators because $S_s\ket{\mrm{TC}} = P_p\ket{\mrm{TC}} = \ket{\mrm{TC}}$.
+        \item The density matrix of the toric code ground state 
+        \[
+        \rho \propto \lr{\frac{1+W_v}{2}}\lr{\frac{1+W_h}{2}}\prod_{s}\lr{\frac{1+S_s}{2}}\prod_{p}\lr{\frac{1+P_p}{2}}
+        \]
+    \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Quantum Magic}
@@ -871,6 +893,7 @@ M_{n}\lr{\ket{\psi}} :=
 \textbf{\underline{Quantum Magic:}}
     \begin{itemize}
         \item Density matrices reflect the quantum information aspects of the Kitaev model more effectively.
+        \item $\text{Gauge}=\text{Stabilizer}$ and $\text{Matter} = \text{Magic Source}$
         \item In the 2D Kitaev model, the Wilson loops serve as stabilizers.
         \item In the 1D Kitaev model, it is the $\xi$-operators that serve as stabilizers.
     \end{itemize}
