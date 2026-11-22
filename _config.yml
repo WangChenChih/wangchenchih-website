@@ -9,10 +9,11 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "dirt" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Homepage of Chen-Chih Wang"
+title                    : "Chen-Chih Wang (王晨志)"
 title_separator          : "-"
 name                     : &name "Chen-Chih Wang"
-description              : &description "theoretical condensed matter physics | many-body entanglement and quantum matter | Chinese music | Erhu"   # Update this with a general description of your site, this is the default if not overridden by a page
+description: "Chen-Chih Wang (王晨志) — Graduate student in theoretical condensed matter physics at National Tsing Hua University, researching Kitaev spin liquids and strongly correlated magnetism."
+# description              : &description "theoretical condensed matter physics | many-body entanglement and quantum matter | Chinese music | Erhu"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : "https://wangchenchih.github.io" # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
                                                            # /gape-template.github.io
