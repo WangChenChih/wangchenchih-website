@@ -32,5 +32,5 @@ main:
   - title: "Personal Logo"
     url: /personal-logo/
     
-  - title: "Guide"
-    url: /markdown/
+  # - title: "Guide"
+  #   url: /markdown/
