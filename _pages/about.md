@@ -29,12 +29,20 @@ After graduation, I became a master’s student and continued doing research in 
 # Teaching Experience
 
 ## Tutor at NTHU Counseling Center
-<figure style="text-align: center;">
-  <img src="https://wangchenchih.github.io/wangchenchih-website/images/parisi-quote.jpg" alt="Alt Text" style="width: 50%; display: block; margin: 0 auto;">
-  <figcaption>This is my favorite qoute by the Nobel laureate G. Parisi.</figcaption>
+<figure style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+  <img src="https://wangchenchih.github.io/wangchenchih-website/images/parisi-quote.jpg" alt="Alt Text" style="width: 50%; margin-bottom: 0.5em;">
+  <figcaption>This is my favorite quote by the Nobel laureate G. Parisi.</figcaption>
 </figure>
 
-I 
+I have been a tutor at the counseling center of the university for four years, from 2022 to 2024. I have leactured general physics, applied mathematics, undergraduate classical mechanics, undergraduate electromagnetism, and undergraduate quantum mechanics. During the process of teaching, I found that the root cause that makes student feel difficult to solve problems is usually *the lack of confidence*. To explain what I meant, I would like to share a [story based on an experience of Prof. Giorgio Parisi](https://www.nobelprize.org/prizes/physics/2021/parisi/184861-parisi-interview-february-2022/), a Nobel physics laureate.
+
+>"Let me tell you a small anecdote, if I may. There was one conjecture on spin glass that we were not able to prove. Then someone told me that they proved this conjecture and they explained the proof to me, which was relatively simple. So, I was speaking with a friend of mine and he started the conversation by saying, well, I think that we are never going to be able to prove that conjecture, that it is too difficult. I told him, “No, no, no, you are wrong. Those people proved the conjecture.” And he said, “Ah okay, I see the proof.” And he told me the proof! The point was that he had more or less the same background of these two other people. So when I told him that the other two people have solved the proof, knowing what the other two people knew, he realised that it should be possible to do the proof. In 10 seconds or something like that, he told me the proof. It was quite amazing.
+
+>So you see that if you have confidence, that in some sense anybody if they were told that they have the capacity to solve the problem would be able to solve it. Self-confidence is very important. Of course, it’s clear that you can’t exaggerate with self-confidence. But I think that self-confidence is an important ingredient."
+
+<!--  -->
+
+## Teaching Assistance
 
 
 <!-- This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
