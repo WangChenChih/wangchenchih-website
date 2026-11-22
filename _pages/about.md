@@ -41,10 +41,7 @@ I have been a tutor at the counseling center of the university for four years, f
 >So you see that if you have confidence, that in some sense anybody if they were told that they have the capacity to solve the problem would be able to solve it. Self-confidence is very important. Of course, it’s clear that you can’t exaggerate with self-confidence. But I think that self-confidence is an important ingredient."
 
 From this story, we can see that the key to build our confidence is confidence itself. And, with confidence that we are able do something, we will probabiliy achieve our goal ultimately. I always tell my students that the problems you see on exam or homeworks must be solvable because at least the professor knows the answer. The only thing we have to do is trying hard to solve a problem by ourselves. This is the starting point to enhance our confidence that we are brilliant enough to solve the problem without checking the answers, and that will encourage us to keep tackling the next problem, leading to a positive cycle. And it turned out that this mindset worked very well. Most of my students do not rely on standard answers anymore and started to believe in themselves. Undoubtly, they ultimately pass the exams they had been struggled with.
-<!-- 
-## Teaching Assistance
 
-I have two TA experiences at NTHU, one is -->
 
 <!-- This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
 
