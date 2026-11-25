@@ -30,7 +30,7 @@ $$
 \ket{\psi} = \ket{+}\ket{-} + \ket{-}\ket{+}
 $$
 
-First, let’s see if the pure state density matrix can be expressed using the spin-1 operators. The matrix representation of the spin operators in the basis \( \{\ket{+},\ket{0},\ket{-}\} \) is as follows
+First, let’s see if the pure state density matrix can be expressed using the spin-1 operators. The matrix representation of the spin operators in the basis $ \{\ket{+},\ket{0},\ket{-}\} $ is as follows
 
 $$
 S^x = \frac{1}{\sqrt{2}}
@@ -218,16 +218,16 @@ $$
 </figure>
 
 $$
-H = J\sum_{i} \bold{S}_i^2 + \sum_{\braket{ij}} J_{\alpha_{ij}} \tau_i^{\alpha_{ij}} \tau_j^{\alpha_{ij}} 
-\bold{S}_i \cdot \bold{S}_j
+H = J\sum_{i} \mathbf{S}_i^2 + \sum_{\braket{ij}} J_{\alpha_{ij}} \tau_i^{\alpha_{ij}} \tau_j^{\alpha_{ij}} 
+\mathbf{S}_i \cdot \mathbf{S}_j
 $$
 
-where $\bold{S}_i = \bold{S}_{i,1} + \bold{S}_{i,2} + \bold{S}_{i,3}$ (therefore, the description is effectively a spin-3/2 system), and the $\tau$ operators are defined as
+where $\mathbf{S}\_i = \mathbf{S}\_{i,1} + \mathbf{S}\_{i,2} + \mathbf{S}\_{i,3}$ (therefore, the description is effectively a spin-3/2 system), and the $\tau$ operators are defined as
 
 $$
 \begin{align*}
-& \tau^x_i = \frac{1}{2} + 2 \bold{S}_{i,1} \cdot \bold{S}_{i,2} \\
-& \tau^y_i = \frac{2}{\sqrt{3}} (\bold{S}_{i,1}\cdot\bold{S}_{i,2} - \bold{S}_{i,2}\cdot\bold{S}_{i,3}) \\
-& \tau^z_i = \frac{4}{\sqrt{3}} \bold{S}_{i,1}\cdot(\bold{S}_{i,2}\times \bold{S}_{i,3})
+& \tau^x_i = \frac{1}{2} + 2 \mathbf{S}_{i,1} \cdot \mathbf{S}_{i,2} \\
+& \tau^y_i = \frac{2}{\sqrt{3}} (\mathbf{S}_{i,1}\cdot\mathbf{S}_{i,2} - \mathbf{S}_{i,2}\cdot\mathbf{S}_{i,3}) \\
+& \tau^z_i = \frac{4}{\sqrt{3}} \mathbf{S}_{i,1}\cdot(\mathbf{S}_{i,2}\times \mathbf{S}_{i,3})
 \end{align*}
 $$
