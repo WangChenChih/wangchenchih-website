@@ -30,28 +30,28 @@ $$
 \ket{\psi} = \ket{+}\ket{-} + \ket{-}\ket{+}
 $$
 
-First, let’s see if the pure state density matrix can be expressed using the spin-1 operators. The matrix representation of the spin operators in the basis $\{\ket{+},\ket{0},\ket{-}\}$ is as follows
+First, let’s see if the pure state density matrix can be expressed using the spin-1 operators. The matrix representation of the spin operators in the basis \( \{\ket{+},\ket{0},\ket{-}\} \) is as follows
 
 $$
-\begin{align*}
-& S^x = \frac{1}{\sqrt{2}}
+S^x = \frac{1}{\sqrt{2}}
 	\begin{pmatrix}
 		0 & 1 & 0 \\
 		1 & 0 & 1 \\
 		0 & 1 & 0
-	\end{pmatrix}	\\
-& S^y = \frac{1}{\sqrt{2}}
+	\end{pmatrix}	
+,\quad
+S^y = \frac{1}{\sqrt{2}}
 	\begin{pmatrix}
 		0 & -i & 0 \\
 		i & 0 & -i \\
 		0 & i & 0
-	\end{pmatrix}	\\
-& S^z = \begin{pmatrix}
+	\end{pmatrix}	
+,\quad
+S^z = \begin{pmatrix}
 		1 & 0 & 0 \\
 		0 & 0 & 0 \\
 		0 & 0 & -1
-	\end{pmatrix}	\\
-\end{align*}
+	\end{pmatrix}	
 $$
 
 On the other hand, the density matrix $\rho = \ket{\psi}\bra{\psi}$ in the matrix representation is 
@@ -188,9 +188,9 @@ $$
 # Higher-Spin Kitaev Model
 
 - [G. Baskaran, Diptiman Sen, and R. Shankar, *Spin-$S$ Kitaev model: Classical ground states, order from disorder, and exact correlation functions*, Phys. Rev. B **78**, 115116](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.78.115116)
-- [Han Ma, *$\mathbb{Z}_2$ Spin Liquids in the Higher Spin-$S$ Kitaev Honeycomb Model: An Exact Deconfined $\mathbb{Z}_2$ Gauge Structure in a Nonintegrable Model*, Phys. Rev. Lett. **130**, 156701]https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.130.156701
+- [Han Ma, *$\mathbb{Z}_2$ Spin Liquids in the Higher Spin-$S$ Kitaev Honeycomb Model: An Exact Deconfined $\mathbb{Z}_2$ Gauge Structure in a Nonintegrable Model*, Phys. Rev. Lett. **130**, 156701](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.130.156701)
 
-In the Kitaev model, the elementary string operator whose endpoints act like particles (bosons or fermions depending on the spin representation, which is also equivalent to the anomaly of the $\mathbb{Z}_2$ spatial string representation) reads $d_{ij} \equiv e^{i\pi S^{\alpha_{ij}}_i}e^{i\pi S^{\alpha_{ij}}_j}$. 
+In the Kitaev model, the elementary string operator whose endpoints act like particles (bosons or fermions depending on the spin representation, which is also equivalent to the anomaly of the $\mathbb{Z}\_2$ spatial string representation) reads $d_{ij} \equiv e^{i\pi S^{\alpha_{ij}}_i}e^{i\pi S^{\alpha_{ij}}_j}$. 
 
 For the spin-1 representation, the local operator can be expanded as follows
 
