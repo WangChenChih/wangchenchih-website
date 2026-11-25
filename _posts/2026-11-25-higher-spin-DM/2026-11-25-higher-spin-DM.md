@@ -211,9 +211,11 @@ $$
 # Yao-Lee Model
 
 - https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.107.087205
-- 
 
-![decohoney-eps-converted-to_page-0001.jpg](decohoney-eps-converted-to_page-0001.jpg)
+<figure style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+  <img src="https://wangchenchih.github.io/wangchenchih-website/_posts/2026-11-25-higher-spin-DM/lattice-geometry.jpg" alt="Alt Text" style="width: 80%; margin-bottom: 0.5em;">
+  <figcaption>The lattice geometry of the Yao-Lee model. Each course site contains three spin-1/2 spins at the vertices of a microscopic triangle.</figcaption>
+</figure>
 
 $$
 H = J\sum_{i} \bold{S}_i^2 + \sum_{\braket{ij}} J_{\alpha_{ij}} \tau_i^{\alpha_{ij}} \tau_j^{\alpha_{ij}} 
