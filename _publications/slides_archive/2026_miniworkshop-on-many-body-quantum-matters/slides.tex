@@ -37,12 +37,12 @@
 \usepackage{pst-all}
 \usepackage{leftidx}
 
-\title{\href{https://arxiv.org/abs/2605.18002}{\textbf{Exact Organization of Density Matrices and Entanglement Structure in the Kitaev Spin Liquid}}}
+\title{\href{https://arxiv.org/abs/2605.18002}{\textbf{A quantum information perspective of Kitaev spin liquids}}}
 \subtitle{C.-C. Wang, Y.-P. Huang, S. Yip, \href{https://doi.org/10.1103/cvny-cwj5}{Phys. Rev. B \textbf{114}, 305105}}
 
 \author{Chen-Chih Wang}
 \institute{NTHU}
-\date{November 18, 2026}
+\date{December 1, 2026}
 \titlegraphic{\vspace{-2cm}\includegraphics[width=2.5cm]{figures/NTHU.pdf}\hspace{5cm}\includegraphics[width=2.5cm]{figures/phys_logo.png}}
 
 \newcommand{\anglelr}[1]{\left\langle #1 \right\rangle}
@@ -129,7 +129,11 @@
         \sequ{
         H = -\sum_{\anglelr{ij}}J_{\alpha_{ij}}\dimer{i}{j} \quad ;\quad\wordfig{1.2}{figures/direction-def.pdf}
         }
-        \item Majorana fermion (parton) representation: $b^x$, $b^y$, $b^z$, $c$ $\Rightarrow$  $\sigma^\mu = ib^\mu c$
+        \item Majorana fermion (parton) representation: 
+        % $b^x$, $b^y$, $b^z$, $c$ $\Rightarrow$  $\sigma^\mu = ib^\mu c$
+        \[
+        \underbrace{b^x, b^y, b^z}_{\text{gauge}}, \underbrace{c}_{\text{matter}} \Rightarrow \sigma^\mu=ib^\mu c
+        \]
         \item Parton Hamiltonian: define $ib^{\alpha_{ij}}_ib^{\alpha_{ij}}_j = \hat{u}_{ij}$
         \sequ{
         H \to \sum_{\anglelr{ij}}iJ_{\alpha_{ij}}\hat{u}_{ij}c_ic_j
@@ -195,40 +199,52 @@ In the Majorana fermion representation, the model is equivalent to a system of f
 \section{Motivation}
 \begin{frame}{Motivation}
     \begin{itemize}
-    \item<1->  A direct \textbf{entanglement} analysis from the \textbf{physical density matrix}  
-        \begin{itemize}
-            \item Gutzwiller projection is needed in the fermionic representation.
-            \item Using physical \textbf{spin}s rather than Majorana fermions
-            \item Odd number of sites: ill-defined Majorana fermionic Hilbert space
-            \item Cutting gauge fields on links (add figures)
-    
-                \vspace{-1.5em}
-                
-            \onslide<2->{
-                \begin{flushright}
-                    \includegraphics[width=0.3\linewidth]{figures/cutting-gauge.pdf}
-                \end{flushright}
-            }
-        \end{itemize}
-        
-    \item<3-> \textbf{$\mathbb{Z}_2$ gauge theory} with \textbf{1-form symmetry}: organization of entanglement spectrum 
-        \begin{itemize}
-            \item How do these symmetries restrict the entanglement spectrum structure?
-            \item Directly solving the entanglement spectrum rather than using the replica trick
-        \end{itemize}
-        
-        \scite{https://doi.org/10.1103/PhysRevX.15.011001}{Xu \textit{et al}. PRX \textbf{15}, 011001 (2025)}
+        \item Entanglement and other genuine quantum features (quantum matters)
+        \item Quantum information perspective: spin framework (qubit)
+        \item Loopy multipartite entanglement 
+            (\scite{https://www.nature.com/articles/s41467-026-71113-8}{L. Lyu \textit{et al.}, Nat. Commun. \textbf{17}, 5650 (2026)})
+        \item Quantum magic (classical simulability of quantum spin liquids)
+        \item Bridge gauge theory and quantum information descriptions
     \end{itemize}
-
-
-\onslide<4->{
-\textbf{\underline{Recent New Development:}}
-\begin{itemize}
-    \item Subsystems with holes (genus number $g>0$)
-    \item Quantum magic: direct calculation of the \textit{stabilizer R\'enyi entropy} (SRE)
-\end{itemize}
-}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Motivation}
+% \begin{frame}{Motivation}
+%     \begin{itemize}
+%     \item<1->  A direct \textbf{entanglement} analysis from the \textbf{physical density matrix}  
+%         \begin{itemize}
+%             \item Gutzwiller projection is needed in the fermionic representation.
+%             \item Using physical \textbf{spin}s rather than Majorana fermions
+%             \item Odd number of sites: ill-defined Majorana fermionic Hilbert space
+%             \item Cutting gauge fields on links (add figures)
+    
+%                 \vspace{-1.5em}
+                
+%             \onslide<2->{
+%                 \begin{flushright}
+%                     \includegraphics[width=0.3\linewidth]{figures/cutting-gauge.pdf}
+%                 \end{flushright}
+%             }
+%         \end{itemize}
+        
+%     \item<3-> \textbf{$\mathbb{Z}_2$ gauge theory} with \textbf{1-form symmetry}: organization of entanglement spectrum 
+%         \begin{itemize}
+%             \item How do these symmetries restrict the entanglement spectrum structure?
+%             \item Directly solving the entanglement spectrum rather than using the replica trick
+%         \end{itemize}
+        
+%         \scite{https://doi.org/10.1103/PhysRevX.15.011001}{Xu \textit{et al}. PRX \textbf{15}, 011001 (2025)}
+%     \end{itemize}
+
+
+% \onslide<4->{
+% \textbf{\underline{Recent New Development:}}
+% \begin{itemize}
+%     \item Subsystems with holes (genus number $g>0$)
+%     \item Quantum magic: direct calculation of the \textit{stabilizer R\'enyi entropy} (SRE)
+% \end{itemize}
+% }
+% \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Kitaev Model: Properties of Spin Correlation Functions}
     \begin{itemize}
@@ -307,7 +323,7 @@ In the Majorana fermion representation, the model is equivalent to a system of f
 % \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Organization: Equivalence Relation (the 1st Layer)}
-\begin{frame}{The 1st Layer Organization}
+\begin{frame}{Real Space Organization}
     \begin{itemize}
         \item<1-> The density matrix of a spin-1/2 system can be expanded in terms of Pauli-group elements
         \[
@@ -346,7 +362,7 @@ In the Majorana fermion representation, the model is equivalent to a system of f
     \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{The 1st Layer Organization}
+\begin{frame}{Real Space Organization}
     Normalize $\tr \rho = 1$ to get the final result:
     \[
     \boxed{
@@ -361,36 +377,10 @@ In the Majorana fermion representation, the model is equivalent to a system of f
     = 
     \frac{1}{2^{\color{red} N/2}}\sum_{\color{red} [\mathfrak{D}]\subset A}\lr{\text{fermion Op.}}
     \]
-\end{frame}
-%%%%%%%%%%%
-\begin{frame}{The 1st Layer Organization}
-    \begin{itemize}
-        \item Following the same spirit to construct the \textbf{reduced density matrix}: 
-        % \begin{enumerate}
-        %     \item [(i)] Hermiticity
-        %     \item [(ii)] Ability of reproducing expectation values of observables
-        %     \item [(iii)] Normalization condition $\tr \rho =1$
-        % \end{enumerate}
-        \[
-        \rho_A 
-        \propto \sum_{\mathfrak{D}\subset A} \mathfrak{C}_{\mathfrak{D}} \Sigma_{\mathfrak{D}} 
-        % \propto \hat{\Pi}_A\sum_{[\mathfrak{D}]\subset A}\anglelr{\Sigma_\mathfrak{D}}\Sigma_{\mathfrak{D}} 
-        \mathop{\longrightarrow}^{\text{normalize}}
-        \boxed{
-            \frac{1}{2^{N^A-N^A_p}}  \sum_{[\mathfrak{D}]\subset A} \mathfrak{C}_\mathfrak{D} \hat{\Pi}_A\Sigma_{\mathfrak{D}} 
-        }
-        \]
-        % \item Define \textit{projected string operators}: $\mathcal{S}_\mathfrak{D}^{(A)} := \hat{\Pi}_A\Sigma_\mathfrak{D}$. In this way, $\mathcal{S}_\mathfrak{D}^{(A)} = \mathcal{S}_\mathfrak{D'}^{(A)}$ if $\mrm{EP}(\mathfrak{D}) = \mrm{EP}(\mathfrak{D}')$.
-        % \item Representing density matrices in terms of projected string operators:
-        % \[
-        % \boxed{
-        %     \rho _A 
-        %     =
-        %     \frac{1}{2^{N^A - N^A_p}}\sum_{[\mathfrak{D}]\subset A}\anglelr{\Sigma_\mathfrak{D}}\mathcal{S}_{\mathfrak{D}}^{(A)}
-        % }
-        % \]
-        \item A geometric relation to area law: $\boxed{\abs{\de A} = N^A - 2N^A_p + 2}$
-        \item Physical interpretation: \textbf{\color{purple} area law} + \textbf{\color{red} Majorana fermion}
+
+    \textbf{\underline{Reduced Density Matrix}}
+
+    Following the same spirit to construct the \textbf{reduced density matrix}: 
         \[
         \boxed{
             \rho_A 
@@ -404,14 +394,57 @@ In the Majorana fermion representation, the model is equivalent to a system of f
             }
         }
         \]
-        The equivalent fermion density matrix $\rho_A^F$ looks the same as $\rho_A$. 
-        \[
-        \rho_A^F = \frac{1}{2^{\color{red} N^A/2}}\sum_{ \color{red} \mrm{EP}(\mathfrak{D})\subset A}\lr{\text{fermion Op.}} 
-        = 
-        \frac{1}{2^{\color{red} N^A/2}}\sum_{\color{red} [\mathfrak{D}]\subset A}\lr{\text{fermion Op.}}
-        \]
-    \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{The 1st Layer Organization}
+%     \begin{itemize}
+%         \item Following the same spirit to construct the \textbf{reduced density matrix}: 
+%         % \begin{enumerate}
+%         %     \item [(i)] Hermiticity
+%         %     \item [(ii)] Ability of reproducing expectation values of observables
+%         %     \item [(iii)] Normalization condition $\tr \rho =1$
+%         % \end{enumerate}
+%         \[
+%         \rho_A 
+%         \propto \sum_{\mathfrak{D}\subset A} \mathfrak{C}_{\mathfrak{D}} \Sigma_{\mathfrak{D}} 
+%         % \propto \hat{\Pi}_A\sum_{[\mathfrak{D}]\subset A}\anglelr{\Sigma_\mathfrak{D}}\Sigma_{\mathfrak{D}} 
+%         \mathop{\longrightarrow}^{\text{normalize}}
+%         \boxed{
+%             \frac{1}{2^{N^A-N^A_p}}  \sum_{[\mathfrak{D}]\subset A} \mathfrak{C}_\mathfrak{D} \hat{\Pi}_A\Sigma_{\mathfrak{D}} 
+%         }
+%         \]
+%         % \item Define \textit{projected string operators}: $\mathcal{S}_\mathfrak{D}^{(A)} := \hat{\Pi}_A\Sigma_\mathfrak{D}$. In this way, $\mathcal{S}_\mathfrak{D}^{(A)} = \mathcal{S}_\mathfrak{D'}^{(A)}$ if $\mrm{EP}(\mathfrak{D}) = \mrm{EP}(\mathfrak{D}')$.
+%         % \item Representing density matrices in terms of projected string operators:
+%         % \[
+%         % \boxed{
+%         %     \rho _A 
+%         %     =
+%         %     \frac{1}{2^{N^A - N^A_p}}\sum_{[\mathfrak{D}]\subset A}\anglelr{\Sigma_\mathfrak{D}}\mathcal{S}_{\mathfrak{D}}^{(A)}
+%         % }
+%         % \]
+%         \item A geometric relation to area law: $\boxed{\abs{\de A} = N^A - 2N^A_p + 2}$
+%         \item Physical interpretation: \textbf{\color{purple} area law} + \textbf{\color{red} Majorana fermion}
+%         \[
+%         \boxed{
+%             \rho_A 
+%             = 
+%             \frac{1}{2^{ {\color{purple}\lr{\abs{\de A}/2 - 1}}}} 
+%             \lr{
+%                 \frac{1}{2^{\color{red} N^A/2}} 
+%                 \sum_{{\color{red} [\mathfrak{D}]} \subset A}
+%                 \mathfrak{C}_\mathfrak{D} \hat{\Pi}_A
+%                 \Sigma_{\mathfrak{D}}
+%             }
+%         }
+%         \]
+%         The equivalent fermion density matrix $\rho_A^F$ looks the same as $\rho_A$. 
+%         \[
+%         \rho_A^F = \frac{1}{2^{\color{red} N^A/2}}\sum_{ \color{red} \mrm{EP}(\mathfrak{D})\subset A}\lr{\text{fermion Op.}} 
+%         = 
+%         \frac{1}{2^{\color{red} N^A/2}}\sum_{\color{red} [\mathfrak{D}]\subset A}\lr{\text{fermion Op.}}
+%         \]
+%     \end{itemize}
+% \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Organization: Block-Diagonal Structure (The 2nd Layer)}
 \begin{frame}{Organization: Block-Diagonal Structure}
@@ -596,93 +629,6 @@ In the Kitaev model, the gauge field here is \textit{fictitious}. So we need to
         \item Odd number of lattice sites: Fermion parity provides an additional degeneracy.
     \end{itemize}
 \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Topological Effect}
-\begin{frame}{Topological Effect}
-    \begin{itemize}
-        \item Strings cannot cross the environment (Pauli operators are traceless). 
-        \item As a consequence, only even-parity components survive (even parity for each separated component). 
-    \end{itemize}
-    \begin{figure}
-        \centering
-        \begin{minipage}{0.25\linewidth}
-            \includegraphics[width=\textwidth]{figures/separate-fermions.pdf}
-        \end{minipage}
-        \begin{minipage}{0.6\linewidth}
-            \begin{align*}
-            \rho_A & \propto 
-            \sum_{[\mathfrak{D}]\in\text{even}}\mathfrak{C}_\mathfrak{D} \hat{\Pi}_A\Sigma_\mathfrak{D}    \\
-            \rho_A^F &\propto \sum_{[\mathfrak{D}] \in \text{even}} \mathfrak{C}_\mathfrak{D} \mathcal{M}_\mathfrak{D} 
-            +
-            \valert{
-                \sum_{[\mathfrak{D}] \in \text{odd}} \mathfrak{C}_\mathfrak{D} \mathcal{M}_\mathfrak{D} 
-            }    
-        \end{align*}
-        \end{minipage}
-    \end{figure}
-
-        \vspace{-1em}
-    
-    \begin{figure}
-        \centering
-        \includegraphics[width=0.3\linewidth]{figures/separate-fermions_string.pdf}\hspace{1em}\includegraphics[width=0.3\linewidth]{figures/separate-fermions_even-even.pdf}
-    \end{figure}
-        
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Topological Effect}
-\begin{itemize}
-    \item $\text{'t Hooft loop} = \text{subsystem fermion parity} = \text{Vison loop}$.
-    \item The 't Hooft loop commutes with the reduced density matrix.
-    \item $\rho_{A}
-            =
-            \frac{1}{2^{N^A - N^A_p}}
-            \hat{\Pi}_A
-            \alert{\lr{\mathds{1} + W_\mathcal{L}}}
-            \sum_{[\mathfrak{D}]\subset A}
-            \lr{
-                \mathfrak{C}_\mathfrak{D} \Sigma_\mathfrak{D} 
-                +
-                \alert{
-                \mathfrak{C}_{\mathfrak{D} \ominus \mathfrak{H}} \Sigma_{\mathfrak{D}\ominus\mathfrak{H}}
-                }
-            }$.
-\end{itemize}
-    \begin{figure}
-        \centering
-        \includegraphics[height=0.4\textheight]{figures/wilson-wp-inter.pdf}
-        \hspace{2em}
-        \includegraphics[height=0.4\textheight]{figures/vison-loop-fermion-parity.pdf}
-    \end{figure}
-    {\tiny
-    \[
-    \tilde{T}_{\de\Gamma}
-    =
-    \exp\lr{i\pi\oint_{\de\Gamma} E_\perp \mrm{d}\ell}
-    \leftrightsquigarrow
-    \prod_{\hat{\xi} \in \de \Gamma}\hat{\xi} 
-    =
-    \Sigma_{\mathfrak{H}}
-    \leftrightsquigarrow
-    \prod_{i\in\Gamma}c_i
-    \propto
-    (-1)^{F_\Gamma} 
-    \;; \quad F_\Gamma = \sum_{i\in\Gamma} n_i
-    \]
-    \[
-    \oint_{\de\Gamma} E_\perp \mrm{d}\ell = \sum_{i\in\Gamma} n_i \Rightarrow \nabla\cdot E = \rho.
-    \]
-    }
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Topological Effect}
-%     \begin{figure}
-%         \centering
-%         \includegraphics[width=0.4\linewidth]{figures/inner-outer-assemble_1.pdf}
-%         \hspace{2mm}
-%         \includegraphics[width=0.4\linewidth]{figures/inner-outer-assemble_2.pdf}
-%     \end{figure}
-% \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Quantum Magic}
 \begin{frame}{Quantum Magic}
