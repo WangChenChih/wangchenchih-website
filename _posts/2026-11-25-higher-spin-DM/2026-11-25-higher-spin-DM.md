@@ -19,6 +19,7 @@ $$
 \newcommand{\bo}[1]{\mathbf{#1}}
 \newcommand{\Tr}{\mathrm{Tr}}
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\braket}[1]{\langle #1 \rangle}
 $$
 In this note, I’m trying to investigate what a density matrix of a higher-spin system looks like. Can it be represented in terms of merely spin operators? Or does it need other $SU(N)$ generators such as Gell-Mann matrices for $SU(3)$?
 
@@ -179,11 +180,11 @@ $$
 t^{xxy}, t^{xxz}, t^{yyx}, t^{yyz}, t^{zzx}, t^{zzy}, t^{xyz}
 $$
 
-Altogether, we have $3 + 6 + 7 + 2 = 18$ independent, non-trivial conditions for determining the density matrix, which equals the number of degrees of freedom of the spin-1 density matrix $(3\times 3) \times 2 = 18$.
+Altogether, we have $3 + 6 + 7 + 2 = 18$ independent, non-trivial conditions for determining the density matrix, which equals the number of degrees of freedom of the spin-1 density matrix $(3\times 3) \times 2 = 18$. Although I didn't come up with a rigorous proof, but I conjecture that the higher spin density matrices can be uniquely determined by correlation of multipoles, and which may leads to the final form of the density matrix represented in terms of multipole operators, i.e., the spin operators together with their products.
 
-$$
+<!-- $$
 Q^{\mu\nu} = 3\braket{S^\mu S^\nu} -  S(S+1)\delta^{\mu\nu}
-$$
+$$ -->
 
 # Higher-Spin Kitaev Model
 
