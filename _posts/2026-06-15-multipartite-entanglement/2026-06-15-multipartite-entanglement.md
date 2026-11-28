@@ -28,13 +28,13 @@ In this notes, I would like to review materials on multipartite entanglement, in
 A state $\varrho$ is called ***separable*** if there exists a bipartition of the Hilbert space $$\mathcal{H} = \mathcal{H}_A\otimes\mathcal{H}_{\overline{A}}$$ such that
 
 $$
-\varrho^{\mrm{sep}}_{A|\overline{A}} = \sum_{n} p_n \rho^{(A)}_n
+\varrho^{\mrm{sep}}_{A\vert\overline{A}} = \sum_{n} p_n \rho^{(A)}_n
 \otimes \rho^{(\overline{A})}_n
 $$
 
-where each component $$\rho^{(A/\overline{A})}_n$$ is a density matrix acting on the subspace $$\mathcal{H}_A$$ and $$\mathcal{H}_{\overline{A}}$$. Weights $$p_n$$ are convex, satisfying $$0\leq p_n\leq 1\forall n$$ and $$\sum_{n}p_n = 1$$. In other words, $$\lrg{p_n}$$ is a *probability distribution*. A state that is separable with respect to a bipartition $$A\|\overline{A}$$ is denoted by $$\bog{\varrho^{\mrm{sep}}_{A\|\overline{A}}}$$. Such a state is often referred to as a *classically correlated* state. 
+where each component $$\rho^{(A/\overline{A})}_n$$ is a density matrix acting on the subspace $$\mathcal{H}_A$$ and $$\mathcal{H}_{\overline{A}}$$. Weights $$p_n$$ are convex, satisfying $$0\leq p_n\leq 1\forall n$$ and $$\sum_{n}p_n = 1$$. In other words, $$\lrg{p_n}$$ is a *probability distribution*. A state that is separable with respect to a bipartition $$A\vert\overline{A}$$ is denoted by $$\varrho^{\mrm{sep}}_{A\vert\overline{A}}$$. Such a state is often referred to as a *classically correlated* state. 
 
-The fact that two physical observables supported on $$A$$ and $$\overline{A}$$, respectively, are *classically correlated* if the state is separable with respect to $$A|\overline{A}$$ can be understood from computing their correlation function. Suppose that the density matrix takes the form of Eq.~\eqref{eq:sep-def}, then the correlation of two operators $$\mathcal{O}_A$$ and $$\mathcal{O}_{\overline{A}}$$ is 
+The fact that two physical observables supported on $$A$$ and $$\overline{A}$$, respectively, are *classically correlated* if the state is separable with respect to $$A\vert\overline{A}$$ can be understood from computing their correlation function. Suppose that the density matrix takes the form used for defining separability, then the correlation of two operators $$\mathcal{O}_A$$ and $$\mathcal{O}_{\overline{A}}$$ is 
 
 $$
 \braket{\mathcal{O}_A\mathcal{O}_{\overline{A}}} = \sum_{n} p_n \Tr_{A}\lr{\rho^{(A)}_n\mathcal{O}_A} \Tr_{\overline{A}}\lr{\rho^{(\overline{A})}_n\mathcal{O}_{\overline{A}}} = \sum_{n} p_n \braket{\mathcal{O}_A}_n \braket{\mathcal{O}_{\overline{A}}}_n.
@@ -47,7 +47,7 @@ This result implies that the observables can be measured locally in two spatiall
 A state $$\varrho$$ is called \textbf{\textit{biseparable}} if it can be expressed as a mixture of separable states defined by previously
 
 $$
-\varrho = \sum_{A \subset \Lambda}p_{A} \varrho^{\mrm{sep}}_{A|\overline{A}}
+\varrho = \sum_{A \subset \Lambda}p_{A} \varrho^{\mrm{sep}}_{A\vert\overline{A}}
 $$
 
 where $$\lrg{p_A}$$ is a probability distribution.
