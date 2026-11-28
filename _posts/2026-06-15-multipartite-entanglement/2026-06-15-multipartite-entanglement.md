@@ -52,9 +52,136 @@ $$
 
 where $$\lrg{p_A}$$ is a probability distribution. A state is ***genuinely multipartite entangled*** if it is **not biseparable**. 
 
-{% capture thm_body %}
-For any real numbers $a$ and $b$, we have:
+## A simple example of inseparable states
+$$
+\varrho = \frac{1}{4}\lr{\mathds{1} + \bog{\sigma}_1\cdot \bog{\sigma}_2}
+$$
 
-$$|a + b| \le |a| + |b|$$
-{% endcapture %}
-{% include theorem.html title="Triangle Inequality" content=thm_body %}
+If this two-spin system is separable, then there exists a probability distribution $\lrg{p_k}$ and two sets of vectors $$\lrg{\bo{v}_k}$$ and $$\lrg{\bo{u}_k}$$ whose norms are less than unity such that
+
+$$
+\varrho
+=
+\frac{1}{4}\lr{\mathds{1} + \bog{\sigma}_1\cdot \bog{\sigma}_2}
+=
+\sum_{k}
+p_k
+\lr{
+\frac{\mathds{1} + \bo{v}_k\cdot \bog{\sigma}_1}{2}
+}
+\lr{
+\frac{\mathds{1} + \bo{u}_k\cdot \bog{\sigma}_2}{2}
+}
+$$
+
+$$
+\sum_{k} p_k v^\mu_k = 0 
+,\qquad 
+\sum_{k} p_k u^\nu_k = 0 
+,\qquad 
+\sum_{k} p_k u^\mu_k v^\nu_k = \delta^{\mu\nu}
+$$
+
+
+
+```markdown
+For any matrix $$M$$, its *nuclear norm*, defined as the sum of singular values of $M$, satisfies 
+
+$$
+\norm{M}_* = \sup_{\norm{A}\leq 1} \Tr\lr{A^\dagger M},
+$$
+
+where $$\norm{A}$$ represents the operator norm of $$A$$.
+```
+
+```markdown
+*Proof:*
+First, we prove that there exists an operator $A = UV^\dagger$ that satisfies the above equation, where $U$ and $V$ are the SVD matrices of $M$. The proof is straightforward
+\[
+\Tr\lr{
+A^\dagger M
+}
+=
+\Tr\lr{
+VU^\dagger U\Sigma V^\dagger
+}
+=
+\Tr\lr{\Sigma} = \norm{M}_*.
+\]
+Next, we need to prove that $\norm{M}_*$  indeed provides an upper bound for $\Tr\lr{A^\dagger M}$. A direct calculation shows that
+\[
+\Tr\lr{
+A^\dagger M
+}
+=
+\sum_{i} \Sigma_{ii} \lrm{U^\dagger A V}_{ii}
+\leq
+\sum_{i} \Sigma_{ii} \norm{U^\dagger A V}
+=
+\norm{M}_*
+\norm{U^\dagger A V}
+\]
+Since both $U$ and $V$ are unitary, the operator norm in the last term reduces to the operator norm of $A$ itself.
+\[
+\norm{U^\dagger A V}
+=
+\sup_{\psi\neq 0} \frac{\abs{U^\dagger A V \ket{\psi}}}{\abs{\psi}}
+=
+\sup_{\psi\neq 0}
+\sqrt{
+\anglelr{
+V^\dagger A^\dagger A V
+}_\psi
+}
+=
+\sup_{\phi\neq 0}
+\sqrt{
+\anglelr{
+A^\dagger A 
+}_\phi
+}
+=
+\norm{ A}
+\]
+Together, we obtain the inequality
+\[
+\Tr\lr{A^\dagger M} = \norm{M}_* \norm{A} \leq \norm{M}_*.
+\]
+```
+
+\begin{theorem}
+    Let $\bo{u}^\mu_k$ and $\bo{v}^\nu_k$ are real vectors (indices are $\mu$ and $\nu$, respectively) bounded below by $R_1$ and $R_2$, respectively, for all $k$. The upper bound for the nuclear norm of the matrix
+    \[
+    C^{\mu\nu}\equiv \sum_{k} p_k u^\mu_k  v^\nu_k
+    \]
+    is determined by $R_1$ and $R_2$
+    \[
+    \sup_{\lrg{p_k}, \lrg{\bo{u}_k}, \lrg{\bo{v}_k}} \norm{C}_* = R_1R_2
+    \]
+\end{theorem}
+\begin{proof}
+Let $A$ be a bounded operator $\norm{A} \leq 1$,
+    \[
+    \Tr\lr{A^\dagger C} = 
+    \sum_{k} p_k \bo{u}_k^T A \bo{c}_k
+    \leq
+    \sum_{k} p_k \abs{\bo{u}_k} \abs{A \bo{v}_k}
+    \leq
+    \sum_{k} p_k \abs{\bo{u}_k} \norm{A} \abs{\bo{v}_k}
+    \leq
+    \sum_{k} p_k R_1 R_2 = R_1 R_2
+    \]
+    According to the Lemma~\ref{lemma:nuclear-norm-lemma}, we have
+    \[
+    \norm{C}_* = \sup_{\norm{A}\leq 1}\Tr\lr{A^\dagger C} \leq R_1R_2.
+    \]
+    This completes the proof.
+\end{proof}
+
+\[
+\norm{\sum_{k} p_k u^\mu_k v^\nu_k}_* = \norm{\delta^{\mu\nu}}_* = 3
+\]
+\[
+\norm{\sum_{k} p_k u^\mu_k v^\nu_k}_* \leq 1
+\]
+Contradiction
