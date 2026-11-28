@@ -32,7 +32,7 @@ $$
 \otimes \rho^{(\overline{A})}_n
 $$
 
-where each component $$\rho^{(A/\overline{A})}_n$$ is a density matrix acting on the subspace $$\mathcal{H}_A$$ and $$\mathcal{H}_{\overline{A}}$$. Weights $$p_n$$ are convex, satisfying $$0\leq p_n\leq 1\forall n$$ and $$\sum_{n}p_n = 1$$. In other words, $$\lrg{p_n}$$ is a *probability distribution*. A state that is separable with respect to a bipartition $$A|\overline{A}$$ is denoted by $$\bog{\varrho^{\mrm{sep}}_{A|\overline{A}}}$$. Such a state is often referred to as a *classically correlated* state. 
+where each component $$\rho^{(A/\overline{A})}_n$$ is a density matrix acting on the subspace $$\mathcal{H}_A$$ and $$\mathcal{H}_{\overline{A}}$$. Weights $$p_n$$ are convex, satisfying $$0\leq p_n\leq 1\forall n$$ and $$\sum_{n}p_n = 1$$. In other words, $$\lrg{p_n}$$ is a *probability distribution*. A state that is separable with respect to a bipartition $$A\|\overline{A}$$ is denoted by $$\bog{\varrho^{\mrm{sep}}_{A\|\overline{A}}}$$. Such a state is often referred to as a *classically correlated* state. 
 
 The fact that two physical observables supported on $$A$$ and $$\overline{A}$$, respectively, are *classically correlated* if the state is separable with respect to $$A|\overline{A}$$ can be understood from computing their correlation function. Suppose that the density matrix takes the form of Eq.~\eqref{eq:sep-def}, then the correlation of two operators $$\mathcal{O}_A$$ and $$\mathcal{O}_{\overline{A}}$$ is 
 
