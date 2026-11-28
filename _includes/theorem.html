@@ -1,0 +1,8 @@
+<div class="theorem-box">
+  <div class="theorem-title">
+    <strong>Theorem{% if include.title %} ({{ include.title }}){% endif %}.</strong>
+  </div>
+  <div class="theorem-body" markdown="1">
+{{ include.content | markdownify }}
+  </div>
+</div>

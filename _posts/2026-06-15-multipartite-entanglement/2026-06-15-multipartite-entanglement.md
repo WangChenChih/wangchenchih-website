@@ -50,4 +50,11 @@ $$
 \varrho = \sum_{A \subset \Lambda}p_{A} \varrho^{\mrm{sep}}_{A\vert\overline{A}}
 $$
 
-where $$\lrg{p_A}$$ is a probability distribution.
+where $$\lrg{p_A}$$ is a probability distribution. A state is ***genuinely multipartite entangled*** if it is **not biseparable**. 
+
+{% capture thm_body %}
+For any real numbers $a$ and $b$, we have:
+
+$$|a + b| \le |a| + |b|$$
+{% endcapture %}
+{% include theorem.html title="Triangle Inequality" content=thm_body %}
